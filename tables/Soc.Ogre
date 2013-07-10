@@ -1,0 +1,461 @@
+#TABLE
+
+19
+
+battle~
+8
+0
+1
+1
+You beat your shield and @b@BHOLLER@n a victorious battle cry!~
+$n pounds on $s shield and @BHOLLERS@n a furious battle cry!~
+You charge toward $N, beating your shield and @BHOLLERING@n a furious battle cry!~
+$n charges towards $N, pounding $s shield and @BHOLLERING@n a furious battle cry!~
+$n charges toward you, pounding $s shield and @BHOLLERING@n a furious battle cry!~
+~
+What are you trying to do? Scare yourself?~
+~
+You wave $1 wildly above your head, @BHOLLERING@n a furious battle cry!~
+$1 waves $2 wildly above $s head, @BHOLLERING@n a furious battle cry!~
+You look $1, beating your shield and @BHOLLERING@n a furious battle cry!~
+$1 looks $2, beats his shield and @BHOLLERS@n a furious battle cry!~
+~
+~
+~
+~
+~
+~
+
+bawl~
+0
+0
+0
+0
+Woe is me! Woe is ME!~
+$n tries to gain your sympathy by bawling $s eyes out. Poor $n.~
+$N becomes your best friend as they allow you to bawl your eyes out on their shoulder.~
+$n clamps his arms around $N and bawls on $S shoulder.~
+Uh oh... $n needed a shoulder to cry on, looks like yours is it.~
+Your sweet dreams are invaded by a mournful sob and the feeling of tears dripping onto your head.~
+You curl into the fetal position and bawl your eyes out... all alone.~
+$n curls into the fetal position and bawls his eyes out. That's one lonely ogre.~
+You cry over $1, it just doesn't live up to your expectations.~
+$n bawls his big ogrish eyes out over $2 because it just doesn't work right.~
+You bawl because you have to kill whatever is $t.~
+$n bawls because he has to kill what is $t.~
+You bawl over $3 to $N trying to gain sympathy.~
+$n tries to gain sympathy from you about $3 by bawling like a runt ogre.~
+$n bawls over $3 to $N trying to gain sympathy.~
+~
+~
+~
+
+beat~
+6
+0
+1
+0
+You beat your chest like a mighty @b@Rwar drum@n.~
+$n beats $s chest like a mighty @b@Rwar drum@n.~
+You grab a rock and beat $N silly.~
+$n picks a rock up off the ground and beats $N with it.~
+$n grabs a big rock and starts to beat you with it.~
+Someone just hit you in the head with a rock! OUCH!~
+You grab a rock and beat yourself over the head with it.~
+$n grabs a rock from the ground and beats $mself with it.~
+You grab $p and begin beating it on the ground.~
+$n grabs $p and begins beating it on the ground.~
+~
+~
+You grab $p and beat $N over the head with it.  Ouch!~
+$n grabs $p and beats you over the head with it.  Ouch!~
+$n grabs $p and beats $N over the head with it.  Ouch!~
+~
+~
+~
+
+burp~
+6
+0
+0
+0
+You emit a thunderous belch.~
+There's a low rumbling as $n burps loudly.~
+You belch in $N's face.~
+$N flinches when $n lets loose a roar-like belch in $S face!~
+$n belches out a breath of fetid air in your face.~
+What is that horrible smell?!~
+Good thing you don't have a sensitive nose.~
+$n belches at $mself in satisfaction.~
+You burp to clear your thoughts as you examine $1.~
+$n burps in apathy at $1 as he examines it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+confuse~
+6
+0
+0
+0
+You are completely confused.~
+$n looks completely confused about something.~
+You are confused at what $N said.~
+$n looks at $N confused.~
+You think you spoke too fast to $n, $e looks confused.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+crack~
+6
+0
+1
+0
+You clench your hands in fists, cracking your knuckles.~
+$n clenches $s hands into fists, cracking all $s knuckles.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+flex~
+8
+0
+0
+0
+You flex your mighty arms revealing @b@YHUGE@n biceps.~
+$n flexes $s arms revealing @b@YHUGE@n biceps.~
+You flex your @b@YHUGE@n arms at $N.~
+$n flexes $s @b@YHUGE@n arms at $N.~
+$n flexes $s @b@YHUGE@n biceps in your face. WOW!~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+frolic~
+0
+0
+0
+0
+You frolic around the room, acting, as best you can, like an elf.~
+$n frolics around in a circle, doing $s best impression of an elf.~
+Mocking $N, you frolic around $M, accusing them of being elf-like.~
+Mocking $N, $n dances around $M, accusing $M of being elf-like.~
+$n frolics around you, accusing you of being elf-like! How dare $e!~
+You have horrible nightmares that you will wake up as an elf!~
+You do your best impression of an elf, frolicing around the room.~
+$n frolics around the room, acting too elf like for $s own good.~
+You frolic around displaying $1, acting very elf-like.~
+$n frolics around like an elf, displaying $1. What a sad, sad ogre.~
+You frolic to the $t, mocking all elves.~
+$n frolics to the $t, mocking all elves.~
+You display $3 while frolicing around $N, showing your true elfness.~
+$n displays $3 while frolicing around you, showing $m true elfness.~
+$n displays $3 while frolicing around you, showing $s true elfness.~
+~
+~
+~
+
+jump~
+8
+0
+1
+1
+You jump up into the air landing with a thud.~
+$n jumps up into the air landing with a thud, $s gelatinous belly jiggling.~
+You jump up into the air landing on $N's big toe.~
+$n lunges towards $N landing on $S big toe. Thats got to hurt!~
+In a blurr of ogre flesh, $n lunges towards you and you feel a crushing pain in your big toe.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+laugh~
+6
+0
+0
+0
+You laugh out loud.~
+$n belches out a laugh.~
+You laugh with $N.~
+$n shares a good belly-laugh with $N.~
+$s eyes twinkling, $n laughs at your joke.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+rofl~
+6
+0
+1
+1
+You drop to the floor, rolling in laughter.~
+$n collapses in a gale of frenzied laughter.~
+You drop to the floor laughting at $N.~
+$n drops to the ground, laughing at $N.~
+While pointing at you, $n drops to the floor, $s belly gyrating with hearty guffaws.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+scratch~
+6
+0
+1
+0
+You scratch your belly.~
+$n scratches $s big hairy belly.~
+You reach over and scratch $N's belly.~
+$n reaches over and scratches $N's belly.~
+With a big gnarled hand, $n reaches out and scratches your belly.~
+You feel blissfully content as someone scratches your back.~
+You try in vain to reach around to the very middle of your back for an itch.~
+$1 strains and bends over backwards trying to scratch an itch.~
+You use $1 to get at an itch. Ahhhhhh...~
+$1 gets a look of contentment as $2 scratches an itch with $3.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+shake~
+6
+0
+1
+0
+You shake your head.~
+$n shakes $s head.~
+With a powerful grip you shake $N's hand.~
+$N seems to wince at $n's powerful handshake.~
+With a powerful grip $n shakes your hand.~
+~
+~
+~
+You pick up $1 and give it a good shaking.~
+$n picks up $2 and shakes it @Rfiercely@n.~
+~
+~
+You pick up $p and shake it at $N.~
+$n shakes $p at you.~
+$n shakes $p at $N.~
+~
+~
+~
+
+smile~
+6
+0
+0
+0
+You flash a gapped toothed smile.~
+$n flashes a gapped toothed, ichor filled smile.~
+You flash a gapped toothed smile at $N.~
+$n flashes a gapped toothed smile at $N.~
+$n flashes a gapped tooth, ichor filled smile at you.~
+~
+You flash a smile at yourself.~
+$n flashes a gapped toothed, ichor filled smile at $sself.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+sneeze~
+0
+0
+0
+0
+Aaaaa-@GCHOO@n!~
+$n inhales deeply and lets loose a typhoon of @Gsnot@n and @Wsaliva@n when $e sneezes.~
+You drench $N in gooey @Gsnot@n and @Wsaliva@n when you sneeze!~
+$N gets a spray of $n's @Gsnot@n and @Wsaliva@n, good thing you moved!~
+Ewwww, you just got doused by $n's sneeze! You should learn to get out of the way.~
+~
+Disregarding all manners, you sneeze all over yourself.~
+$n sneezes all over himself, how gross is that?~
+You sneeze all over $1, giving it a nice coating of @Gsnot@n.~
+$n sneezes all over $1, hope he doesn't hand it to you.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+stagger~
+0
+0
+0
+0
+Woah! One too many Orcish brews, eh?~
+$n staggers from having one too many Orcish brews.~
+You almost fall and lean on $N for support. I hope $N doesn't drop you!~
+$n staggers and almost falls over! Lucky for $n that $N was there to catch him.~
+$n staggers and falls on you for support! You struggle to keep his huge frame from falling over.~
+~
+You try to support yourself, a tough duty in your drunken state.~
+$n is so drunk that he tries to prop himself up on... himself!~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+strangle~
+6
+0
+0
+0
+~
+~
+You place your hands around $N's neck and shake them violently!~
+$n places his @RHUGE@n hands over $N's neck and chokes $m!~
+$n wraps his @RHUGE@n hands around your neck and begins to choke you!~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+stupid~
+6
+0
+0
+0
+Feeling particularly ogrish today are we?~
+A stupid look appears in $n's eyes.~
+Woah! What did $N say?!~
+$n is completely blown away by what $N said.~
+Your superior intellect cripples $n once again.~
+~
+HA! You've outsmarted yourself again! Wait a minute....~
+$n has defeated $mself in a battle of wits once again!~
+You look in bewilderment at $1, wondering how it works.~
+$n examines $2 trying to figure out how it works.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+thump~
+6
+0
+1
+0
+You threaten everyone with a thumping.~
+$n looks about ready to thump heads.~
+You @gthump@n $N right on the noggin!~
+$n @gthumps@n $N on the forehead, sending $M reeling.~
+$n @gthumps@n you right on the forehead, look at the pretty stars!~
+~
+You thump yourself on the head for being an idiot.~
+$n sighs and thumps $mself on the head.~
+~
+~
+~
+~
+You thump $N on the head with $p.~
+$n thumps you on the head with $p.~
+$n thumps $N on the head with $p.~
+~
+~
+~
+
+

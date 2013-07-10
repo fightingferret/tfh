@@ -1,0 +1,3703 @@
+#AREA
+Dragonspire Trail~
+Nereus Morrach~
+~
+
+40 0
+4
+#ROOMS
+
+#78250
+Between Walls of Snow~
+You stand on a trail, dug out from a giant snowbank.  Between the large
+
+volume of snow which has been piled on the east and west sides of the
+
+trail and the giant footprints which cover the ground, it is apparent
+
+that a group of large creatures were responsible for clearing the trail.
+
+~
+[Nereus] no.mob
+
+[Nereus] Dig south action here, back to normal yeti trail
+
+[Cyndra] how do you know large creatures dug this?
+
+[Nereus] if you've ever seen piles of shovelled snow at someone's
+
+driveway, it looks different than snow which has piled from being blown
+
+into drifts.
+
+[Nereus] Although they could be small creatures, the big footprints in the snow also would tend to make one think otherwise.
+
+[Eliza] action for leaving south.
+
+[Eliza] reviewed.
+
+~
+301465608 5 9 0
+D0
+~
+~
+0 -1 78251 10 10 5
+D2
+~
+~
+163 -1 34518 10 10 5
+E
+1 east 1 west walls snow~
+The piles of snow to the east and west of the trail have been piled at
+
+least thirty feet above the ground.  Large boulders of ice can be seen
+
+tottering at the top of the pile, as if casually thrown on by some divine
+
+hand.  Perhaps it would be wise to move out of this region before the
+
+walls collapsed.
+
+~
+E
+footprints giant~
+The giant footprints are vaguely humanoid in shape, and perhaps three
+
+feet long, although fresh snowfall has covered them up too much to make
+
+out any details.
+
+~
+A
+dig clear~
+s south drift snow~
+if( !is_open( room, south ) ) {
+
+  act_tochar( #dig, ch );
+
+  act_notchar( #theydig, ch );
+
+  open( room, south );
+
+  }
+
+else
+
+  act_tochar( #nodig, ch );
+
+~
+E
+dig~
+You dig through the drift to the south, revealing a trail.
+
+~
+E
+theydig~
+$n digs through the drift to the south, revealing a trail.
+
+~
+E
+nodig~
+The trail to the south has already been cleared.
+
+~
+!
+0 0 0
+A
+close cover~
+south trail s~
+if( is_open( room, south ) ) {
+
+act_tochar( #close, ch );
+
+act_notchar( #theyclose, ch );
+
+close( room, south );
+
+}
+
+else
+
+act_tochar( #noclose, ch );
+
+~
+E
+close~
+You cover up the trail to the south with a pile of snow.
+
+~
+E
+theyclose~
+$n covers up the trail to the south with a pile of snow.
+
+~
+E
+noclose~
+The trail to the south has already been covered with snow.
+
+~
+!
+0 0 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78251
+Icy Trail~
+You are in the center of a large path cut deep into the snow and ice. 
+
+The snow underfoot is packed solid and marked by innumerable medium to
+
+large-sized depressions.  No vegetation is visible along this barren
+
+passage.  Massive snowdrifts make passage to the east and west impossible.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] could add action for a small avalanche
+
+[Eliza] I like random sounds and 4 yeti would make a lot of sound. Add random for chilling cry? something to set the hair on the back of the players neck on end.;)
+
+[Eliza] reviewed.
+
+[Nereus] Will add random evil howl ;)
+
+[Morrach] Added the random evil howl :b
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78252 10 10 5
+D2
+~
+~
+0 -1 78250 10 10 5
+E
+packed snow depressions 1 down~
+Upon closer inspection, the depressions in the snowy path appear to be
+
+large footprints.  Small tufts of fur can be found imbedded in the bottom
+
+of many of the indentations.
+
+~
+E
+snowdrifts 1 east 1 west~
+These snowdrifts have been piled to incredible heights, nearly thirty
+
+feet in some places.  The snow is loose and provides no hand or footholds
+
+for climbing.
+
+~
+A
+~
+~
+send_to_room( #howl, room );
+
+~
+E
+howl~
+@RYou peer anxiously northward as a blood-chilling howl rises in the distance.@n
+
+~
+!
+2 350 0
+-1
+S
+
+#78252
+Icy Trail~
+The icy trail rises sharply to the north, becoming a nearly vertical
+
+ascent up the mountainside.  The trail has been packed down into ice
+
+here, making the climb extremely slippery.  Deep drifts line the trail on
+
+each side, blocking travel in those directions.  All around you the peaks
+
+of the Dragonspires rise imperiously toward the sky.
+
+~
+falling on ice acode here
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D2
+~
+~
+0 -1 78251 10 10 5
+D4
+~
+~
+0 -1 78253 10 10 5
+E
+drifts deep 1 east 1 west~
+The drifts are piled very high here, and consist of fluffy snow incapable
+
+of supporting any weight.  No obvious hand or footholds can be seen on
+
+the snowdrifts on the east and west edges of the path.
+
+~
+E
+icy trail 1 up 1 south~
+The trail has been packed down by the frequent travel of some sort of
+
+humanoid creature.  Footprints are vaguely visible in the ice, but the
+
+traffic across the trail has worn any details away.
+
+~
+E
+footprints~
+The footprints are quite large, and small tufts of coarse, white hair can
+
+be seen frozen into the ice of many.
+
+~
+E
+peaks dragonspires~
+The mighty Dragonspires tower skyward, their magnificent peaks seeming to
+
+challenge the heavens above.  The next closest peak must be miles away,
+
+yet it still dominates the landscape, leaving you with a sense of
+
+insignificance.
+
+~
+A
+~
+~
+if( random( 1, 12 ) >= find_stat( ch, dex ) ) {
+
+  act_tochar( #fall, ch );
+
+  act_notchar( #theyfall, ch );
+
+  i = 2d4+5;
+
+  inflict( ch, mob, i, "slipping on an icy trail" );
+
+  dam_message( ch, i, "falling on the ice" );
+
+  interpret( ch, "+sit" );
+
+  }
+
+~
+E
+fall~
+You slip, and fall on a patch of ice!
+
+~
+E
+theyfall~
+$n slips and falls on a patch of ice!
+
+~
+!
+1 0 20
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78253
+Sharp Rise in the Trail~
+The trail continues upwards here, a thick coat of ice on the path making
+
+travel very difficult.  Large banks of snow to the east block off travel
+
+in that direction, while the trail leads back down the slope to the south. 
+
+To the west, a sharp drop makes the path even more dangerous, with a
+
+small slip meaning a thousand-foot drop.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78254 10 10 5
+D5
+~
+~
+0 -1 78252 10 10 5
+E
+trail path~
+The icy, dangerous trail continues up the slope to the north, and
+
+retreats back down towards safer ground to the south.  Covered in a thick
+
+coat of ice, the trail is extremely slippery.
+
+~
+E
+banks snow 1 east~
+Deep banks of loose snow have collected on the eastern side of the trail. 
+
+There is far too much snow to attempt to dig through, and the snow is too
+
+loose and unstable to attempt to climb.
+
+~
+E
+drop 1 west~
+The bottom of the drop to the west is lost in the swirling whiteness far
+
+below.  It would be unlikely a fall over icy, grey rocks and snow could
+
+be survived.
+
+~
+-1
+S
+
+#78254
+Along an Icy Ridge~
+The trail narrows slightly here as it crosses over an icy ridge high in
+
+the mountains.  There is no choice but to follow the path at this point,
+
+aside from a several thousand-foot drop into the ice-filled canyons far
+
+below.  Just to the north, the trail turns sharply to the east and
+
+disappears behind a sheer cliff face.  The path to the south seems to
+
+descend sharply.  The wind up here is powerful and bitterly cold as it
+
+causes the snow to eddy and twist about you.
+
+~
+Damaging acode for nasty cold wind here.
+
+changed to physical damage, cause cold isn't working.
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78255 10 10 5
+D2
+~
+~
+0 -1 78253 10 10 5
+E
+trail ridge path 1 north 1 south~
+The path consists of firmly packed snow and slippery ice, which makes
+
+footing hazardous.  To the south you can make out a sharp descent, while
+
+just northward the path turns east and vanishes behind a sheer cliff face.
+
+~
+E
+drop ice-filled canyons~
+The canyon that you are looking into is so deep that you are unable to
+
+see exactly how far down it reaches.  The walls are coated with ice and
+
+nearly vertical.  Only a handful of small bushes can be seen clinging to
+
+the sides of the canyon far below.
+
+~
+E
+sheer cliff face~
+The mountain face to the north forms a cliff that climbs nearly straight
+
+up to immense heights.  Not much of the cliff face can be seen from this
+
+angle.
+
+~
+A
+~
+~
+send_to_room( #snow, room );
+
+loop( all_in_room ) {
+
+i = 2d30+10;
+
+  dam_message_cold( rch, i, "the driving ice" );
+
+  inflict( rch, mob, i, "flying bits of ice" );
+
+  }
+
+~
+E
+snow~
+@cDriving ice eddies around you, driven by the gale force winds!@n
+
+~
+!
+2 350 5
+1602 17 1509949540 -2 0
+-1
+S
+
+#78255
+Curve in the Trail~
+The packed-down trail curves sharply here along the sheer face of the
+
+mountain.  Along the north side of the trail, a tall pile of snow acts as
+
+a wall between the trail and a dizzying drop into the whiteness far below. 
+
+All around you rise the enormous peaks of the Dragonspires, snow-covered
+
+giants visible along the horizon as far as the eye can see.  Further
+
+along the mountain climb to the east, the trail widens as the cliff
+
+begins to overhang it.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] how high above your head are the icicles.. would it be possible to break some of them off for ice crystals?
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D1
+~
+~
+0 -1 78256 10 10 5
+D2
+~
+~
+0 -1 78254 10 10 5
+E
+trail packed-down~
+The deeply packed trail follows closely along the cliff face, curving
+
+sharply from south to east.  Between the icy footprints and how deeply
+
+the trail is packed here, it is fairly obvious that this area recieves a
+
+lot of traffic by some sort of large humanoid creature.
+
+~
+E
+pile north n~
+This pile of snow appears to be a deep drift, likely blown from the cliff
+
+high above.
+
+~
+E
+Dragonspires giants~
+The mighty peaks of the Dragonspires stretch along the horizon to the
+
+north as far as you can see.  Even though the next peak must be miles
+
+away, it towers over you, filling you with a feeling of insignificance.
+
+~
+E
+east e~
+The mountain trail continues its climb to the east, where the cliff face
+
+begins to overhang the trail.  Looking closer through the falling snow,
+
+you can make out large icicles hanging from the cliff east of here.
+
+~
+E
+cliff mountain face~
+The cliff face is southeast of the trail.  This icy, grey rock face would
+
+be impossible to climb without some sort of special equipment.
+
+~
+A
+north~
+~
+act_tochar( #pile, ch );
+
+~
+E
+pile~
+A large pile of snow just north of the trail prevents you from falling
+
+thousands of feet.
+
+~
+!
+0 0 0
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+-1
+S
+
+#78256
+Curve in the Trail~
+The trail weaves itself along the mountainside here, creating a winding,
+
+treacherous path.  A thick layer of ice, along with a sharp dropoff at
+
+the edge of the trail, makes fast movement nearly impossible.  Large
+
+icicles hang from the edge of the cliff just south of the trail, making
+
+climbing too dangerous to consider.  Shattered pieces of ice litter the
+
+trail, broken from the icicles suspended above.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] add sound of ice cracking? sharp pops as the wind blows it and a rise or lowering of temperature causes it to expand and contract?
+
+[Eliza] add ice crystal reset here?
+
+[Eliza] reviewed
+
+[Nereus] may have icicles blow down here..  also might make another
+
+icicle item which is useless but cool to have.
+
+[Nereus] will add break icicle action, possibly
+
+~
+301465600 5 9 0
+D1
+~
+~
+0 -1 78257 10 10 5
+D3
+~
+~
+0 -1 78255 10 10 5
+E
+cliff~
+The cliff overhangs the trail here.  Large, heavy-looking icicles hang
+
+from the overhanging section of the cliff, although a few have been
+
+mysteriously broken off.
+
+~
+E
+icicles~
+Large icicles overhang the trail here, some as large as six feet long. 
+
+As you watch, they sway ominously in the wind high above.
+
+~
+E
+trail path~
+The trail weaves as it follows the sheer cliff face; giant humanoid
+
+footprints are packed deeply into the snow underfoot.  Shattered ice lies
+
+in scattered heaps, presumably from broken icicles falling from high
+
+above.
+
+~
+E
+shattered pieces ice~
+The shattered pieces of ice are scattered about the ground along the
+
+trail.  Presumably, they are from broken icicles which have fallen from
+
+above.
+
+~
+A
+climb scale ascend~
+cliff south s up u~
+act_tochar( #cant, ch );
+
+~
+E
+cant~
+After one look at the giant icicles hanging immediately above where you
+
+plan to attempt your climb, you decide it would not be such a good idea.
+
+~
+!
+0 0 0
+612 9 1509949540 3 0
+-1
+S
+
+#78257
+Curve in the Trail~
+The trail contines here, twisting and turning along the side of the
+
+mountain, at times coming dangerously close to steep drops.  Thousands of
+
+footprints form this section of the trail; this area seems to be heavily
+
+trafficked by the large bi-pedal humanoids.  Mountainous piles of snow
+
+prevent any travel off the trail.  Looming like a giant bird of prey to
+
+the east and south, a steep cliff face rises hundreds of feet above the
+
+serpentine path.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78258 10 10 5
+D3
+~
+~
+0 -1 78256 10 10 5
+E
+piles snow~
+Giant piles of snow surround the trail, probably fallen from the cliff
+
+further to the east.
+
+~
+E
+trail~
+The trail is formed here by thousands of large, humanoid footprints. 
+
+Deep snow has been packed down into ice, making the trail slippery and
+
+travel through the area dangerous.
+
+~
+E
+footprints~
+The footprints were formed by some type of large humanoid creature,
+
+although there are too many footprints covering one another to make out a
+
+footprint clearly.
+
+~
+E
+cliff~
+A sheer, icy cliff face is just a bit off the trail to the east.  Due to
+
+the huge piles of snow just off to the east, it would be impossible to
+
+reach.
+
+~
+A
+climb ascend scale~
+cliff east e up u~
+act_tochar( #cant, ch );
+
+~
+E
+cant~
+You can't reach the sheer cliff due to the mountainous snowdrifts.
+
+~
+!
+0 0 0
+A
+search dig clear move~
+snow drifts piles east e ice~
+act_tochar( #dig, ch );
+
+act_notchar( #digs, ch );
+
+~
+E
+dig~
+You dig through a nearby pile of snow, but find only more snow.
+
+~
+E
+digs~
+$n digs through a nearby pile of snow, but finds nothing of value.
+
+~
+!
+0 0 0
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78258
+Mountainside Trail~
+Deep snowdrifts cover this area, interrupted only by the huge, embedded
+
+footprints of some gigantic humanoid creature.  The trail continues to
+
+the north along the face of the cliff, while to the west a sheer dropoff
+
+prevents any thought of movement in that direction.  A large pile of ice
+
+and snow has fallen from the precipice above and covers the cliff face east
+
+of the trail, making any climbing impossible.
+
+~
+hidden cavern here
+
+clear ice, then you can squeeze inside
+
+crack leads to 78279
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 8 0
+D0
+~
+~
+0 -1 78259 10 10 5
+D2
+~
+~
+0 -1 78257 10 10 5
+E
+huge deep footprints~
+These deep footprints are humanoid in shape, although by the depth of
+
+packed snow whatever creature made them must weigh well over a ton.
+
+~
+E
+pile ice snow~
+A large pile of ice and snow has accumulated on the eastern side of the
+
+trail, covering the bottom few feet of the cliff face.
+
+~
+E
+west w dropoff~
+A sheer dropoff lies just' west of the trail; a misstep would be
+
+treacherous.
+
+~
+A
+climb scale~
+cliff east e~
+act_tochar( #cant, ch );
+
+~
+E
+cant~
+There is too much loose snow and ice at the base of the cliff face for
+
+you to climb it.
+
+~
+!
+0 0 0
+A
+dig clear~
+ice snow~
+if( rflag( reset0, room ) ) {
+
+  act_tochar( #dig, ch );
+
+  act_notchar( #othdig, ch );
+
+  remove_rflag( reset0, room );
+
+  }
+
+else
+
+  act_tochar( #already, ch );
+
+~
+E
+dig~
+You clear away the pile of ice and snow near the cliff, revealing a crack
+
+into the cliff face.
+
+~
+E
+othdig~
+$n clears away the pile of ice and snow near the cliff, revealing a crack
+
+into the cliff face.
+
+~
+E
+already~
+The pile of ice has already been cleared away.
+
+~
+!
+0 0 0
+A
+enter squeeze~
+crack cliff east e~
+if( rflag( reset0, room ) )
+
+  act_tochar( #nocrack, ch );
+
+else {
+
+  if( size( ch ) < 5 ) {
+
+    act_tochar( #squeeze, ch );
+
+    act_notchar( #othsqueeze, ch );
+
+    transfer( ch, find_room( 78279 ) );
+
+    }
+
+  else
+
+    act_tochar( #toobig, ch );
+
+  }
+
+~
+E
+nocrack~
+You don't see that to enter.
+
+~
+E
+squeeze~
+You squeeze your way through the icy crack in the cliff face.
+
+~
+E
+othsqueeze~
+$n squeezes through a crack in the cliff face and disappears from sight.
+
+~
+E
+toobig~
+You are too big to squeeze through the crack.
+
+~
+!
+0 0 0
+-1
+S
+
+#78259
+Mountainside Trail~
+The trail here is clearly defined by the packed snow, apparently used
+
+often by some sort of large humanoid.  Off the trail to the rises a
+
+huge cliff, but deep drifts of snow make it unreachable.  To the west,
+
+the path ceases to exist where a several hundred-foot drop begins. 
+
+Beyond the dropoff to the west is a magnificent view of the Dragonspires;
+
+the huge peaks tower on the horizon as far as the eye can see.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 8 0
+D0
+~
+~
+0 -1 78260 10 10 5
+D2
+~
+~
+0 -1 78258 10 10 5
+E
+trail packed~
+The trail has been formed by snow which has been packed deeply by the
+
+travel of one or more large, humanoid creatures.  Footprints lead in both
+
+north and south directions along the path.
+
+~
+E
+drifts snow~
+These drifts have been formed as snow is blown up against the
+
+cliff face to the east.  The snow has apparently been accumulating for
+
+some time, as the drifts have become rather large.
+
+~
+E
+Dragonspires peaks~
+The snow-covered peaks of the Dragonspires can be seen along the horizon
+
+in the distance.  Stretching along the entire horizon from south to
+
+north, they are truly a breathtaking sight.
+
+~
+E
+footprints~
+The footprints are large, obviously humanoid, and very numerous. 
+
+Unfortunately, they are too blurred and trampled over to make out clearly.
+
+~
+E
+cliff~
+The cliff face to the east of the trail, while not as steep as to the
+
+north and south, is still virtually a sheer vertical climb.  The grey,
+
+ice-covered stone rises out of sight amidst blowing snow high above the
+
+trail.
+
+~
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+-1
+S
+
+#78260
+Mountainside Trail~
+Huge footprints cover the snowy ground, creating a visible path where
+
+some sort of immense humanoid creature or creatures must travel.  Large
+
+boulders of ice litter the area, perhaps fallen from the mountainside
+
+high above.  Travel is only possible along the trail, as the mountain ends to
+
+the west, and is too steep to climb to the east.
+
+~
+no.mob - dont want mammoth to gang up and kill people
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465608 5 6 0
+D0
+~
+~
+0 -1 78261 10 10 5
+D2
+~
+~
+0 -1 78259 10 10 5
+E
+footprints~
+The footprints were created by some immense, humanoid creature.  By the
+
+large numbers of them which can be seen around the area, something large
+
+frequents this section of the trail.
+
+~
+E
+boulders ice~
+Huge chunks of ice are strewn about the area, seemingly fallen from the
+
+cliff above.
+
+~
+E
+cliff east e~
+The cliff face to the east is a sheer face of icy rock, rising up out of
+
+sight far above you.  It would probably be impossible to climb without
+
+some sort of special equipment.
+
+~
+E
+trail path~
+The trail heads in a general north-south direction here, following the
+
+sheer cliff face just east of it.  Deeply packed footprints cover the
+
+trail, made by some large, humanoid creature.
+
+~
+A
+climb scale ascend~
+cliff east e up u~
+act_tochar( #cant, ch );
+
+~
+E
+cant~
+The cliff to the east is too steep to climb without some sort of special
+
+equipment.
+
+~
+!
+0 0 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78261
+Mountainside Trail - Blood-Soaked Snow~
+The snow here is soaked with blood and packed down with huge footprints. 
+
+Bleached-white bones are difficult to make out against the trampled snow,
+
+but occasionally they can be seen casually tossed along the path.  Strewn
+
+about the area are huge boulders, perhaps fallen from the mountain above. 
+
+The trail narrows dangerously along the mountainside to the north, and
+
+back to safer ground to the south.
+
+~
+[Nereus] Blocking acode in place
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 6 0
+D0
+~
+~
+0 -1 78262 10 10 5
+D2
+~
+~
+0 -1 78260 10 10 5
+E
+snow ground~
+The snow in this area has been trampled down as if by some heavy creature. 
+
+Blood has soaked into the snow, forming frozen red-brown patches against
+
+the pristine white.  Bleached-white bones protrude from the snow here and
+
+there, casually tossed aside.
+
+~
+E
+boulder~
+Large boulders of solid ice have been thrown around the area.  It appears
+
+that they have fallen from the mountain above.
+
+~
+E
+bones bleached-white~
+Bones of several humanoid-looking creatures are littered about the snowy
+
+ground.  They are too gnawed and scattered, however, to make any specific
+
+determination as to what race of creature they belong to.
+
+~
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+
+  continue;
+
+if( mob_in_room( 2266, room ) ) {
+
+  act_tochar( #stay, ch );
+
+  act_notchar( #othstay, ch );
+
+  }
+
+else
+
+  continue;
+
+~
+E
+stay~
+@RThe giant yeti reaches out a spindly arm and hauls you back towards
+
+him!@n 
+
+~
+E
+othstay~
+@RThe giant yeti reaches out a spindly arm and hauls $n back towards
+
+him!@n 
+
+~
+!
+3 0 5
+2266 137 1509949540 3 0
+-1
+S
+
+#78262
+Mountainside Trail - Sheer Face of a Cliff~
+The trail narrows to just a few feet here, requiring caution to navigate. 
+
+A frost-covered, sheer cliff face rises east of the trail to a height of
+
+at least fifty feet.  A dark gorge looms menacingly just west of the
+
+trail, making this section of the trail a precarious climb indeed.
+
+~
+fall off the cliff here if you fail a dex check.. fall into icy gorge.
+
+no.mob
+
+[Nereus] Done - ready for self review
+
+~
+301465608 5 6 0
+D0
+~
+~
+0 -1 78263 10 10 5
+D2
+~
+~
+0 -1 78261 10 10 5
+E
+sheer cliff east e~
+The cliff rises at least fifty feet into the air, before becoming lost to
+
+your sight in the blowing snow far overhead.  It is frost-covered and
+
+very smooth; you believe it would be impossible for anyone to climb.
+
+~
+E
+gorge~
+The gorge runs parallel to the trail and immediately west of it.  The
+
+bottom of the gorge is lost in a swirling, white blur of snow.
+
+~
+E
+trail north n south s~
+The trail is a mere five feet wide here and is slippery with ice.  It
+
+widens to the north and south.
+
+~
+A
+~
+~
+if( !is_player( ch ) )
+
+  continue;
+
+else {
+
+  if( random( 2, 14 ) > find_stat( ch, dex ) ) {
+
+    act_tochar( #fall, ch );
+
+    act_notchar( #youfall, ch );
+
+    wait( 1 );
+
+    transfer( ch, find_room( 78280 ) );
+
+    i = 3d16+80;
+
+    dam_message( ch, i, "falling off a mountain" );
+
+    inflict( ch, mob, i, "falling off a mountain" );
+
+    interpret( ch, "+sit" );
+
+    }
+
+  else
+
+    continue;
+
+  }
+
+~
+E
+fall~
+You slip off the narrow trail and fall off the mountainside!
+
+~
+E
+youfall~
+$n slips on the ice and falls off the mountainside!
+
+~
+!
+1 0 5
+A
+climb scale ascend~
+cliff east e up~
+act_tochar( #insane, ch );
+
+~
+E
+insane~
+You would have to be insane to even attempt to climb this sheer cliff
+
+face.
+
+~
+!
+0 0 0
+A
+climb scale descend~
+gorge west w down~
+act_tochar( #noway, ch );
+
+~
+E
+noway~
+You have neither the necessary skills nor equipment to attempt such a
+
+climb.
+
+~
+!
+0 0 0
+-1
+S
+
+#78263
+Dangerous Trail~
+Although a mere eight feet wide, the trail is still much wider and less
+
+slippery than immediately to the south.  A deep gorge runs parallel to
+
+the path here, the bottom hidden from sight amidst the swirling snow.  A
+
+sheer cliff face rises high into the sky just to the east, although the
+
+top of the cliff is obscured from view.  Large chunks of ice and snow
+
+periodically are blown from the cliff above, and litter the ground
+
+underfoot, as if to hurry you along to some unknown destination.
+
+~
+climb back up here
+
+no.mob
+
+* can climb down with climbing gear
+
+* can throw gear down to someone else
+
+[Nereus] Done - ready for self review
+
+[Eliza] action 1 - when I type climb cliff with climbing gear in
+
+inventory, it returns 'The frost-covered cliff is impossible to ascend
+
+without special tools.' Either the action is wrong or the message needs
+
+to be altered.  Check other cli up places in the area to see if they
+
+return the same message in the same situation.
+
+[Eliza] reviewed
+
+~
+301465672 5 9 0
+D0
+~
+~
+0 -1 78264 10 10 5
+D2
+~
+~
+0 -1 78262 10 10 5
+E
+trail~
+The trail here is about eight feet wide, bounded on the east by a sheer
+
+cliff face and on the west by a deep gorge.  There are no obvious
+
+footprints on this section of the trail, but whether from lack of traffic
+
+or from fresh snowfall you cannot tell.
+
+~
+E
+chunks ice snow~
+Chunks of ice and boulders of snow have fallen from the cliff high above,
+
+littering the trail.  Perhaps it would be best if you were not here when
+
+the next bit of ice fell.
+
+~
+E
+gorge west w~
+The gorge to your west is seemingly bottomless.  Slick ice here would
+
+make a climb downward impossible without some sort of special gear.
+
+~
+E
+east e cliff~
+The sheer cliff face rises out of sight just east of the trail.  Slick
+
+with ice and snow, it would be impossible to climb without some sort of
+
+special gear.
+
+~
+A
+climb scale~
+up cliff east~
+act_tochar( #cant, ch );
+
+~
+E
+cant~
+The sheer, frost-covered cliff is too steep and icy to climb.
+
+~
+!
+0 0 0
+A
+climb scale~
+down gorge~
+if( has_obj( 3414, ch ) ) {
+
+  if( find_skill( ch, climb ) > 7 ) {
+
+    act_tochar( #climb, ch );
+
+    act_notchar( #othclimb, ch );
+
+    transfer( ch, find_room( 78283 ) );
+
+    act_notchar( #arrives, ch );
+
+    }
+
+  else
+
+    act_tochar( #noskill, ch );
+
+  }
+
+else
+
+  act_tochar( #nogear, ch );
+
+~
+E
+nogear~
+You lack the equipment necessary to make such a climb.
+
+~
+E
+climb~
+You climb down the side of the chasm.
+
+~
+E
+othclimb~
+$n clambers down the face of the cliff and disappears from sight.
+
+~
+E
+arrives~
+$n climbs down the icy chasm wall from above.
+
+~
+E
+noskill~
+You lack the skill to even attempt such a dangerous climb.
+
+~
+!
+0 0 0
+A
+throw toss~
+gear ice-climbing~
+if( has_obj( 3414, ch ) ) {
+
+  act_tochar( #toss, ch );
+
+  act_notchar( #othtoss, ch );
+
+  send_to_room( #flies, find_room( 78283 ) );
+
+  junk_obj( has_obj( 3414, ch ) );
+
+  obj_to_room( oload( 3414 ), find_room( 78283 ) );
+
+  }
+
+else
+
+  act_tochar( #nope, ch );
+
+~
+E
+toss~
+You toss the climbing gear off the cliff into the gorge.
+
+~
+E
+othtoss~
+$n tosses something off the cliff into the gorge to the west.
+
+~
+E
+flies~
+A set of ice-climbing gear falls from high above and lands at your feet
+
+with a WHUMP!
+
+~
+E
+nope~
+You don't have anything that you feel like tossing into the chasm.
+
+~
+!
+0 0 0
+-1
+S
+
+#78264
+Dangerous Trail~
+Shards of sleet and large chunks of ice are blown off the cliff from
+
+above here, making it virtually impossible to see in any direction.  You
+
+can make out through the deluge of ice and snow that the trail continues
+
+north and south; it would likely be wise to move on quickly.
+
+~
+avalanche here
+
+no scanning here
+
+[Nereus] Done - ready for self review
+
+[Tyrone] can scan with an argument to work around the acode
+
+[Nereus] scan <argument> overcoded
+
+~
+301465672 5 9 0
+D0
+~
+~
+0 -1 78265 10 10 5
+D2
+~
+~
+0 -1 78263 10 10 5
+A
+~
+~
+send_to_room( #aval, room );
+
+loop( all_in_room ) {
+
+  i = 3d8+45;
+
+  dam_message( rch, i, "The falling ice");
+
+  inflict( rch, mob, i, "an avalanche of ice" );
+
+  }
+
+~
+E
+aval~
+@BShards of ice fall from the cliff high above!@n
+
+~
+!
+1 0 5
+A
+scan~
+~
+act_tochar( #noscan, ch );
+
+~
+E
+noscan~
+@BIt is impossible to see more than five feet in any direction through
+
+the blasting ice and snow.@n 
+
+~
+!
+0 0 0
+A
+~
+~
+acode( room, 1 );
+
+~
+!
+2 300 0
+A
+scan~
+1 north 1 east 1 south 1 west~
+act_tochar( #Ithinknot, ch );
+
+~
+E
+Ithinknot~
+@BIt is impossible to see more than five feet in any direction through
+
+the blasting ice and snow.@n 
+
+~
+!
+0 0 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78265
+Dangerous Trail~
+A few piles of ice and snow cover the narrow trail here, fallen from the
+
+top of the rising to the east.  To the west, a gorge parallels the narrow
+
+track, but at its northern end it turns sharply to the west.  The trail
+
+widens to the north as the gorge moves away to the west, while to the
+
+south you can see hail and snow being blown down from the cliffs above.
+
+~
+Yeti will arrive from north upon entrance of people.
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465664 5 9 0
+D0
+~
+~
+0 -1 78266 10 10 5
+D2
+~
+~
+0 -1 78264 10 10 5
+E
+piles ice snow~
+A few piles of ice and snow litter the trail in this area.  They seem to
+
+have fallen from the mountain immediately to the east.
+
+~
+E
+gorge~
+An icy gorge parallels the path here, except where it begins to turn
+
+westward at the northern end of this section of the trail.
+
+~
+E
+trail~
+The trail follows the cliff face closely, heading northward on its climb
+
+up the mountain.
+
+~
+E
+cliffs east e~
+The cliffs tower over the trail to the east, the top out of sight high
+
+above.  It would be impossible to climb this sheer cliff face from here.
+
+~
+A
+~
+~
+act_tochar( #move, ch );
+
+mob = mob_in_room( 612, find_room( 78266 ) );
+
+interpret( mob, "stand" );
+
+interpret( mob, "south" );
+
+~
+E
+move~
+@BYour movement through the area causes a low rumbling high on the
+
+mountain above you!@n 
+
+~
+!
+1 0 4
+-1
+S
+
+#78266
+Before a Steep Mountain Trail~
+Nearly twenty feet across, this section of the trail seems to be a highly
+
+traveled area for whatever creatures reside here.  Large, humanoid
+
+footprints cover the icy ground underfoot, leading both up the slope to
+
+the north and along the more narrow section to the south.  A steep slope
+
+upwards is just east of here, although deep drifts of snow prevent you
+
+from reaching the cliff.  Quite a bit off the off the path, a gorge
+
+curves away westward out of sight; drifts also make it inaccessible from
+
+the trail.
+
+~
+This yeti will move south to investigate when people come into the room
+
+no.mob to prevent yetis from collecting ehre
+
+[Nereus] Climb cliff action to room 78285
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+[Eliza] add action leaving up
+
+~
+301465608 5 9 0
+D2
+~
+~
+0 -1 78265 10 10 5
+D4
+~
+~
+0 -1 78267 10 10 5
+E
+footprints~
+These footprints are large, well over two feet long, although aside from
+
+their general size and humanoid shape they are too tracked over to make
+
+out clearly.
+
+~
+E
+icy trail~
+The icy trail narrows again as it begins a steep climb just north of
+
+here, and also narrows as it descends the cliff to the south.
+
+~
+E
+1 west gorge~
+The gorge is difficult to make out from this part of the trail.  South of
+
+here, the gorge is closer to the trail, and runs almost parallel with it,
+
+while as you travel northward the gorge falls away to the west.
+
+~
+E
+slope steep 1 east~
+The slope to the east is not nearly as steep as the cliff just south of
+
+here.  Perhaps if you could reach it you might be able to climb it.
+
+~
+E
+1 north~
+The icy trail begins climbing a steep mountain slope to the north;
+
+although the mountaintop is obscured by snow high above, you would guess
+
+it is quite a climb to the top.
+
+~
+A
+climb scale ascend~
+slope 1 east~
+if( !rflag( reset0, room ) ) {
+
+  if( find_skill( ch, climb ) >= 7 ) {
+
+    act_tochar( #climb, ch );
+
+    act_notchar( #climbs, ch );
+
+    transfer( ch, find_room( 78285 ) );
+
+    act_notchar( #arrives, ch );
+
+    }
+
+  else {
+
+    act_tochar( #slip, ch );
+
+    act_notchar( #slips, ch );
+
+    }
+
+  }
+
+else
+
+  act_tochar( #snow, ch );
+
+~
+E
+climb~
+You climb up the steep, snowy slope.
+
+~
+E
+climbs~
+$n climbs up the steep, snowy slope and disappears from sight.
+
+~
+E
+slip~
+You try to climb up the snowy slope, but slip and fall back into a
+
+snowdrift at the base of the slope.
+
+~
+E
+slips~
+$n tries to climb up the snowy slope, but slips and falls back into a
+
+snowdrift at the base of the slope.
+
+~
+E
+snow~
+There are large drifts of snow which prevent you from reaching the slope.
+
+~
+E
+arrives~
+$n climbs up from the snowy slope below you.
+
+~
+!
+0 0 0
+A
+dig clear move~
+drifts 1 east~
+if( rflag( reset0, room ) ) {
+
+  act_tochar( #clear, ch );
+
+  act_notchar( #clears, ch );
+
+  remove_rflag( reset0, room );
+
+  }
+
+else
+
+  act_tochar( #already, ch );
+
+~
+E
+clear~
+You dig at the deep drift to the east, managing to clear enough snow to
+
+reach the base of the slope to the east.
+
+~
+E
+clears~
+$n digs at the deep drift to the east, clearing enough of the snow to
+
+reach the base of the slope to the east.
+
+~
+E
+already~
+A narrow trail has already been cleared to the base of the slope.
+
+~
+!
+0 0 0
+612 137 1509949540 3 0
+-1
+S
+
+#78267
+A Steep Mountain Trail~
+The trail turns abruptly to the east, remaining at the same elevation
+
+along the mountainside.  An immense drift of snow blocks travel to the
+
+north, perhaps the reason for the abrupt change in direction.  To the
+
+west, the mountain slope drops away quickly, providing a breathtaking
+
+view of a snowy canyon far below.  Despite a constant dusting of snow
+
+blown from high above, the trail is fairly clear of any accumulation.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] add action for falling,swirling snow?
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D1
+~
+~
+0 -1 78268 10 10 5
+D5
+~
+~
+0 -1 78266 10 10 5
+E
+trail~
+The trail curves from a north-south direction and turns to the east,
+
+running along the mountainside.  This part of the trail must be traveled
+
+often, because the grey rock of the trail has little accumulation.
+
+~
+E
+drift 1 north~
+Just north of the bend in the trail is a huge drift of snow.  It seems to
+
+have been formed from snow blowing down from further up the slope.  Since
+
+it is rather loosely packed, it would be nearly impossible to climb over.
+
+~
+E
+snowy canyon~
+The snowy canyon is visible hundreds of feet below, just west of the
+
+trail.  Although the slope is not too steep, slick patches of ice and
+
+drifts of snow would make it impossible to climb down into the canyon.
+
+~
+612 9 1509949540 3 0
+-1
+S
+
+#78268
+A Steep Mountain Trail~
+The trail weaves from west to a northerly direction as it heads up the
+
+slope.  The snow is fairly shallow along this section of the mountainous
+
+incline, although further up the slope and westward along the mountain,
+
+deep drifts can be discerned.  The rising peaks become drastically
+
+steeper to the south and east, forcing you to remain on the hard-packed
+
+track.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+[Eliza] add action for successfully climbing up the slope? not sure where it goes.. prolly in the action in the up room from here.
+
+~
+301465600 5 9 0
+D3
+~
+~
+0 -1 78267 10 10 5
+D4
+~
+~
+0 -1 78269 10 10 5
+E
+trail track slope~
+The trail here is defined by a five foot across area of packed snow. 
+
+Large, humanoid footprints cover the trail, although they are too heavily
+
+trampled over to make out clearly.
+
+~
+E
+1 south 1 east~
+The mountainside becomes very steep just south and east of the trail.  It
+
+appears to be impossible to climb down the mountain in this direction.
+
+~
+E
+footprints~
+The footprints are large and vaguely humanoid.  More detail than that is
+
+not possible to make out.
+
+~
+-1
+S
+
+#78269
+A Steep Mountain Trail - Between Giant Drifts~
+Two giant drifts block movement off the path to the east or west here. 
+
+The mountain climb becomes much less steep off to the north, while the
+
+slope drops away quickly to the south.  A thin covering of slick, glare
+
+ice covers the dull, grey rock of the mountain's incline, making passage
+
+through this section of the trail a treacherous trek indeed.
+
+~
+slipping acode, fall down the trail to 78268
+
+[Nereus] Done - ready for self review
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78270 10 10 5
+D5
+~
+~
+0 -1 78268 10 10 5
+E
+1 east 1 west giant drifts~
+Huge drifts have accumulated on the east and west sides of the trail.  It
+
+is unclear why the snow has not accumulated on the path itself; perhaps
+
+it is too well-travelled to allow any accumulation, or perhaps the wind
+
+simply doesn't blow the snow to this part of the mountainous slope.  Both
+
+drifts reach almost twenty feet in height in some places, and would be
+
+impossible to climb.
+
+~
+E
+slick glare ice trail~
+Thin, slippery ice covers the dull, grey rock.  A few footprints are
+
+vaguely visible along the trail, although the ice has been worn away,
+
+making them too difficult to see in detail.
+
+~
+A
+~
+~
+if( !is_player( ch ) )
+
+  end;
+
+if( find_stat( ch, dex ) < random( 2, 13 ) ) {
+
+  act_tochar( #slip, ch );
+
+  act_notchar( #slips, ch );
+
+  transfer( ch, find_room( 78268 ) );
+
+  act_notchar( #arrives, ch );
+
+  i = 2d7+25;
+
+  dam_message( ch, i, "Falling down a cliff" );
+
+  inflict( ch, mob, i, "falling down a mountainside" );
+
+  interpret( ch, "+sit" );
+
+  }
+
+~
+E
+slip~
+You slip on the icy trail and go tumbling down the mountainside!
+
+~
+E
+slips~
+$n slips on the icy trail and goes tumbling down the mountainside!
+
+~
+E
+arrives~
+$n comes crashing down the mountain slope from above and lands on the
+
+trail at your feet with a WHUMP!
+
+~
+!
+1 0 33
+A
+1 east 1 west~
+~
+act_tochar( #drifts, ch );
+
+~
+E
+drifts~
+A huge, loosely-packed drift prevents any movement in that direction.
+
+~
+!
+0 0 0
+-1
+S
+
+#78270
+Mountain Trail - Break in the Rise~
+This region of the ascent resembles an almost flat ledge on the mountain;
+
+in to the north the slope becomes drastically more steep, while in all
+
+other directions a level, windswept plain spreads outward.  This section
+
+of the trail is very narrow and icy, and the footprints which define it
+
+are difficult to make out.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78271 10 10 5
+D2
+~
+~
+0 -1 78269 10 10 5
+E
+trail icy narrow~
+The trail is only a few feet wide here, while to the north and south you
+
+see it widens.  Footprints are visible, as they make up the trail, but
+
+difficult to see as the trail has become mostly ice.
+
+~
+E
+footprints~
+The footprints are blurred and difficult to make out, since the ice they
+
+have been in has melted and re-frozen.
+
+~
+A
+east e west w~
+~
+act_tochar( #drifts, ch );
+
+~
+E
+drifts~
+The snowdrifts are far too deep to journey in that direction.
+
+~
+!
+0 0 0
+A
+dig search~
+drifts east e west w snow~
+act_tochar( #dig, ch );
+
+act_notchar( #digs, ch );
+
+~
+E
+dig~
+You dig through a deep snowdrift at the side of the trail, but find
+
+nothing.
+
+~
+E
+digs~
+$n digs though a deep snowdrift at the side of the trail, but finds
+
+nothing.
+
+~
+!
+0 0 0
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+-1
+S
+
+#78271
+Mountain Trail - Break in the Rise~
+The gentle rise of the mountainside ends here, and another steep incline
+
+lies to the north where the rock has been blown clear of snow.  Huge
+
+white drifts tower over the trail, swept from the mountain slope high
+
+above.  Despite frequent snowfall in this area, a path packed down by
+
+giant footprints leads through the snow in a north-south direction.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] add random for blowing snow, sweeping down the mountainside?
+
+[Eliza] add action for leaving up
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D2
+~
+~
+0 -1 78270 10 10 5
+D4
+~
+~
+0 -1 78272 10 10 5
+E
+tower drifts snow~
+The drifts of snow tower thirty feet above the trail on both sides, as
+
+the snow blown from the mountain slope above collects in huge piles.
+
+~
+E
+trail footprints~
+Giant humanoid footprints have been packed deep into the snow, forming an
+
+icy trail.  The trail heads down the mountain to the south and ascends
+
+sharply to the north.
+
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#78272
+A Steep Mountain Trail - Rocky Rise~
+Irregularly-shaped stone pillars dominate this section of the steep
+
+mountain climb.  A fierce wind whips through the rocky columns, blowing
+
+any snow that manages to fall here further down the trail to the south. 
+
+The rise slopes sharply down to the east and west, making travel across
+
+the icy rock in those directions impossible.  Looking southward, you can
+
+see far, far into the distance, where the jagged peaks of the
+
+Dragonspires rise starkly against the horizon.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] action for blowing snow and/or the whistling of the wind as it sweeps through and around the rock pillars
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78273 10 10 5
+D5
+~
+~
+0 -1 78271 10 10 5
+E
+rocky pillars~
+Some as high as twenty feet high, these grey, rock pillars rise above the
+
+surface of the mountain face.  It appears that they have been formed over
+
+uncounted years as windblown ice and snow carved them from the
+
+unforgiving stone.
+
+~
+E
+southward s dragonspires horizon peaks~
+The grand peaks of the Dragonspires spread out for miles to the south. 
+
+Immediately below you, the rest of the mountain is lost from view amidst
+
+the blowing snow.
+
+~
+A
+~
+~
+act_tochar( #pillar, ch );
+
+continue;
+
+~
+E
+pillar~
+You wind your way through the rocky pillars and continue on your way.
+
+~
+!
+3 0 33
+612 9 1509949540 3 0
+-1
+S
+
+#78273
+A Steep Mountain Trail~
+Only a fine dusting of snow covers the icy rock along this section of the
+
+steep incline.  Gusting winds whip along the slopes, blasting the snow
+
+further down the mountain.  The trail here is difficult to follow,
+
+undefined as it is by the lack of snow and ice.  A sharp climb is just
+
+north of here, while the trail is along a more gentle slope as it winds
+
+through rocky pillars to the south.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] add leaving north. The thin sheen of ice could call for a dex check perhap?
+
+[Eliza] or.. you the wind could do cold area damage.
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D2
+~
+~
+0 -1 78272 10 10 5
+D4
+~
+~
+0 -1 78274 10 10 5
+E
+fine dusting snow~
+The snow is less than an inch deep in most places, and is made up of very
+
+fine, powdery flakes of snow.
+
+~
+E
+icy rock~
+The icy, grey rock of the mountain is visible in patches here where the
+
+snow has been blown away.
+
+~
+E
+trail~
+The trail is faint here, and can be made out only by a thin sheen of ice
+
+which covers the rock as it heads further up the mountainside.
+
+~
+E
+rocky pillars 1 south~
+Large pillars of icy, grey rock rise up from the slope along the trail
+
+just south of here.
+
+~
+-1
+S
+
+#78274
+A Steep Mountain Trail~
+The snow is shallow here, apparently having been blown off this part of
+
+the slope.  A thin sheen of ice covers the trail, making footing
+
+extremely treacherous.  Outlined in the ice underfoot are large, vaguely
+
+humanoid footprints.  The climb to the north is not too difficult, while
+
+to the south the descent drops away steeply.  Far in the distance up the
+
+slope, a white sheet of blowing, swirling snow can be made out.
+
+~
+slip + fall code here
+
+fall down to 78273
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 8 0
+D0
+~
+~
+0 -1 78275 10 10 5
+D5
+~
+~
+0 -1 78273 10 10 5
+E
+sheet blowing snow~
+Far up the slope, you can make out a wall of white as snow is blasted off
+
+the top of the cliff high, high above.
+
+~
+E
+ice trail~
+The trail is covered by a layer of ice and is very slippery.  Footprints
+
+can be faintly seen in the ice of the trail.
+
+~
+E
+footprints~
+The footprints are very faint, but are vaguely humanoid in shape,
+
+although a humanoid creature would have to be very large to leave
+
+footprints this size.
+
+~
+A
+~
+~
+if( !is_player( ch ) )
+
+  end;
+
+if( find_stat( ch, dex ) < random( 2, 13 ) ) {
+
+  act_tochar( #slip, ch );
+
+  act_notchar( #slips, ch );
+
+  transfer( ch, find_room( 78273 ) );
+
+  act_notchar( #arrives, ch );
+
+  i = 2d7+25;
+
+  dam_message( ch, i, "Falling down a cliff" );
+
+  inflict( ch, mob, i, "falling down a mountainside" );
+
+  interpret( ch, "+sit" );
+
+  }
+
+~
+E
+slip~
+You slip on the icy trail and fall back down the mountain!
+
+~
+E
+slips~
+$n slips on the icy trail and falls back down the mountain!
+
+~
+E
+arrives~
+$n comes flying down the mountainside and lands on the icy trail next to
+
+you with a crash!
+
+~
+!
+1 0 33
+612 9 1509949540 3 0
+612 9 1509949540 3 0
+-1
+S
+
+#78275
+Mountain Trail - Near the Top of the Climb~
+A thin layer of very fine snow covers the ground here.  Further up the
+
+mountainside to the north, a wall of blowing snow is visible, blowing
+
+down to the trail at your feet from above to form ever-changing drifts.
+
+The snow on both sides of the path is periodically pushed further along
+
+each time a particularly strong gust sweeps through the area.  An
+
+ice-covered trail continues up the mountainside; whatever creatures use
+
+it must be oblivious to the blasting snow immediately up ahead.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+~
+301465600 5 9 0
+D2
+~
+~
+0 -1 78274 10 10 5
+D4
+~
+~
+0 -1 78276 10 10 5
+E
+ice-covered trail~
+The ground underfoot is covered with a dusting of very fine snow, blown
+
+from further up the slope.  Despite a constant influx of the powdery,
+
+white substance from above, the trail is relatively free of snow;
+
+apparently it is traveled frequently and has been used recently by the
+
+creatures that live here.
+
+~
+E
+wall blowing 1 up 1 north~
+A swirling, shifting wall of white is visible just up the slope from here. 
+
+Nothing can be made out beyond this sheet of snow; you can only assume
+
+the trail continues through it.
+
+~
+612 9 1509949540 3 0
+-1
+S
+
+#78276
+Mountain Trail - Blowing Snow~
+A wall of white envelops both sight and sound here, as snow from
+
+somewhere above is blown down by a fierce, icy wind.  You can see no more
+
+than a few scant inches in front of your face here, and can only guess
+
+that the trail continues on its north-south course.
+
+~
+no.scan
+
+[Nereus] Done - ready for self review
+
+[Eliza] add extra for wall of white snow
+
+[Eliza] add action for blowing snow. If the wind is really that fierce should have it take damage from it.
+
+[Eliza] reviewed
+
+~
+301465664 5 9 0
+D0
+~
+~
+0 -1 78277 10 10 5
+D5
+~
+~
+0 -1 78275 10 10 5
+E
+trail~
+You cannot see the trail through the blowing, swirling wind.
+
+~
+A
+scan~
+~
+act_tochar( #noscan, ch );
+
+~
+E
+noscan~
+@BIt is impossible to see more than a few feet through the blasting
+
+snow.@n 
+
+~
+!
+0 0 0
+-1
+S
+
+#78277
+End of the Mountain Trail~
+The trail comes to an abrupt halt here.  Partially covered by drifts of
+
+snow is the horribly mangled corpse of a yeti; blood and gore stain the
+
+surrounding snow-covered ground.  A vast plateau lies to the north,
+
+stretching as far as the eye can see.  To the south, the wind blows
+
+fiercely off the top of the plateau, making it impossible to see what
+
+lies in that direction.
+
+~
+no.mob
+
+[Nereus] Done - ready for self review
+
+[Eliza] add extras here.
+
+[Eliza] reviewed
+
+~
+301465608 5 9 0
+D0
+~
+~
+0 -1 78278 10 10 5
+D2
+~
+~
+0 -1 78276 10 10 5
+A
+skin~
+yeti corpse~
+act_tochar( #notmuch , ch );
+
+~
+E
+notmuch~
+There's not enough of this yeti left to be worth skinning.
+
+~
+!
+0 0 0
+3412 17 1509949540 -2 0
+-1
+S
+
+#78278
+South of a Vast Plateau~
+Waist-deep snowdrifts ripple like waves on a ocean of white.  The
+
+trail seems to have vanished here, as if this area is rarely travelled. 
+
+Before you to the north sprawls a vast, icy plateau; far in the distance
+
+you can barely make out a towering shape.  Any vision of what lies to the
+
+south is blocked by a swirling wall of white as snow is blown from the
+
+plateau above.
+
+~
+end of the trail - north is plateau zone
+
+no.mob here, no wandering bears onto the trail
+
+[Nereus] Done - ready for self review
+
+[Eliza] rextra towering shape add general impression of the outine of the shape
+
+[Eliza] reviewed
+
+~
+301465608 5 9 0
+D0
+~
+~
+0 -1 62500 10 10 5
+D2
+~
+~
+0 -1 78277 10 10 5
+E
+waist-deep snowdrifts waves~
+The snowdrifts would be waist-deep on the average man, although a few
+
+larger drifts are almost five feet in height.
+
+~
+E
+wall white snow s south~
+The snow swirls as it is blasted off the plateau and off to the south.
+
+~
+E
+shape towering~
+A dark, towering shape is barely visible along the horizon far to the
+
+north.  Whatever it is, it must be truly massive to be seen at this
+
+distance.
+
+~
+A
+search dig~
+snow drifts waist-deep~
+act_tochar( #snow, ch );
+
+act_notchar( #othsnow, ch );
+
+~
+E
+snow~
+You dig through a nearby snowdrift, finding nothing.
+
+~
+E
+othsnow~
+$n digs through a nearby snowdrift, uncovering only more snow.
+
+~
+!
+0 0 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#78279
+A Sheltered Cavern~
+This cavern would make an excellent spot to hide from the freezing wind
+
+and blowing snow outside.  A few worn boulders surround a pit dug into
+
+the frozen earth in the center of this snug chamber.  Against the southern
+
+wall, a body lies frozen and lifeless; apparently the shelter alone was
+
+not sufficient to keep them alive.  The grey, frost-covered stone is
+
+broken only to the west, where a crack leads back to the mountain trail.
+
+~
+squeeze through crack back to trail
+
+Curse affect uses mob in 78284
+
+will be putting something to pop in the firepit sooner or later -
+
+probably something needed for a custom 
+
+[Nereus] Done - ready for self review
+
+[Eliza] reviewed
+
+[Eliza] Are you adding a corpse object?
+
+hmm, good idea - will probably add a corpse object with same
+
+descriptions, will leave cursing acode the same 
+
+~
+301465604 11 7 0
+E
+boulders worn~
+These boulders have been carefully arranged around the pit dug in the
+
+center of the cave, although how they were rolled through the crack in
+
+the western wall is a mystery.
+
+~
+E
+pit~
+A fire-blackened pit has been dug in the frozen ground in the center of
+
+the cavern.  Perhaps if you had some wood you could light a fire.
+
+~
+E
+lifeless frozen body~
+The body is that of a human male, perhaps thirty years of age.  His fist
+
+clutches something tightly, and he has been frozen in a position of
+
+prayer; a look of peace and serenity is upon his rigid featueres.  He is
+
+clothed in furs of some animal, perhaps bear or wolf.  It is difficult to
+
+tell how long he has been dead, since the cold seems to have preserved
+
+his body quite well.
+
+~
+E
+fist clutched~
+The fist is clutched tightly and frozen shut.
+
+~
+A
+search examine~
+fire ashes pit~
+act_tochar( #search, ch );
+
+act_notchar( #othsearch, ch );
+
+~
+E
+search~
+You search through the ashes of the firepit, but find nothing.
+
+~
+E
+othsearch~
+$n searches through the ashes of the firepit, but finds nothing.
+
+~
+!
+0 0 0
+A
+cast~
+summon~
+if( find_skill( ch, summon ) >= 1 ) {
+
+  act_tochar( #nosumm, ch );
+
+  act_notchar( #othnosum, ch );
+
+  }
+
+else
+
+  act_tochar( #dontknow, ch );
+
+~
+E
+nosumm~
+You begin to cast summon, but you feel an empty feeling, as if your god
+
+is not listening from here.
+
+~
+E
+othnosum~
+$n begins to cast summon, but suddenly stops, a blank look on $s face.
+
+~
+E
+dontknow~
+You don't know that spell.
+
+~
+!
+0 0 0
+A
+open~
+fist hand~
+act_tochar( #openfist, ch );
+
+act_notchar( #othopen, ch );
+
+wait( 2 );
+
+send_to_room( #wind, room );
+
+wait( 2 );
+
+send_to_room( #voice, room );
+
+loop( all_in_room ) {
+
+  mob = mob_in_room( 2264, find_room( 78284 ) );
+
+  if( is_player( rch ) )
+
+    do_spell( curse, mob, rch );
+
+  }
+
+wait( 2 );
+
+send_to_room( #close, room );
+
+~
+E
+openfist~
+You lean down and force open the frozen man's fist.
+
+~
+E
+othopen~
+$n leans down and forces open the frozen man's fist.
+
+~
+E
+wind~
+@eSuddenly, a blast of icy wind whips through the room.@n
+
+~
+E
+voice~
+@eA voice booms, "You shall not harm my warriors, either in life or in
+
+death!"@n 
+
+~
+E
+close~
+The fist slowly closes, until it returns to its undisturbed position.
+
+~
+!
+0 0 0
+A
+search get touch take~
+body frozen corpse man~
+act_tochar( #search, ch );
+
+act_notchar( #othsearch, ch );
+
+wait( 2 );
+
+send_to_room( #wind, room );
+
+wait( 2 );
+
+send_to_room( #voice, room );
+
+loop( all_in_room ) {
+
+  mob = mob_in_room( 2264, find_room( 78284 ) );
+
+  if( is_player( rch ) )
+
+    do_spell( curse, mob, rch );
+
+  }
+
+wait( 2 );
+
+send_to_room( #close, room );
+
+~
+E
+search~
+You lean down and start to search through the frozen man's belongings.
+
+~
+E
+othsearch~
+$n leans down and starts to search through the frozen man's belongings.
+
+~
+E
+wind~
+@eSuddenly, a blast of icy wind whips through the room.@n
+
+~
+E
+voice~
+@eA voice booms, "You shall not harm my warriors, either in life or in
+
+death!"@n 
+
+~
+E
+close~
+Slowly, the body returns to its undisturbed position.
+
+~
+!
+0 0 0
+A
+enter crawl squeeze~
+crack west w wall~
+act_tochar( #squeeze, ch );
+
+act_notchar( #othsqueeze, ch );
+
+transfer( ch, find_room( 78258 ) );
+
+if( rflag( reset0, find_room( 78258 ) ) ) {
+
+  act_notchar( #burst, ch );
+
+  remove_rflag( reset0, find_room( 78258 ) );
+
+  }
+
+else
+
+  act_notchar( #outpop, ch );
+
+~
+E
+squeeze~
+You squeeze through the crack in the western wall.
+
+~
+E
+othsqueeze~
+$n squeezes through the crack in the western wall, disappearing from
+
+sight.
+
+~
+E
+burst~
+$n bursts through a pile of snow on the cliff face to the east.
+
+~
+E
+outpop~
+$n pops out of the crack in the cliff wall.
+
+~
+!
+0 0 0
+-1
+S
+
+#78280
+Bottom of an Icy Gorge~
+You are at the southern end of an icy gorge.  Frost and snow an inch or
+
+so deep covers the ground in this part of the fissure.  The chasm narrows
+
+slightly as it stretches northward, while to the south it tapers off to a
+
+crack only inches wide.  Snow and small bits of ice fall from high above,
+
+blocking out any view of the sky.
+
+~
+fall off cliff to here
+
+add falling in message
+
+[Nereus] Done - ready for self review
+
+[Eliza] add fail action for moving south.
+
+[Eliza] reviewed
+
+~
+301465601 5 6 0
+D0
+~
+~
+0 -1 78281 10 10 5
+E
+s south crack~
+The chasm narrows to a crack a few inches wide just to the south, bounded
+
+on two sides by ice-covered, granite boulders.
+
+~
+E
+frost snow~
+Blue-white frost covers the floor of the chasm here.  Although it seems
+
+that this area sees no traffic, the layer of frost is a mere few inches
+
+deep.
+
+~
+A
+climb clamber scale~
+up cliff walls~
+acode( find_room( 78282 ), 1 );
+
+~
+!
+0 0 0
+-1
+S
+
+#78281
+Bottom of an Icy Gorge - Narrow Squeeze~
+The icy chasm narrows to a mere few feet wide here.  Blue-white frost a
+
+few inches thick covers the rock walls and ground of the gorge; odd
+
+considering that snow is constantly being blown from high above.  To the
+
+north and south, the gorge becomes wider.
+
+~
+Ice ooze resets here
+
+squeeze through if ogre sized or bigger
+
+[Nereus] Done - ready for self review
+
+[Eliza] add random action about the snow falling from above?
+
+[Eliza] reviewed
+
+~
+301465601 5 5 0
+D0
+~
+~
+0 -1 78282 10 10 5
+D2
+~
+~
+0 -1 78280 10 10 5
+E
+blue-white frost~
+Frost rises a few feet up the gorge's walls and covers the the ground
+
+underfoot.  Despite the snow falling from above, the ice here is only
+
+mere inches thick.
+
+~
+A
+~
+~
+if( size( ch ) > 4 ) {
+
+act_tochar( #squeeze, ch );
+
+act_notchar( #othsqueeze, ch );
+
+}
+
+continue;
+
+~
+E
+squeeze~
+You manage to squeeze yourself through the narrow spot in the gorge and
+
+continue on.
+
+~
+E
+othsqueeze~
+$n manages to squeeze $mself through the narrow spot in the gorge and
+
+continues on.
+
+~
+!
+3 0 5
+A
+climb clamber scale~
+up cliff walls~
+acode( find_room( 78282 ), 1 );
+
+~
+!
+0 0 0
+2267 9 1509949540 3 0
+-1
+S
+
+#78282
+Bottom of an Icy Gorge~
+The walls of this icy gorge rise high overhead.  Swirling snow falls from
+
+above, obscuring any view of the top of the cliffs.  A layer of thick,
+
+white frost covers the rocky chasm floor here, undisturbed by footprints
+
+or other signs of travel.
+
+~
+[Nereus] Done - ready for self review
+
+[Eliza] add extra for snow top cliffs
+
+[Eliza] reviewed
+
+~
+301465601 5 6 0
+D0
+~
+~
+0 -1 78283 10 10 5
+D2
+~
+~
+0 -1 78281 10 10 5
+E
+frost walls floor~
+A two-inch layer of thick, blue-white frost covers the ground of the
+
+gorge and rises a score of feet up the sheer cliff walls.
+
+~
+A
+climb scale clamber~
+up cliff wall~
+act_tochar( #noclimb, ch );
+
+~
+E
+noclimb~
+The smooth, icy walls of the gorge are impossible to climb.
+
+~
+!
+0 0 0
+-1
+S
+
+#78283
+Bottom of an Icy Gorge~
+Huge piles of snow and ice cover the gorge bottom here, making footing
+
+uneven at best.  The reason for the piles of snow is fairly obvious;
+
+boulder-sized chunks of ice and snow fall from above to only to shatter
+
+when they hit ground.  Slick, ice-covered walls rise high overhead.  The
+
+gorge comes to an abrupt halt on the northern end, while it narrows to
+
+the south.
+
+~
+climb back up from the fall to here
+
+*dig in ice and find climbing gear
+
+no.mob here, ooze avoids the falling ice crap
+
+[Nereus] Done - ready for self review
+
+[Eliza] add rextras to this room.
+
+[Eliza] reviewed
+
+~
+301465609 5 6 0
+D2
+~
+~
+0 -1 78282 10 10 5
+A
+climb clamber scale~
+up east wall u e cliff~
+if( has_obj( 3414, ch ) ) {
+
+  act_tochar( #climb, ch );
+
+  act_notchar( #climbs, ch );
+
+  transfer( ch, find_room( 78263 ) );
+
+  act_notchar( #arrives, ch );
+
+  }
+
+else
+
+  act_tochar( #donthave, ch );
+
+~
+E
+climb~
+You climb the treacherous slope up to the top of the gorge.
+
+~
+E
+climbs~
+$n climbs up the treacherous slope and disappears amidst the swirling
+
+snow high above you.
+
+~
+E
+arrives~
+$n climbs up from out of the gorge, panting with exertion.
+
+~
+E
+donthave~
+The icy walls of the gorge would be impossible to climb without some sort
+
+of special equipment.
+
+~
+!
+0 0 0
+A
+dig search~
+piles snow ice~
+if( rflag( reset0, room ) ) {
+
+  act_tochar( #uncover, ch );
+
+  act_notchar( #othun, ch );
+
+  obj_to_char( oload( 3414 ), ch );
+
+  remove_rflag( reset0, room );
+
+  }
+
+else {
+
+  act_tochar( #nothing, ch );
+
+  act_notchar( #othnoth, ch );
+
+  }
+
+~
+E
+uncover~
+@BYou dig through the pile of snow, uncovering some ice-climbing
+
+equipment!@n 
+
+~
+E
+othun~
+@B$n digs through the pile of snow, uncovering some ice-climbing
+
+equipment!@n 
+
+~
+E
+nothing~
+You search through the pile of ice, but find nothing.
+
+~
+E
+othnoth~
+$n searches through the pile of ice, but finds nothing.
+
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #crap, ch );
+
+i = 3d4+16;
+
+dam_message( ch, i, "The falling ice");
+
+inflict( ch, mob, i, "an avalanche" );
+
+~
+E
+crap~
+@BLarge chunks of ice and sleet fall into the chasm from high above!@n
+
+~
+!
+1 0 4
+-1
+S
+
+#78284
+Storage Closet for Cursing Mob~
+This room functions as storage for the mob which curses in the open fist
+
+acode in room 78279.  Please don't erase this room or mob.
+
+~
+Also have a slipping-on-ice acode stored here
+
+[Cyndra] this mob is starting to be used for every spell, blah in opcode,
+
+acodes, etc.  really shouldn't be, if possible.
+
+~
+301465607 5 9 0
+A
+~
+~
+act_tochar( #icetrip, ch );
+
+  act_notchar( #othtrip, ch );
+
+  i = 2d7;
+
+  dam_message( ch, i, "the icy ground" );
+
+  inflict( ch, mob, i, "slipping on the ice" );
+
+  interpret( ch, "+sit" );
+
+~
+E
+icetrip~
+You slip on a slippery patch of ice, and fall to the ground!
+
+~
+E
+othtrip~
+$n slips on a slippery patch of ice, and falls to the ground!
+
+~
+!
+0 0 0
+2264 9 1509949540 3 0
+-1
+S
+
+#78285
+A Craggy Peak - Before a Giant Nest~
+A gigantic nest made of large limbs and tree trunks has been constructed
+
+on the top of this craggy peak.  From the light dusting of snow and
+
+general disarray of the nest, it has presumably been unoccupied for some
+
+time.  From this high mountain peak, you can see through the crisp, clear
+
+mountain air for dozens of miles in any direction.  The cliff falls away
+
+abruptly to the east and west, although it seems there would be
+
+sufficient handholds to climb down the cliff to the west from here.
+
+~
+[Nereus] climb down action goes to 78266
+
+[Nereus] random shivering in the wind action
+
+[Nereus] search nest - find branch, or nest collapses and fall down
+
+mountain, or find nothing.
+
+[Eliza] Can't find the reset in here for the branch in action 3
+
+[Eliza] reviewed
+
+~
+301465608 5 9 0
+E
+1 north~
+A vast, white plateau stretches out for miles to the north.  Far on the
+
+horizon to the north, a huge, dark shape can be made out, but it is too
+
+distant to discern.
+
+~
+E
+1 west 1 down~
+The mountain slope is probably climbable, at least without too much
+
+difficulty.
+
+~
+E
+1 south~
+A range of peaks runs southeast of here, although the next snow-covered
+
+mountain is too far away to make out any details.
+
+~
+E
+nest~
+The nest seems to have been originally constructed some time ago, because
+
+the wood appears to be quite old.  There is little rotten wood visible,
+
+although with the cold mountain air it would be unlikely.  The nest is in
+
+disarray, as if it has been abandoned for some time and the winds have
+
+had their way with some of the branches.  Oddly, some of the 'branches'
+
+of the nest are actually whole tree trunks!  Whatever creature made this
+
+nest must have been gigantic indeed.
+
+~
+E
+1 east~
+The cliff face to the east is sheer rock, icy and without handholds.  It
+
+would be impossible to climb down without some sort of special equipment.
+
+~
+A
+climb clamber scale descend~
+1 west 1 down slope~
+act_tochar( #climb, ch );
+
+act_notchar( #climbs, ch );
+
+transfer( ch, find_room( 78266 ) );
+
+act_notchar( #arrives, ch );
+
+~
+E
+climb~
+You climb down the steep, snowy slope to safer ground far below.
+
+~
+E
+climbs~
+$n climbs down the steep, snowy slope, disappearing from view.
+
+~
+E
+arrives~
+$n climbs down from the snowy slope to the east.
+
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #wind, room );
+
+loop( all_in_room )
+
+  interpret( rch, "+shiver" );
+
+wait( 1 );
+
+if( random( 1, 7 ) < 2 )
+
+send_to_room( #nest, room );
+
+~
+E
+wind~
+The crisp, cold wind gusts across the exposed peak.
+
+~
+E
+nest~
+The abandoned nest creaks ominously in the wind.
+
+~
+!
+2 250 0
+A
+search~
+nest~
+i = random( 1, 25 );
+
+if( !rflag( reset0, room ) ) {
+
+  act_tochar( #search, ch );
+
+  act_notchar( #searches, ch );
+
+  }
+
+else {
+
+  if( i < 20 ) {
+
+    act_tochar( #search, ch );
+
+    act_notchar( #searches, ch );
+
+    remove_rflag( reset0, room );
+
+    }
+
+  if( i == 21 ) {
+
+    act_notchar( #finds, ch );
+
+    act_tochar( #find, ch );
+
+    remove_rflag( reset0, room );
+
+    obj_to_char( oload( 1371 ), ch );
+
+    }
+
+  if( i > 21 ) {
+
+    act_tochar( #disturb, ch );
+
+    act_notchar( #disturbs, ch );
+
+    wait( 1 );
+
+    act_tochar( #collapse, ch );
+
+    act_notchar( #collapses, ch );
+
+    wait( 1 );
+
+    transfer( ch, find_room( 78266 ) );
+
+    act_notchar( #crashes, ch );
+
+    i = 4d35+40;
+
+    dam_message( ch, i, "falling down a mountain" );
+
+    inflict( ch, mob, i, "falling down a mountain" );
+
+    remove_rflag( reset0, room );
+
+    }
+
+  }
+
+~
+E
+search~
+You search through the branches of the abandoned nest but find nothing.
+
+~
+E
+searches~
+$n searches through the branches of the abandoned nest but finds nothing.
+
+~
+E
+find~
+You search through the nest, and find a branch that looks rather peculiar.
+
+~
+E
+finds~
+$n searches through the nest, finding a rather peculiar branch.
+
+~
+E
+disturb~
+You search through the nest, but accidentally pull out a branch which
+
+held the nest together!
+
+~
+E
+disturbs~
+$n searches through the nest, but accidentally pulls out a branch which
+
+held the nest together!
+
+~
+E
+crashes~
+$n flies down from the cliff high above your head and crashes into the
+
+icy rock of the trail!
+
+~
+E
+collapse~
+The nest collapses, throwing you from the mountain peak!
+
+~
+E
+collapses~
+The nest collapses, throwing $n off the mountain peak!
+
+~
+!
+0 0 0
+A
+1 down~
+~
+act_tochar( #climb, ch );
+
+~
+E
+climb~
+It would be a good idea to climb down the mountain instead of simply
+
+jumping.
+
+~
+!
+0 0 0
+A
+climb clamber scale descend~
+1 east~
+act_tochar( #sheer, ch );
+
+~
+E
+sheer~
+The cliff face just east of the peak is too sheer to even consider
+
+climbing.
+
+~
+!
+0 0 0
+-1
+S
+
+#0
+

@@ -1,0 +1,164 @@
+#AREA
+~
+None~
+~
+
+0 0
+5
+#ROOMS
+
+#41500
+Nothing~
+~
+~
+301465730 3 5 0
+A
+~
+~
+send_to_room( #birds, room );
+
+~
+E
+birds~
+The delicate sounds of songbirds drift across the island and through the
+
+surrounding woodlands to soothe your senses in this holy place.
+
+~
+!
+2 50 0
+A
+~
+~
+send_to_room( #trees, room );
+
+~
+E
+trees~
+Wind softly blows through the outstretched limbs of the great old oaks,
+
+inviting you to rest a while beside the sacred well.
+
+~
+!
+2 50 0
+A
+~
+~
+send_to_room( #giggle, room );
+
+~
+E
+giggle~
+The sound of soft, female laughter reaches your ears, carried on the
+
+warm, fragrant winds of this beautiful island.
+
+~
+!
+2 40 0
+A
+~
+~
+send_to_room( #bubble, room );
+
+~
+E
+bubble~
+The crystalline laughter of water echoes in this grove of worship,
+
+originating from within the sacred well itself as the clear spring water
+
+bubbles upwards.
+
+~
+!
+2 50 0
+A
+fill~
+bronze cup gold chalice barrel glass bottle leather waterskin wineskin bowl goblet vial keg mug pot chalice fured small porcelain rusty wooden slick green drinking horn dogskin canteen bucket elf skin waterskin~
+send_to_char( #fill, ch );
+
+~
+E
+fill~
+You are afraid to violate the sanctity of the holy well by such a
+
+temporal thing as filling your water container.  You decide not to risk
+
+the displeasure of the great goddess Siochain.
+
+~
+!
+0 0 0
+A
+get~
+pear fruit~
+act_tochar( #pear, ch );
+
+~
+E
+pear~
+You begin to reach out for the pear when a soft, quiet voice drifts up
+
+from within the well itself.
+
+  
+
+@I@c"Do not touch the sacrifices given unto me in love."@n
+
+~
+!
+0 0 0
+A
+fill~
+~
+send_to_char( #fill, ch );
+
+~
+E
+fill~
+You are afraid to violate the sanctity of the holy well by such a
+
+temporal thing as filling your water container.  You decide not to risk
+
+the displeasure of the great goddess Siochain.
+
+~
+!
+0 0 0
+A
+drink~
+~
+send_to_char( #drink, ch );
+
+~
+E
+drink~
+You begin to sip the water before you are overtaken by a choking
+
+sensation.  You wisely decide not to drink anymore from the holy well.
+
+~
+!
+0 0 0
+A
+drink~
+well water sacred~
+send_to_char( #drink, ch );
+
+~
+E
+drink~
+You begin to sip the water before you are overtaken by a choking
+
+sensation.  You wisely decide not to drink anymore from the holy well.
+
+~
+!
+0 0 0
+-1
+S
+
+#0
+

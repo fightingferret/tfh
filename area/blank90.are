@@ -1,0 +1,2103 @@
+#AREA
+Clan Houses~
+Nereus~
+~
+
+0 0
+0
+#ROOMS
+
+#51000
+Mountain Trail - Dead End~
+The road here stays close to the rough mountain face which dictates the
+
+direction of the path.  Rocks both large and small jut from the northern
+
+wall, making it look like a perilous climb.  Thick bushes that have grown
+
+to survive under such hostile conditions crowd a small area to the east,
+
+the only place within sight that they can grow reasonably well.  The road
+
+heads south, while to the north it comes to an abrupt halt in front of a
+
+steep mountain cliff.
+
+~
+[Nereus] Start of Fist clan stronghold - mountain road south
+
+~
+301465600 12 9 0
+D1
+~
+bushes~
+2187 -1 51001 10 10 5
+D2
+~
+~
+0 -1 28016 10 10 5
+E
+bushes~
+The thin leaves on the bushes do little to hide the tiny thorns that
+
+protect the branches.  Small white insects can be seen on closer
+
+inspection.
+
+~
+E
+mountain face~
+The mountain face is covered with rocky outcroppings, both large and
+
+small.  After a closer look, you notice a fair-sized hole near the base
+
+of the mountain face.
+
+~
+E
+hole~
+A fair-sized hole tunnels into the mountain face near the ground.  It is
+
+circular and relatively smooth, as if it was made by a tunneling worm of
+
+some sort.  It is barely big enough for a large humanoid to squeeze
+
+through.
+
+~
+A
+squeeze crawl enter~
+hole~
+if( size( ch ) < 6 ) {
+
+  act_tochar( #squeeze, ch );
+
+  act_notchar( #squeezes, ch );
+
+transfer( ch, find_room( 51002 ) );
+
+  act_notchar( #arrives, ch );
+
+  }
+
+else
+
+act_tochar( #toobig, ch );
+
+~
+E
+squeeze~
+You squeeze yourself into the hole in the cliff face.
+
+~
+E
+squeezes~
+$n squeezes $mself into the hole in the cliff face and disappears from
+
+sight.
+
+~
+E
+arrives~
+$n squeezes through from the hole to the south.
+
+~
+E
+toobig~
+You are too big to squeeze into the hole.
+
+~
+!
+0 0 0
+A
+move~
+bush 1 east~
+if( !is_open( room, east ) ) {
+
+  act_tochar( #move, ch );
+
+  act_notchar( #moves, ch );
+
+  open( room, east );
+
+  }
+
+else
+
+  act_tochar( #already, ch );
+
+~
+E
+move~
+You move the bushes to the east aside, revealing a path.
+
+~
+E
+moves~
+$n moves the bushes to the east aside, revealing a path.
+
+~
+E
+already~
+The bushes have already been pulled aside, revealing a path.
+
+~
+!
+0 0 0
+A
+~
+~
+act_room( #snap, ch );
+
+close( room, east );
+
+~
+E
+snap~
+The bushes to the east snap back into place.
+
+~
+!
+1 0 2
+-1
+S
+
+#51001
+A Simple Wooden Stable~
+A simple wooden stable has been wedged here between the rocks and brush. 
+
+It looks well constructed and relatively new, as the planks below and the
+
+poles rising from the ground are firmly in place.  The gabled roof is
+
+unpatched and looks to be free of leaks.  A dirty trough, half full of
+
+what is probably water, has not been cleaned for a while.  Stalls differ
+
+in size to accomodate a variety of animals.  Hay litters the ground at
+
+your feet, thinly covering the dirt floor.  A wall of thorny bushes
+
+covers the western half of a trail to the west.
+
+~
+[Eliza] FIST
+
+~
+301465607 12 9 0
+D3
+~
+~
+2187 -1 51000 10 10 5
+E
+stall~
+The stalls appear to be of many different sizes for a large number of
+
+different animals.  The final stall looks as if it could be the living
+
+quarters of a small humanoid.  The grubby sleeping mat in the far corner
+
+of the stall, old food parts that have mixed in with the hay, and
+
+fragments of a broken mirror fastened to the wall here provide evidence
+
+of this.
+
+~
+A
+open move~
+bush 1 west~
+if( !is_open( room, west ) ) {
+
+  act_tochar( #move, ch );
+
+  act_notchar( #moves, ch );
+
+  open( room, west );
+
+  }
+
+else
+
+  act_tochar( #already, ch );
+
+~
+E
+move~
+You move the bush aside, revealing a path to the west.
+
+~
+E
+moves~
+$n moves the bush aside, revealing a path to the west.
+
+~
+E
+already~
+The bush has already been pulled aside.
+
+~
+!
+0 0 0
+A
+~
+~
+act_room( #snap, ch );
+
+close( room, west );
+
+~
+E
+snap~
+The bushes snap back into place.
+
+~
+!
+1 0 8
+-1
+S
+
+#51002
+Small Cave~
+This gap in the mountain is lit only by whatever light can make it
+
+through the hole to the south.  The craggy ceiling is low enough that a
+
+tall humanoid would have to duck his head to stand in this room.  Silt,
+
+sand and gravel lie underfoot, while the corners are home to what appears
+
+to be ancient cobwebs.  To the north, a dark metal door silently stands
+
+guard.
+
+~
+[Eliza] FIST
+
+~
+301465604 11 5 0
+D0
+dark metal door~
+dark metal door~
+131 -1 51003 10 10 5
+D2
+~
+~
+0 -1 51000 10 10 5
+E
+dark metal door~
+This door is made of a mysterious, dark metal that seems to absorb the
+
+light.  A bas-relief icon of a clenched fist is fixed at eye level, the
+
+only marking on the otherwise smooth, cold metal.
+
+~
+-1
+S
+
+#51003
+A Dimly-Lit Cavern~
+The cave opens up into a roughly rectangular room that is dimly lit by
+
+three torches that hang on each of the east and western walls of the room. 
+
+Insignificant dunes of silt lie about the cave around the walls,
+
+especially in the corners.  The only visible exit is a thick metal door
+
+embedded in the south wall.
+
+~
+[Eliza] FIST
+
+~
+301465639 11 6 0
+D2
+dark metal door~
+dark metal door~
+131 -1 51002 10 10 5
+D5
+wooden trapdoor~
+wooden trapdoor~
+2203 -1 51004 10 10 5
+A
+show~
+fist~
+mob = mob_in_room( 2282, room );
+
+if( has_obj( 2987, ch ) ) {
+
+  act_notchar( #shows, ch );
+
+  act_tochar( #show, ch );
+
+  interpret( mob, "nod" );
+
+  wait( 2 );
+
+  if( !is_open( room, down ) ) {
+
+    act_room( #dusts, ch );
+
+    open( room, down );
+
+    }
+
+  }
+
+else {
+
+  interpret( mob, "shake" );
+
+  if( is_open( room, down ) ) {
+
+    act_room( #covers, ch );
+
+    interpret( mob, "say Yous no come in here!" );
+
+    close( room, down );
+
+    }
+
+  }
+
+~
+E
+show~
+You show the tiny fist to the small goblin.
+
+~
+E
+shows~
+$n shows something to the small goblin.
+
+~
+E
+dusts~
+The small goblin shoves aside a pile of silt and pulls open a trapdoor in
+
+the floor.
+
+~
+E
+covers~
+The small goblin reaches down and covers up the trapdoor with a pile of
+
+silt.
+
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2282, room );
+
+if( !has_obj( 2987, ch ) ) {
+
+  interpret( mob, "shake" );
+
+  interpret( mob, "emote steps in front of the trapdoor." );
+
+  }
+
+else
+
+  continue;
+
+~
+!
+3 0 32
+A
+drink~
+~
+mob = mob_in_room( 2282, room );
+
+if( !has_obj( 2987, ch ) ) {
+
+  interpret( mob, "shake" );
+
+  interpret( mob, "say No soup for yous!" );
+
+  }
+
+else
+
+  continue;
+
+~
+!
+0 0 0
+A
+drink~
+soup pool~
+mob = mob_in_room( 2282, room );
+
+if( !has_obj( 2987, ch ) ) {
+
+  interpret( mob, "shake" );
+
+  interpret( mob, "say No soup for yous!" );
+
+  }
+
+else
+
+  continue;
+
+~
+!
+0 0 0
+2282 9 1509949540 3 0
+2477 17 1509949540 -2 16
+-1
+S
+
+#51004
+Granite Hall~
+A polished staircase descends from above, its steps worn smooth from the
+
+tread of passing feet.  Overhead, the vaulted ceiling is barely visible
+
+in the dim light provided by rows of torches that line the sides of the
+
+room.  Pillars carved directly from the stone of the mountain are evenly
+
+spaced every few paces, each as wide as two ogres.  A thick gray carpet
+
+runs from the base of the stairs to a set of double doors set in the
+
+northern wall.  The doors are fashioned from iron, and carved into them
+
+is the emblem of a clenched fist.
+
+~
+[Eliza] FIST
+
+~
+301465605 11 8 0
+D0
+~
+~
+0 -1 51005 10 10 5
+D4
+wooden trapdoor~
+wooden trapdoor~
+2203 -1 51003 10 10 5
+E
+pillars~
+The immense fluted columns are carved from the hard granite of the
+
+mountain.  They have been smoothed and polished to a shine.
+
+~
+E
+doors~
+The huge set of double doors takes up much of the northern wall.  Forged
+
+from iron, they are polished to a shine that makes them appear blood-red
+
+in the flickering light of the torches.  The symbol carved into the door,
+
+a clenched fist, is centered around the handles.
+
+~
+E
+staircase~
+The staircase dominates the southern wall of this chamber.  It is carved
+
+into the stone of the mountain like all of the stonework here.  An
+
+indentation in the middle of each step shows the wear of countless
+
+passing feet.  At the top of the staircase, a trapdoor leading up is
+
+visible.
+
+~
+E
+carpet~
+The thick carpet looks like a wolf skin, but it is much darker and
+
+thicker.  Each pelt has been fashioned into a seamless rug that is more
+
+than ten paces wide and spans the entire length of the floor.
+
+~
+A
+knock~
+1 up trapdoor~
+mob = mob_in_room( 2282, find_room( 51002 ) );
+
+if( !is_open( room, up ) ) {
+
+  act_tochar( #knock, ch );
+
+  act_notchar( #knocks, ch );
+
+  interpret( mob, "emote peers at the ground for a moment." );
+
+  wait( 1 );
+
+  interpret( mob, "emote dusts off a trapdoor at his feet and pulls it open." );
+
+  act_room( #opens, ch );
+
+  open( room, up );
+
+  }
+
+else
+
+  act_tochar( #already, ch );
+
+~
+E
+opens~
+The trapdoor above you opens.
+
+~
+E
+knock~
+You knock on the trapdoor above you.
+
+~
+E
+knocks~
+$n knocks on the trapdoor above you.
+
+~
+E
+already~
+The trapdoor above you has already been opened.
+
+~
+!
+0 0 0
+A
+move~
+carpet~
+if( !has_obj( 2987, ch ) )
+
+end;
+
+act_tochar( #search, ch );
+
+act_notchar( #rsearch, ch );
+
+obj_to_char( oload( 2987 ), ch );
+
+act_tochar( #find, ch );
+
+~
+E
+search~
+You roll the corner of the carpet back, looking for the key you placed
+
+there.
+
+~
+E
+rsearch~
+$n rolls the corner of the carpet back.
+
+~
+E
+find~
+You find the key you shoved under there earlier.  The carpet rolls back
+
+into place after you stand up fully.
+
+~
+!
+0 0 0
+-1
+S
+
+#51005
+Granite Meeting Hall~
+A massive stone table completely fills the center of the room.  Unlike
+
+most of the stonework, the table has been crafted from red marble and
+
+polished smooth.  The emblem of a clenched fist has been traced on the
+
+table in gold.  The entire floor is covered by a thick, gray carpet made
+
+of some kind of animal fur.  Two massive double doors take up most of the
+
+southern wall, fashioned from iron and glimmering dully in the bright
+
+light that fills this room.  A large mural depicting a battle scene is
+
+painted on the face of the northern wall.  The room is lit by several
+
+white balls of light that are fastened to the ceiling above each chair.
+
+~
+[Eliza] FIST
+
+~
+301465605 11 8 0
+D2
+~
+~
+0 -1 51004 10 10 5
+E
+carpet~
+This carpet is quite thick and springy.  It seems to be constructed from
+
+the pelt of an animal with coarse dark hair, too dark for any mundane
+
+wolf.
+
+~
+E
+doors~
+These double doors have been forged from iron and dominate the southern
+
+wall.
+
+~
+E
+mural~
+This battle scene covers the northern wall behind the large ebony throne. 
+
+In it a horde of trolls, ogres, goblins, orcs and vyans are rushing from
+
+a cave to overtake an unwary elven army.
+
+~
+A
+touch~
+mural~
+if( has_obj( 2987, ch ) ) {
+
+  act_tochar( #touch, ch );
+
+  act_notchar( #touches, ch );
+
+  transfer( ch, find_room( 51006 ) );
+
+  act_notchar( #arrives, ch );
+
+  }
+
+else
+
+  act_tochar( #nothing, ch );
+
+act_notchar( #nothingtoday, ch );
+
+~
+E
+touch~
+You reach out and touch the mural and find yourself growing smaller and
+
+smaller!
+
+~
+E
+touches~
+$n reaches out and touches the mural, and suddenly vanishes from sight!
+
+~
+E
+nothing~
+You reach out and touch the mural, feeling the cold stone beneath your
+
+fingertips.
+
+~
+E
+nothingtoday~
+$n reaches out and touches the mural, but nothing happens.
+
+~
+E
+arrives~
+$n suddenly appears from thin air!
+
+~
+!
+0 0 0
+2974 17 1509949540 -2 0
+2966 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+2946 17 1509949540 -2 0
+-1
+S
+
+#51006
+Neatly Organized Storeroom~
+This square room has been hewn from solid granite and the walls, floor,
+
+and ceiling polished to a shine.  A soft glow radiates from a circular
+
+pattern of white balls of light which have been fastened to the ceiling
+
+somehow.  Oddly, it appears that there is no way to leave or enter this
+
+room.  On the south wall, a mural has been painted, while on the north
+
+wall a large rack has been nailed into the granite wall.
+
+~
+[Eliza] FIST
+
+~
+301664261 0 9 0
+E
+mural~
+The mural painted on the southern wall is quite detailed, depicting a
+
+large, well-lit granite meeting room with several dark chairs surrounding
+
+a red stone table.
+
+~
+A
+touch~
+mural 1 south~
+if( has_obj( 2987, ch ) ) {
+
+  act_tochar( #touch, ch );
+
+  act_notchar( #touches, ch );
+
+  transfer( ch, find_room( 51005 ) );
+
+  act_notchar( #arrives, ch );
+
+  }
+
+else
+
+  {
+
+act_tochar( #nothing, ch );
+
+act_notchar( #nothingtoday, ch );
+
+}
+
+~
+E
+touch~
+You reach out and touch the mural on the southern wall, and feel yourself
+
+growing larger and larger!
+
+~
+E
+touches~
+$n reaches out and touches the mural on the southern wall, and suddenly
+
+vanishes from sight!
+
+~
+E
+arrives~
+$n suddenly appears from thin air!
+
+~
+E
+nothing~
+You reach out and touch the smooth granite the mural is painted on.
+
+~
+E
+nothingtoday~
+$n reaches out and touches the mural on the southern wall.
+
+~
+!
+0 0 0
+A
+drop put~
+bag all yeti sack burlap large small medium bronze iron steel mithril ingot storage box~
+if( weight( room ) > 300000 ) {
+
+  act_tochar( #cant, ch );
+
+  act_notchar( #rcant, ch );
+
+  end;
+
+  }
+
+continue;
+
+~
+E
+cant~
+You can't find any room to put that.
+
+~
+E
+rcant~
+$n seems unable to find a spot to place it.
+
+~
+!
+0 0 0
+2999 17 1509949540 -2 0
+-1
+S
+
+#51007
+A Hidden Ledge~
+A small expanse of earth runs east to west along the side of this cliff,
+
+creating a small ledge.  Over the edge and a dizzying distance below lies
+
+the Sea of Stars.  Despite the sense of danger emanating from the height
+
+of such a drop, the view is spectacular.  Lantern lights twinkle from the
+
+passing ships, shining through the mist of the sea.  The view of the sky
+
+above is unobstructed, and the sight of the stars from here must be
+
+gorgeous.  A patch of grass offers a comfortable place to sit and relax
+
+on this peaceful, undisturbed ledge.
+
+~
+[Eliza] up is 21014
+
+[Eliza] LORE
+
+~
+301465600 4 6 0
+D0
+~
+~
+202 -1 51008 10 10 5
+D4
+~
+~
+14 -1 21014 10 10 5
+A
+climb~
+up cliff~
+act_tochar( #clamber, ch );
+
+act_notchar( #rclamber, ch );
+
+wait( 1 );
+
+transfer( ch, find_room( 21014 ) );
+
+act_notchar( #arrive, ch );
+
+~
+E
+clamber~
+You scramble up and over the rocks to the trail above.
+
+~
+E
+rclamber~
+$n scrambles up the rocks to the trail above.
+
+~
+E
+arrive~
+$n climbs up from the cliff.
+
+~
+!
+0 0 0
+A
+enter crawl squeeze~
+crevice opening~
+act_tochar( #squeeze, ch );
+
+act_notchar( #rsqueeze, ch );
+
+wait( 3 );
+
+act_tochar( #light, ch );
+
+wait( 1 );
+
+transfer( ch, find_room( 51008 ) );
+
+act_notchar( #arrive, ch );
+
+~
+E
+squeeze~
+You enter a tunnel through a tight crevice that is so well concealed you
+
+could not have found it without previous knowledge.
+
+~
+E
+rsqueeze~
+$n enters a tunnel, through a tight crevice that was so well concealed,
+
+$e must have had previous knowledge of it.
+
+~
+E
+light~
+After a short trek you find yourself at another crevice of light in the
+
+wall of the tunnel and squeeze through it.
+
+~
+E
+arrive~
+$n pushes $s way through the crevice, entering the valley.
+
+~
+!
+0 0 0
+-1
+S
+
+#51008
+A Hidden Valley - Before an Iron Fence~
+You find yourself in a small valley nestled between the hills of the
+
+forest.  The expanse of trees has halted to form a green meadow that is
+
+kept partially shaded by the surrounding hills.  To the north, in the
+
+heart of the meadow, stands a grandiose stone building.  The solitude of
+
+the single structure against the flatness of the plain makes it seem even
+
+more strikingly stately.  The grass around the building seems a little
+
+greener than the rest of the field.  A row of circular stones creates a
+
+path leading to the front steps.  An iron-wrought fence surrounds the
+
+structure and extends out in front to enclose the entirety of the path. 
+
+There is no gate across the entrance, but a pillar stands to each side,
+
+both topped by a statue of a howling wolf.
+
+~
+[Eliza] LORE
+
+~
+301465600 0 6 0
+D0
+~
+~
+0 -1 51009 10 10 5
+D2
+~
+~
+202 -1 51007 10 10 5
+A
+enter squeeze~
+crevice opening~
+act_tochar( #enter, ch );
+
+act_notchar( #renter, ch );
+
+wait( 3 );
+
+act_tochar( #almost, ch );
+
+wait( 1 );
+
+transfer( ch, find_room( 51007 ) );
+
+act_notchar( #arrive, ch );
+
+~
+E
+enter~
+You enter a tunnel through a tight crevice that is so well concealed you
+
+could not have found it without previous knowledge.
+
+~
+E
+renter~
+$n squeezes through a tight crevice and disappears from sight.
+
+~
+E
+almost~
+After a short trek you find yourself at another crevice, nearly out of
+
+the narrow tunnel.
+
+~
+E
+arrive~
+$n appears from a tight crevice in the rocks.
+
+~
+!
+0 0 0
+-1
+S
+
+#51009
+Before a Grandiose Stone Building~
+Before you stands a tall stone structure, magnificent in appearance. 
+
+Stone steps span the width of the structure, leading up to a small porch
+
+and the front door.  The walls are medium grey - dark enough to be
+
+solemn, yet light enough to ease the ominous nature one might expect from
+
+such a setting.  Unlike the rest of the structure, the door is wooden,
+
+but appears thick and solidly constructed.  Metal supports run the width
+
+of the door both top and bottom.  An ornate iron knocker hangs on the
+
+door, but the lack of wear on it indicates that it has seen little to no
+
+use and is instead there for atmosphere.  Below the knocker is an
+
+intricate carving set into the door.
+
+~
+[Eliza] LORE
+
+~
+301465608 0 6 0
+D0
+solid wooden door~
+~
+407 2883 51010 10 10 5
+D2
+~
+~
+0 -1 51008 10 10 5
+E
+carving door~
+The carving in the wooden door seems crude at first glance, but the more
+
+you examine it, the more it looks smoothly and cleanly crafted, an
+
+excellent job considering the roughness of the wood into which it is set. 
+
+The carving is set against a background of a dark blue circle.  Along the
+
+right side of the circle is the side of a tree, a single branch extending
+
+out to the middle in the top of the emblem.  Perched on top is an owl
+
+peering down on a scroll rolled open near the base of the tree.  Set
+
+behind the tree and scroll, taking up almost the entire circular
+
+background, is a pair of swords crossed in the shape of an X.
+
+~
+A
+~
+~
+if( !has_obj( 2883, ch ) )
+
+  end;
+
+continue;
+
+~
+!
+3 0 1
+-1
+S
+
+#51010
+Entrance Hall~
+Despite the dark solemnity of the colors in this room, the atmosphere of
+
+the hall is still warm and inviting.  The stone floor is vast, making the
+
+room spacious and grand, and is covered with a thick red carpet.  Sconces
+
+containing torches line the walls, and a chandelier hangs from the
+
+ceiling, making the room well lit.  Colorful tapestries hang from the
+
+walls, mostly depicting battle scenes from ages past.  To the west is a
+
+door made of a metallic material, and to the east is another wooden door.
+
+~
+[Eliza] LORE
+
+[Silas] The the solid wooden door to the south opens.
+
+~
+301465605 0 5 0
+D1
+~
+~
+0 -1 51011 10 10 5
+D2
+solid wooden door~
+~
+407 2883 51009 10 10 5
+D3
+metal-sheathed door~
+~
+277 2883 51012 10 10 5
+-1
+S
+
+#51011
+Library~
+This room bears a resemblance to the entrance hall both in atmosphere and
+
+size.  The room is vast, with bookcases spaced out a few feet apart along
+
+all but the eastern wall, with the pattern only being broken by space for
+
+the door lying westward.  Torches flicker from sconces in their positions
+
+between every bookcase.  Small tables are placed in front of every other
+
+bookcase, and several have scrolls, books, and small covered lanterns
+
+left atop them, as if someone had been in too much of a hurry to put them
+
+up after studying.  In the center of the room, a long, oaken wood table
+
+is surrounded by chairs.  To the west is a tall wooden door.  On the
+
+eastern wall is a staircase that leads down to the second floor.
+
+~
+Clan key loads here, requires having the key to find one.
+
+[Eliza] LORE
+
+~
+301664261 0 5 0
+D3
+~
+~
+0 -1 51010 10 10 5
+D5
+~
+~
+0 -1 51013 10 10 5
+A
+~
+tables books scrolls~
+if( !has_obj( 2883, ch ) )
+
+end;
+
+act_tochar( #find_key, ch );
+
+act_notchar( #rfind_key, ch );
+
+obj_to_char( oload( 2883 ), ch );
+
+act_tochar( #found, ch );
+
+~
+E
+find_key~
+You search through the stuff on the table, looking for the key you saw
+
+there.
+
+~
+E
+rfind_key~
+$n searches across the table.
+
+~
+E
+found~
+You find the key you were looking for.
+
+~
+!
+9 0 0
+-1
+S
+
+#51012
+In a Stone Vault~
+In contrast to the rest of the building, this room has a less inviting
+
+atmosphere.  The stone used in this room seems several shades darker than
+
+that used in the rest of the structure.  A torch on each of the northern,
+
+western, and southern walls provide the only lighting in the room, each
+
+casting only a dim glow onto its adjacent wall and floor beneath it. 
+
+Shelves line the walls of the room, spaced only by a couple of feet in
+
+the center of each wall where the torches are secured.  Several chests
+
+lie closed on the uncarpeted stone floor.  The room is rather small in
+
+comparison to the size of the entrance hall to the east.
+
+~
+[Eliza] LORE
+
+~
+301533221 0 9 0
+D1
+metal-sheathed door~
+~
+277 2883 51010 10 10 5
+A
+put drop~
+bag all yeti sack burlap large small medium bronze iron steel mithril ingot~
+if( weight( room ) > 300000 ) {
+
+  act_tochar( #cant, ch );
+
+  act_notchar( #rcant, ch );
+
+  end;
+
+  }
+
+continue;
+
+~
+E
+cant~
+You can't find a spot to put that.
+
+~
+E
+rcant~
+$n seems unable to find somewhere to place something.
+
+~
+!
+0 0 0
+-1
+S
+
+#51013
+At The Bottom of a Staircase~
+You find yourself at the beginning of a hallway.  The walls here seem to
+
+be made of stone, but long sections are paneled with wainscoting,
+
+separated by a few feet of stone between each section.  Mounted on each
+
+stone section is a sconce holding a torch to light the hallway.  To the
+
+north, a wooden door is set in the right side of the first section of
+
+wainscot.  Against the eastern wall is a staircase leading up to a
+
+well-lit room below.
+
+~
+[Eliza] LORE
+
+~
+301664261 0 5 0
+D0
+simple wooden door~
+~
+407 2884 51014 10 10 5
+D4
+~
+~
+0 -1 51011 10 10 5
+-1
+S
+
+#51014
+A Beautiful Stone-Carved Room~
+Hollowed out of the cold rock by dwarven masters, this room has been made
+
+cozy and beautiful.  Several shelves fashioned from living rock hold
+
+brass lanterns that cast a soft, warm glow over the room.  To the right,
+
+a high backed maple bench sits before a small, vented fireplace hewn out
+
+of the solid rock.  A sparkling vein of quartz runs through its mantel,
+
+polished and faceted to turn a fire's light into tiny rainbows.  At the
+
+back of the room, a silken damask curtain hides an alcove that serves as
+
+a bedroom.  A bowl-shaped rock ledge, its lip intricately patterned,
+
+holds layers of thick lynx furs that serve as a soft mattress.  Shelves
+
+at its foot hold books and nooks for clothing.  To the left, a tiny
+
+waterfall fed by an underground spring spills from the wall into a small
+
+carved pool before trickling over a series of carved ledges and into a
+
+channel that disappears into the wall.  A cluster of cream-white water
+
+lilies grows at the pools edge scenting the air with a delicate fragrance.
+
+~
+[Eliza] LORE
+
+~
+301596677 0 5 0
+D2
+simple wooden door~
+~
+407 2884 51013 10 10 5
+2334 9 1509949540 2 0
+-1
+S
+
+#51015
+At the Foot of a Stone Staircase~
+You are at the base of a smooth stone staircase, which leads up and south
+
+between walls of stone, ending in a trapdoor of wood and steel.  The
+
+floor beneath your feet is patterned marble.  To the north, a short
+
+hallway leads between walls neatly laid in stone blocks, opening into a
+
+large underground cavern.
+
+~
+[Eliza] SoKP
+
+~
+301596677 0 9 0
+D0
+~
+~
+0 -1 51016 10 10 5
+D4
+iron and steel trapdoor~
+~
+391 1878 356 10 10 5
+-1
+S
+
+#51016
+Large Cavern~
+This large, roomy underground cavern is dominated by a black marble
+
+fountain at its center.  Lines of torches along the walls are set into
+
+decorative crystalline sconces.  Above, a beautiful yet practical crystal
+
+chandelier throws out the light of many candles in a spray of golden
+
+radiance.  A small hallway leads into darkness to the south.  North, you
+
+can see what appears to be a storage chamber.  East and west, dimly lit
+
+halls branch off.
+
+~
+[Eliza] SoKP
+
+~
+301596677 0 9 0
+D0
+iron bound oak door~
+~
+391 1878 51021 10 10 5
+D1
+~
+~
+0 -1 51017 10 10 5
+D2
+~
+~
+0 -1 51015 10 10 5
+D3
+~
+~
+0 -1 51019 10 10 5
+2627 17 1509949540 -2 0
+-1
+S
+
+#51017
+Dimly Lit Hallway~
+The walls and floor here are of compacted dirt, laced with polished
+
+reddish-brown roots, which reflect the light of the torches placed at
+
+intervals along the passage.  A large, well-lit cavern connects to the
+
+west, and to the east the hall leads into a roomy meeting hall.
+
+~
+[Eliza] SoKP
+
+~
+301596677 0 9 0
+D1
+~
+~
+0 -1 51018 10 10 5
+D3
+~
+~
+0 -1 51016 10 10 5
+-1
+S
+
+#51018
+Meeting Room~
+You enter a large meeting hall that extends west.  and west between walls
+
+of stone laid around living roots.  Torches line the walls, and the room
+
+is lit from above by an iron chandelier, holding large white candles. 
+
+Several couches and chairs sit around a large, wooden table.  A dimly lit
+
+hallway leads off to the west.  Opposite the doorway, an iron @ccauldron@n
+
+bubbles merrily on the hearth of a massive stone fireplace.
+
+~
+[Eliza] SoKP
+
+~
+301596677 0 9 0
+D3
+~
+~
+0 -1 51017 10 10 5
+A
+open~
+drawer~
+if( has_obj( 1878, ch ) ) {
+
+  act_tochar( #open, ch );
+
+  act_notchar( #ropen, ch );
+
+  obj_to_char( oload( 1878 ), ch );
+
+  end;
+
+  }
+
+act_tochar( #nounlock, ch );
+
+~
+E
+open~
+You unlock and open the drawer, removing a key from within.
+
+~
+E
+ropen~
+$n unlocks and opens the drawer, withdrawing a key from within.
+
+~
+E
+nounlock~
+You don't have the key to unlock the drawer.
+
+~
+!
+0 0 0
+1740 17 1509949540 -2 0
+2711 17 1509949540 -2 0
+2711 17 1509949540 -2 0
+1697 17 1509949540 -2 0
+1697 17 1509949540 -2 0
+460 17 1509949540 -2 16
+-1
+S
+
+#51019
+Dimly Lit Hallway~
+You are in a comfortably wide hallway, which is dimly lit by two torches. 
+
+The walls and floor are compacted dirt, traced by polished living roots
+
+of various sizes.  The dirt on the north wall is embedded with a few
+
+small chunks of some type of crystal.  To the east, the hall opens up
+
+onto a well-lit cavern, while to the west is a marble-tiled room, the
+
+floor of which has several dark stains.
+
+~
+[Eliza] SoKP
+
+~
+301596677 0 9 0
+D1
+~
+~
+0 -1 51016 10 10 5
+D3
+~
+~
+0 -1 51020 10 10 5
+-1
+S
+
+#51020
+Training Room~
+This appears to be a sort of training room for those that practice the
+
+arts of war.  Whips, daggers, axes, swords, and many other manner of
+
+weapon hang from the walls or are placed in racks.  The floor is of white
+
+marble, and stained with the blood of many contestants.  The walls and
+
+ceiling are compacted dirt, interwoven by polished reddish roots.  A dim
+
+hallway leads off to the east.
+
+~
+[Eliza] SoKP
+
+~
+368705541 0 9 0
+D1
+~
+~
+0 -1 51019 10 10 5
+-1
+S
+
+#51021
+Storage Room~
+A slightly cramped storage room is here, the floor littered with odds and
+
+ends.  The ceiling is compacted dirt, traced with tree roots that have
+
+been polished,.  The walls and floor are also crisscrossed by polished,
+
+reddish roots, but are inlaid with stone instead of dirt.  An opening in
+
+the south wall leads into a larger room.
+
+~
+[Eliza] SoKP
+
+~
+301664293 0 9 0
+D2
+iron bound oak door~
+~
+391 1878 51016 10 10 5
+-1
+S
+
+#51022
+Before Gleaming Steel Gates~
+A large building lies just to the north, protected by fine gates wrought
+
+of gleaming steel.  Small beds of flowers have been planted at the base
+
+of the wall protecting the courtyard behind the gate.  Part of the
+
+building is visible through the gates, and it looks to have been built of
+
+silvery-white marble and pale, grey stone.  There seems to be no way to
+
+get in except by going through the gates.
+
+~
+[Eliza] ALLY
+
+[Eliza] connect to 57082
+
+~
+301465600 0 9 0
+D0
+pair of gleaming steel gates~
+~
+407 3453 51023 10 10 6
+D2
+~
+~
+32 -1 57082 10 10 6
+E
+gates gate steel~
+These gates rise at least ten feet tall, made from the finest steel. 
+
+Wrought into it, centered over the break between the two sides of the
+
+gate, half on each side, is the design of a sword, vertical and point
+
+down over an open book, in the middle of a ring of linked circles.
+
+~
+A
+~
+~
+if( !is_player( ch ) )
+
+  continue;
+
+if( !has_obj( 3453, ch ) )
+
+  end;
+
+continue;
+
+~
+!
+3 0 1
+A
+inspect untrap pick~
+pair gleaming steel gates north lock~
+if( has_obj( 3453, ch ) ) {
+
+  act_tochar( #your, ch );
+
+  end;
+
+  }
+
+act_tochar( #work, ch );
+
+act_notchar( #rwork, ch );
+
+mob = mob_in_room( 2264, find_room( 78284 ) );
+
+loop( all_in_room ) {
+
+  i = random( 85, 435 );
+
+  dam_message_acid( rch, i, "a rain of acid" );
+
+  inflict_acid( rch, mob, i, "the enchanted gates" );
+
+  }
+
+end;
+
+~
+E
+work~
+As you begin to work on the gate, it flashes, and the room is engulfed in
+
+an acid storm.
+
+~
+E
+rwork~
+As $n begins working on the gate, it flashes, and the room is engulfed in
+
+an acid storm.
+
+~
+E
+your~
+This is your stronghold, why would you ever want to do that?
+
+~
+!
+0 0 0
+-1
+S
+
+#51023
+A Sprawling Courtyard~
+You stand in the courtyard of this building, surrounded by lush grass
+
+speckled with flowers.  Ivy, interspersed with delicate blooming flowers,
+
+climbs trellises mounted on the smooth marble of the east and west walls. 
+
+A gleaming silvery marble fountain stands in the middle of the courtyard,
+
+a small flagstone path leading towards it from both the entrance to the
+
+building to the north and the gate to the south.  A marble bench sits
+
+just to the side of the path, facing the fountain.  A small arena has
+
+been sectioned off with a low wall of pale stone to the west, and a small
+
+gate in the east wall leads to a small stone stable.
+
+~
+[Eliza] ALLY
+
+[Eliza] how to set number of sitters on a chair type object
+
+~
+301465601 0 9 0
+D0
+~
+~
+0 -1 51026 10 10 5
+D1
+sturdy wooden gate~
+~
+131 -1 51025 10 10 6
+D2
+pair of gleaming steel gates~
+~
+407 3453 51022 10 10 6
+D3
+~
+~
+0 -1 51024 10 10 5
+3454 17 1509949540 -2 0
+3455 17 1509949540 -2 0
+-1
+S
+
+#51024
+A Small Arena~
+Sand covers the floor of this sectioned-off area.  The pale stone walls
+
+rise about five feet high, providing spectators with a safe view.  The
+
+sand rises in small mounds and valleys in a circular pattern around the
+
+middle of the floor, as if two people were circling each other before
+
+battle very recently.  A few very pale bloodstains are visible on the
+
+stone.
+
+~
+[Eliza] ALLY
+
+~
+368574465 0 5 0
+D1
+~
+~
+0 -1 51023 10 10 5
+-1
+S
+
+#51025
+A Well-Built Stable~
+This small stable looks as though it was built to withstand almost
+
+anything.  The walls are thick, and the roof has been expertly shingled. 
+
+There are several stalls inside for horses, and an open area for other
+
+pets.  The floor has been covered with a thick layer of straw, providing
+
+a more comfortable alternative than the stone floor for the animals to
+
+rest on.  A small gate keeps the animals safely inside.
+
+~
+[Eliza] ALLY
+
+~
+301465605 0 6 0
+D3
+sturdy wooden gate~
+~
+131 -1 51023 10 10 6
+-1
+S
+
+#51026
+A Meeting Hall~
+The stone ceiling arches high overhead, supported by thick, varnished
+
+rafters of a warm-toned wood.  Bright tapestries hang on each wall,
+
+adding a warmer air to the cool starkness of the marble.  The smooth,
+
+pale stone of the floor is bare but well kept no dirt or dust is visible
+
+on its surface.  A large silvery marble fireplace is set in the east
+
+wall, and next to it is a small stand with related implements. 
+
+Stretching down the length of the room is a long table of solid wood.
+
+~
+[Eliza] ALLY
+
+~
+301465605 0 9 0
+D1
+~
+~
+511 -1 51028 10 10 5
+D2
+~
+~
+0 -1 51023 10 10 5
+D3
+~
+~
+0 -1 51027 10 10 5
+E
+tapestry tapestries~
+These tapestries, woven of finest silken threads have been bordered in a
+
+pattern of gold and silver crosses.  It seems that together, all of the
+
+tapestries form a sort of mural which extends around the walls.  Depicted
+
+on them are the images of many great heroes, charging down a hill into a
+
+fray, while on the other side, masses of trolls and goblins are turning
+
+down to meet them.  Lightning bolts of silver thread fly brilliantly
+
+through the air, and at the head of the charge stands a large entish
+
+warrior, his hands and arms covered with the blood of his foes, and the
+
+glint of madness in his eyes as his weapons are poised for another strike.
+
+~
+E
+fireplace~
+This fireplace has been set into the middle of the east wall.  There
+
+seems to be a semi-circle of slightly darker stone in front of it.  The
+
+fire burning inside burns merrily behind a fine veil of steel chain,
+
+giving light and heat to the large stone room.
+
+~
+E
+stand implements~
+This small wrought-iron stand contains several implements related to a
+
+fireplace, including a poker and a small ash shovel.
+
+~
+A
+pull~
+shovel~
+if( has_obj( 3453, ch ) ) {
+
+  act_tochar( #swivel, ch );
+
+  act_notchar( #rswivel, ch );
+
+  send_to_room( #fireplace, find_room( 51028 ) );
+
+  transfer( ch, find_room( 51028 ) );
+
+  act_notchar( #arrive, ch );
+
+  end;
+
+  }
+
+act_tochar( #trap, ch );
+
+act_notchar( #rtrap, ch );
+
+mob = mob_in_room( 2264, find_room( 78284 ) );
+
+i = random( 29, 85 );
+
+dam_message_shock( ch, i, "an electrical shock from the shovel" );
+
+inflict_shock( ch, mob, i, "trapped shovel" );
+
+~
+E
+swivel~
+You pull the shovel, and quickly squeeze behind the fireplace as it
+
+swivels out.
+
+~
+E
+rswivel~
+$n fiddles with something, $s body blocking the view, and the fireplace
+
+swivels out from the wall.  $n quickly squeezes in behind it as it starts
+
+to swivel back into position.
+
+~
+E
+arrive~
+$n squeezes in just as the fireplace returns to its original position.
+
+~
+E
+trap~
+You spring a trap as you try to do that.
+
+~
+E
+rtrap~
+$n springs a trap as $e tries to pull the shovel.
+
+~
+E
+fireplace~
+The fireplace swivels out of place.
+
+~
+!
+0 0 0
+-1
+S
+
+#51027
+A Quiet Library~
+The warm wood paneling on the walls is hidden in many places behind large
+
+bookcases, which are filled with cloth and leather-bound books.  The
+
+smooth stone floor is covered with a huge midnight-blue rug, stopping
+
+about half a foot from the walls.  The north and east walls contain
+
+several small niches for braziers, and there are windows on the south and
+
+west walls, half-hidden by heavy brocade drapes.  Several overstuffed
+
+couches sit along the perimeter of the room, facing inwards.
+
+~
+[Eliza] ALLY
+
+~
+301465605 0 9 0
+D1
+~
+~
+0 -1 51026 10 10 5
+A
+take~
+book~
+if( has_obj( 3453, ch ) ) {
+
+  act_tochar( #book, ch );
+
+  act_notchar( #rbook, ch );
+
+  obj_to_char( oload( 3453 ), ch );
+
+  }
+
+~
+E
+rbook~
+$n removes a book from the shelf, opens it and removes a key from within
+
+it.
+
+~
+E
+book~
+You remove a book from the shelf, and retrieve a key from within it.
+
+~
+!
+0 0 0
+3456 17 1509949540 -2 0
+3456 17 1509949540 -2 0
+-1
+S
+
+#51028
+A Stately Bank~
+The fine marble walls in this small room are bare, lending a solemn air. 
+
+There are small counters along the north and south walls, and there is a
+
+pair of large potted plants flanking the doorway to the west, one of
+
+which looks to have been moved lately.  The floor is tiled in silvery
+
+white and grey marble, in a circular checkerboard pattern radiating from
+
+the center of the room.
+
+~
+[Eliza] ALLY
+
+[Eliza] how to do the door on this side.
+
+~
+301533221 0 5 0
+D3
+~
+~
+479 -1 51026 10 10 5
+A
+move push pull~
+plant~
+act_tochar( #move_plant, ch );
+
+act_notchar( #rmove_plant, ch );
+
+send_to_room( #swivels, find_room( 51026 ) );
+
+transfer( ch, find_room( 51026 ) );
+
+act_notchar( #arrive, ch );
+
+~
+E
+move_plant~
+You move the plant a little, and the fireplace opens marginally.
+
+You squeeze out through the narrow crevice.
+
+~
+E
+rmove_plant~
+$n moves one of the plants, and the fireplace swivels out of place, and
+
+$e squeezes out.
+
+~
+E
+arrive~
+$n squeezes out from the narrow crevice.
+
+~
+E
+swivels~
+The fireplace swivels slightly out of place.
+
+~
+!
+0 0 0
+-1
+S
+
+#0
+

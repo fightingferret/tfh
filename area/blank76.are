@@ -1,0 +1,4292 @@
+#AREA
+Wood Imps~
+Eldina Usiel Eliza Skurva~
+~
+
+0 0
+4
+#ROOMS
+
+#47500
+Inside A Rotting Stump~
+The twisted wood of the marred tree winds down and about the entrance,
+
+sheltering the small hollow of the trunk.  The smell of dirt and musky
+
+decay hangs upon the moist air, and the muddy soil is blanketed by wet
+
+leaves, stirring and whispering in the occasional gusts of wind from
+
+without.  The ground dips down to the north below the grasp of gnarled
+
+roots, a small passageway lined with soft and fresh-dug earth.
+
+~
+[Eliza] reviewed
+
+[Cyndra] hmm...make up a climb up so room doesn't have to be no.mob?
+
+[Eliza] added the acode but would like to leave this room no.mob if possible. There is a wide span in levels on the mobs and the enterring code transfers players one at a time, with each player having to type the command to get in.
+
+[Eliza] Since most zones have a no.mob room at the beginning, a breathing space of sorts and an opportunity to turn back before dying to mobs way over the level of the accidental entrant.. probably rambling.. main point is I don't want them to die before they see more than this one room.
+
+[Eliza] dex check here leading north.
+
+[Eliza] search here
+
+~
+301465608 11 9 0
+D0
+~
+~
+0 -1 47501 10 10 5
+D4
+~
+~
+512 -1 47527 10 10 5
+E
+roots soil~
+Gnarled and twisted, decaying roots grope for purchase in the soft and
+
+loosened soil that forms the roof of the small enclosure.  Like groping
+
+fingers they prod and pry, ending up most often adangle in mid-air.
+
+~
+E
+leaves wet~
+Drifting in through the opening that marks the entrance, fallen leaves
+
+and other, wandering vegetation have accumulated on the floor of the
+
+shelter...a thick carpet of decayed and dying matter that rustles and
+
+whispers secrets no one hears.
+
+~
+E
+down passageway~
+Sloping downward toward the north, a narrow, confining passageway
+
+disappears out of sight into the underlying darkness beneath the earth. 
+
+The surrounding soil of the tunnel is loose and shifting, as though
+
+carved in some not-to-distant past.
+
+~
+A
+~
+~
+loop( all_in_room ) {
+
+  if( find_stat( ch, dex ) < random( 10, 15 ) ) {
+
+    act_tochar( #slip, ch );
+
+    act_notchar( #slip2, ch );
+
+    transfer( ch, find_room( 47501 ) );
+
+    act_notchar( #arrive, ch );
+
+    interpret( ch, "+sit" );
+
+    end; }
+
+    }
+
+  continue;
+
+~
+E
+slip~
+@GYou lose your footing and fall, sliding down the muddy tunnel into
+
+the shallow puddle below!@n
+
+~
+E
+slip2~
+@G$n slips and loses $s footing, sliding down the muddy tunnel.@n
+
+~
+E
+arrive~
+$n slides down the mud and lands with a splash in the small and murky
+
+pubble at the bottom of the incline.
+
+~
+E
+to_char~
+@ySlipping, you barely maintain your footing as you navigate the narrow
+
+passage leading north.@n 
+
+~
+E
+to_room~
+@ySlipping, $n barely maintains $s footing as $e navigates the narrow
+
+passage leading north.@n 
+
+~
+!
+3 0 1
+A
+~
+leaves leav ground floor mud~
+if( !is_player( ch ) )
+
+end;
+
+if( rflag( reset0, room ) ) {
+
+remove_rflag( reset0, room );
+
+act_notchar( #seesearch, ch );
+
+i = random( 1, 20 );
+
+if( i < 3 ) {
+
+obj_to_char( oload( 415 ), ch ); 
+
+send_to_char( #herb, ch );
+
+end; }
+
+if( i < 6 ) {
+
+obj_to_char( oload( 672 ), ch );
+
+send_to_char( #acorn, ch );
+
+end; }
+
+if( i < 9 ) {
+
+obj_to_char( oload( 685 ), ch );
+
+send_to_char( #pine, ch );
+
+end; }
+
+if( i < 12 ) {
+
+obj_to_char( oload( 1598 ), ch );
+
+send_to_char( #mouse, ch );
+
+end; }
+
+if( i < 18 ) {
+
+obj_to_char( oload( 805 ), ch );
+
+send_to_char( #leaf, ch );
+
+end; }
+
+}
+
+send_to_char( #nothing, ch );
+
+~
+E
+nothing~
+You search through the pile of leaves and woodchips, but can find nothing
+
+of substance.
+
+~
+E
+seesearch~
+$n rummages through the piles of leaves.
+
+~
+E
+herb~
+You find a clump of herbs buried among the leaves and woodchips.
+
+~
+E
+acorn~
+You find an acorn buried among the leaves and woodchips.
+
+~
+E
+pine~
+You find a pine cone buried among the leaves.
+
+~
+E
+mouse~
+You find the body of a dead mouse within the rotting piles of
+
+leaves. 
+
+~
+E
+leaf~
+You retrieve a perfectly-shaped oak leaf from the pile, untarnished by
+
+moisture, dirt and decay.
+
+~
+!
+9 0 0
+A
+climb crawl~
+1 up stump hole roots~
+act_tochar( #crawl, ch );
+
+act_notchar( #rcrawl, ch );
+
+transfer( ch, find_room( 47527 ) );
+
+remove_rflag( reset0, room );
+
+act_notchar( #arrive, ch );
+
+end;
+
+~
+E
+crawl~
+@gAfter brushing a few remaining leaves aside, you climb up and out of
+
+the hole overhead.@n 
+
+~
+E
+rcrawl~
+@gAfter brushing aside a few remaining leaves, $n climbs up and out of
+
+the hole.@n 
+
+~
+E
+arrive~
+@g$n emerges slowly, crawling out of a leaf-surrounded hole.@n
+
+~
+!
+0 0 0
+-1
+S
+
+#47501
+Muddy Passage~
+Roots dangle from the ceiling above, some weaving in and out of the walls
+
+and along the muddy base of the corridor.  Between the occasional gnarled
+
+twine of dark wood, pools of murky water litter the gradual northward
+
+descent of the passageway.  To the south, the loose soil rises sharply,
+
+peppered with wet leaves, twigs and the broken remnants of small tree
+
+branches.
+
+~
+[Eliza] reviewed
+
+~
+335151108 11 5 0
+D0
+~
+~
+0 -1 47504 10 10 5
+D2
+~
+~
+0 -1 47500 10 10 5
+E
+loose soil rise~
+The loose soil is slippery even in the gradual descent to the north, more
+
+so in the steeper rise to the south.  Sparse layers of slender twigs and
+
+pea-sized pebbles have been strewn about, apparently in an attempt to
+
+provide more secure footing.  At the bottom of the slope lies a puddle of
+
+murky, foul-smelling water.
+
+~
+E
+roots ceiling~
+Gnarled roots weave in and out of the walls, some from the tree itself
+
+and some from the forest above.  The corridor is dug around their
+
+intrusion, allowing progress only by climbing over some and ducking under
+
+others.
+
+~
+E
+puddle pool~
+Small puddles of collected water gather in the low spots between
+
+interwoven roots, their surfaces afloat with broken bits of dying
+
+vegetation.  At the base of the slope, a larger pool of murky runoff from
+
+a recent storm emits a foul-smelling stench.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou scramble up the slippery incline to the south.@n
+
+~
+E
+to_room~
+@y$n scrambles up the slippery incline to the south.@n
+
+~
+!
+3 0 4
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou hop over the murky puddle at the base of the incline.@n
+
+~
+E
+to_room~
+@y$n hops over the murky puddle at the base of the incline.@n
+
+~
+!
+3 0 1
+1066 9 1509949540 3 0
+1066 9 1509949540 3 0
+-1
+S
+
+#47502
+Just Inside A Rotting Stump~
+REUSE OUTSIDE
+
+~
+~
+301465601 3 9 0
+-1
+S
+
+#47503
+Just Inside A Rotting Stump~
+REUSE OUTSIDE
+
+~
+~
+301465601 3 9 0
+-1
+S
+
+#47504
+An Intersection~
+The rough-dug tunnels meet at this jagged intersection, branching off
+
+into three directions.  The hanging roots of the forest above dangle
+
+along the ceiling and weave their way in and out of the walls along the
+
+puddle-filled passage to the south.  To the east the soil seems more
+
+solid, keeping a consistent shape as the corridor drifts towards the dim
+
+glow of light.  The passageway continues downward to the west into
+
+glittering darkness, as though the air itself shimmers at the presence of
+
+light.
+
+~
+[Eliza] done/reviewed
+
+~
+335151116 11 5 0
+D1
+~
+~
+0 -1 47506 10 10 5
+D2
+~
+~
+0 -1 47501 10 10 5
+D3
+~
+~
+0 -1 47505 10 10 5
+E
+roots south ceiling~
+Roots dangle from the ceiling along the rising incline to the south, and
+
+others insinuate themselves along the walls in random and interwoven
+
+patterns, making the climb difficult in that direction.
+
+~
+E
+glow east soil~
+The tunnel continues toward the east into nearly unrelenting darkness. 
+
+The solidly packed passage is wide and even at the floor, tapering upward
+
+toward the ceiling.  Far into the distant, so dim it is little more than a
+
+lesser shade of black, the faintest of glows can be discerned.
+
+~
+E
+darkness glittering~
+Down the sloping, western passageway, the air shimmers, tiny flickerings
+
+of light that dance in ever more random patterns...spinning, pirouetting
+
+glimmers, twisting back and forth as if called by a whispering faery's
+
+breath.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou inch your way west into the unrelenting darkness of the narrow
+
+enclosure.@n 
+
+~
+E
+to_room~
+@y$n inches $s way west into the unrelenting darkness of the narrow
+
+enclosure.@n 
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou turn to the eastern tunnel and a dim glow of light.@n
+
+~
+E
+to_room~
+@y$n turns to the eastern tunnel and a dim glow of light in the
+
+distance.@n 
+
+~
+!
+3 0 2
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou slip and slide up the rising incline to the south.@n
+
+~
+E
+to_room~
+@y$n slips and slides up the rising incline to the south.@n
+
+~
+!
+3 0 4
+1066 9 1509949540 3 0
+-1
+S
+
+#47505
+Dark Passage~
+Rubble litters the floor of this dark passageway, it's walls and ceiling
+
+blanketed by thick and gleaming spiderwebs.  The strands drift lazily in
+
+an unfelt breeze, some fine and intricate, others almost as thick as a
+
+braided rope.  At the center of the corridor sits a dusty, grated wooden
+
+plank.
+
+~
+[Eliza] reviewed
+
+[Eliza] opening down-3 possibilities
+
+~
+335151108 11 5 0
+D1
+~
+~
+0 -1 47504 10 10 5
+D3
+~
+~
+0 -1 47507 10 10 5
+D5
+cobweb covered door~
+cobweb covered door~
+131 -1 47509 10 10 8
+E
+rubbles floor dirt~
+Mounds of rubble, both large and small, huddle at the base of the
+
+passage's wall...bits of twigs, pebbles, small clods of dirt and bits and
+
+pieces of unidentifiable detritus collected over the course of time.  On
+
+the rise of the walls, above the growing mounds, gouges and scraps have
+
+been worn into the hard-packed dirt.
+
+~
+E
+webs strand gleam~
+Festooned in gossamer strands of varying thickness across the corners and
+
+along the walls of the corridor, spider webs drift back and forth in an
+
+unnatural rhythm to a song only they can hear.  Faint gleamings sparkle
+
+among the strands like fairy lights on a moonless night.
+
+~
+E
+plank wooden grated down~
+Upon closer inspection, the wooden plank is constructed from splintery
+
+boards, possibly stripped from a fence or a wagon, and bolted down on two
+
+ends to rooted, wooden beams to the east and west, allowing it to swing
+
+up and open.  Between the boards you can see only darkness, but it seems
+
+apparent the plank firmly covers a small pit...and efficiently contains
+
+whatever lays within.
+
+~
+A
+open move lift slide push pull~
+plank wooden grated grate down d door boards beams~
+if( players_room( find_room( 47509 ) ) > 0 )
+
+  end;
+
+if( is_open( room, down ) )
+
+  end;
+
+if( mob_in_room( 2306, find_room( 47509 ) ) ) {
+
+  open( room, down );
+
+  act_tochar( #grab, ch );
+
+  act_notchar( #rgrab, ch );
+
+  transfer( ch, find_room( 47509 ) );
+
+  act_notchar( #arrive, ch );
+
+end;
+
+  }
+
+if( mob_in_room( 2319, find_room( 47509 ) ) ) {
+
+  open( room, down );
+
+  mob = mob_in_room( 2319, find_room( 47509 ) );
+
+  act_room( #fly_up, ch );
+
+  transfer( mob, find_room( 47505 ) );
+
+end;
+
+  }
+
+continue;
+
+~
+E
+grab~
+@RSpidery arms reach up through the open hole, grabbing at you and dragging
+
+you down into its dank and dark cell.@n
+
+~
+E
+rgrab~
+@RSpidery arms reach up through the open hole, grabbing at $n and
+
+dragging $m down into its dank and dark cell.@n 
+
+~
+E
+arrive~
+$n gets dragged in from above.
+
+~
+E
+fly_up~
+@cThe pixie flits up and out of its dank cell, its iridescent wings
+
+aflutter.@n 
+
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) == faerie )
+
+  end;
+
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappears, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+disappears~
+$n disappear through the narrow opening.
+
+~
+!
+3 0 32
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou continue westard along the narrow, confining passage.@n
+
+~
+E
+to_rooom~
+@y$n continues westward along the narrow, confining passage.@n
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yA dull orange glow beckons you eastward.@n
+
+~
+E
+to_room~
+@y$n heads eastward toward the dull, orange glow in the distance.@n
+
+~
+!
+3 0 2
+1144 9 1509949540 3 0
+81 17 1509949490 -2 0
+-1
+S
+
+#47506
+Dim Passageway~
+The passageway appears rather solid, a half-dozen paces across, and the
+
+walls and ceiling are lined with roots that weave in and out of the soil,
+
+keeping it firm.  The tunnel expands in width to the east, winding off
+
+towards the distant glow of a dull, orange light.  Drifting down the
+
+corridor, the occasional sound of scraping metal or hissing steam nearly
+
+hides the background of faint, gutteral laughter.  The passageway
+
+continues westward, growing more narrow in the darkness.
+
+~
+[Eliza] extras added
+
+[Eliza] desc reviewed.
+
+~
+335151109 11 5 0
+D1
+~
+~
+0 -1 47512 10 10 5
+D3
+~
+~
+0 -1 47504 10 10 5
+E
+roots ceiling walls~
+Gnarled and twisted roots form a serpentine network of support for the
+
+passage's walls and ceiling, holding them firmly packed and solid.
+
+~
+E
+orange glow east~
+A dull, orange glow illuminates the tunnel as it widens toward the east. 
+
+Undulating patches of lighter and darker shades suggest the faint light
+
+may be torch or flame.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou head back into the darkness that lies westward@n
+
+~
+E
+to_room~
+@y$n heads back into the darkness that lies westward.@n
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou continue eastward down the corridor.@n
+
+~
+E
+to_room~
+@y$n continues eastward down the corridor.@n
+
+~
+!
+3 0 2
+1066 9 1509949540 3 0
+-1
+S
+
+#47507
+Dark Corridor~
+A plethora of shimmering spiderwebs decorate the corners of the corridor,
+
+thick silken strands stretching across the ceiling and hanging down to
+
+mid-height.  Amidst the rubble, a grated, wooden plank rests upon the
+
+ground at the center of the passageway, and several wooden cages litter
+
+the northern wall, some stacked and other strewn about.  To the west, the
+
+webs grow so dense they seem to cover the passage completely.  The
+
+corridor stretches out to the east, growing slightly larger in diameter
+
+as it twines off into darkness.
+
+~
+[Eliza] reviewed
+
+[Eliza] open down, same as east
+
+~
+335151108 11 5 0
+D1
+~
+~
+0 -1 47505 10 10 5
+D3
+~
+~
+0 -1 47510 10 10 5
+D5
+cobweb covered door~
+~
+131 -1 47508 10 10 5
+E
+rubble floor dirt~
+Mounds of rubble, both large and small, huddle at the base of the
+
+passage's wall...bits of twigs, pebbles, small clods of dirt and bits and
+
+pieces of unidentifiable detritus collected over the course of time.  On
+
+the rise of the walls, above the growing mounds, gouges and scraps have
+
+been worn into the hard-packed dirt.
+
+~
+E
+web strands shimmering~
+Festooned in gossamer strands of varying thickness across the corners and
+
+along the walls of the corridor, spider webs drift back and forth in an
+
+unnatural rhythm to a song only they can hear.  Faint gleamings sparkle
+
+among the strands, fairy lights on a moonless night.
+
+~
+E
+wooden grated plank down~
+Upon closer inspection, the wooden plank is constructed from splintery
+
+boards, possibly stripped from a fence or a wagon, and bolted down on two
+
+ends to rooted, wooden beams to the east and west, allowing it to swing
+
+up and open.  Between the boards you can see only darkness, but it seems
+
+apparent the plank firmly covers a small pit...and efficiently contains
+
+whatever lays within.
+
+~
+E
+cages~
+Several wooden cages in various states of deterioration are strewn about
+
+the floor.  Some seem fairly new; others are barely standing upright. 
+
+Within some of them, tiny crossbows and other small raiment, lie in sad
+
+repose.
+
+~
+A
+~
+~
+if( race( ch ) == faerie )
+
+  end;
+
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappears, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+to_char~
+@yYou continue east along the narrow, enclosing tunnel.@n
+
+~
+E
+to_room~
+@y$n continues eastward, through the narrow confines of the tunnel.@n
+
+~
+E
+disappears~
+No description.
+
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == faerie )
+
+  end;
+
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappears, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+to_char~
+@yClearing the swagged webs from your way, you continue on to the west.@n
+
+~
+E
+to_room~
+@y$n clears the webs away and continues on to the west.@n
+
+~
+E
+disappears~
+No description.
+
+~
+!
+3 0 8
+A
+open move lift slide push pull~
+plank wooden grated grate down d door boards beams~
+if( players_room( find_room( 47509 ) ) > 0 )
+
+  end;
+
+if( is_open( room, down ) )
+
+  end;
+
+if( mob_in_room( 2306, find_room( 47509 ) ) ) {
+
+  open( room, down );
+
+  act_tochar( #grab, ch );
+
+  act_notchar( #rgrab, ch );
+
+  transfer( ch, find_room( 47509 ) );
+
+  act_notchar( #arrive, ch );
+
+  end;
+
+  }
+
+if( mob_in_room( 2319, find_room( 47509 ) ) ) {
+
+  open( room, down );
+
+  mob = mob_in_room( 2319, find_room( 47509 ) );
+
+  act_room( #fly_up, ch );
+
+  transfer( mob, find_room( 47505 ) );
+
+  end;
+
+  }
+
+continue;
+
+~
+E
+grab~
+@RSpidery arms reach up through the open hole, grabbing at you and
+
+dragging you down into its dank and dark cell.@n 
+
+~
+E
+rgrab~
+@RSpidery arms reach up through the open hole, grabbing at $n and
+
+dragging $m down into its dank and dark cell.@n 
+
+~
+E
+arrive~
+$n gets dragged in from above.
+
+~
+E
+fly_up~
+@cThe pixie flits up and out of its dank cell, her iridescent wings
+
+aflutter.@n 
+
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) == faerie )
+
+  end;
+
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappears, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+disappears~
+$n disappears, squeezing through the rough hole in the ground.
+
+~
+!
+3 0 32
+1144 9 1509949540 3 0
+2348 9 1509949540 2 0
+-1
+S
+
+#47508
+The Pit~
+The walls of this lightless pit are rough and marred by scratches and
+
+scrapes, leading up to the mounted, wooden board above.  The ground is
+
+moist and bears the fetid smell of waste and death.  Shoved into a
+
+corner, a ragged pile of rotted clothes and broken bones, lies forlorn
+
+and forgotten.
+
+~
+[Eliza] reviewed
+
+[Cyndra] how'd a wolf get down here?
+
+~
+335151109 11 6 0
+D4
+cobweb covered door~
+~
+131 -1 47507 10 10 5
+E
+board up~
+The plank covering the opening leading up is made of rough and weathered
+
+boards possibly stripped from an existing construction.  The surface is
+
+splintery and warped.
+
+~
+E
+ribs bones cloth~
+A pile of tattered and rotting cloth lies in one corner of the pit. 
+
+Interspersed among the dirty cloth are bits of broken bones.  Clearly
+
+evident on some of the bones, jagged teeth marks offer clues to the fate
+
+of those trapped here.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou scramble up and out through the cobweb infested door.@n
+
+~
+E
+to_room~
+@y$n scrambles up and out through the cobweb infested door.@n
+
+~
+!
+3 0 16
+2319 9 1509949540 3 0
+2306 9 1509949460 3 0
+114 9 1509949470 3 0
+-1
+S
+
+#47509
+The Pit~
+The walls of this lightless pit are rough and marred by scratches and
+
+scrapes, leading up to the mounted, wooden board above.  The ground is
+
+moist and bears the fetid smell of waste and death.  Shoved into a
+
+corner, a ragged pile of rotted clothes and broken bones, lies forlorn
+
+and forgotten.
+
+~
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D4
+cobweb covered door~
+~
+131 -1 47505 10 10 5
+E
+board up~
+The plank covering the opening leading up is made of rough and weathered
+
+boards possibly stripped from an existing construction.  The surface is
+
+splintery and warped.
+
+~
+E
+pile bones clothes~
+A pile of tattered and rotting cloth lies in one corner of the pit. 
+
+Interspersed among the dirty cloth are bits of broken bones.  Clearly
+
+evident on some of the bones, jagged teeth marks offer clues to the fate
+
+of those trapped here.
+
+~
+E
+scratches scrapes~
+Deep and ragged gashes scar the pit, lined with chips of claw and stained
+
+red.  Countless parallel scratches adorn every edge and corner, but from
+
+the look of it, nothing ever escaped save through death.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou scramble up and out through the narrow opening.@n
+
+~
+E
+to_room~
+@y$n scrambles up and out through the narrow opening.@n
+
+~
+!
+3 0 16
+2319 9 1509949470 3 0
+114 8 1509949470 3 0
+2306 8 1509949460 3 0
+-1
+S
+
+#47510
+Webbed Chamber~
+This chamber is shrouded by webs hanging down and across from wall to
+
+wall in seemingly haphazard patterns, interlaced into gently swaying nets
+
+of glittering silver.  The ground is soft and moist, torn and blanketed
+
+by fresh-dug soil.  The path seems to open to the east, escaping the
+
+grasping curtains...while to the north, there is nothing but opaque
+
+darkness and the sounds of incessant scurrying.
+
+~
+[Usiel] possible to make this room no.scan?
+
+[Eliza] room set no.autoscan
+
+[Eliza] reviewed
+
+[Cyndra] should no.autoscan prevent scan as well? perhaps this is a code bug? (can scan in here, btw)
+
+[Tyrone] is no.autoscan even working, didn't notice anything in the code referring to this rflag
+
+[Eliza] dunno really.. I keep forgetting things didn't used to work. no, doesn't prevent scan but coding a no.scan is way over my head. If someone would like to add that in, it would be great as I know Usiel planned to.
+
+~
+335151172 11 5 0
+D0
+~
+~
+0 -1 47511 10 10 5
+D1
+~
+~
+0 -1 47507 10 10 5
+E
+webs shimmering curtains~
+Spun silver threads festoon the tunnel, draping the ceiling in lacy,
+
+ethereal webs.  Yet, despite their intricate webwork, the strands are
+
+strong, encasing several large masses within their silken folds.  Closer
+
+examination reveals that these masses are naught but corpses in various
+
+stages of decay.
+
+~
+E
+ground moist soil~
+The ground is soft and damp, not wet as if water had collected here, but
+
+rather the moistness of dirt hidden far below the earth's surface. 
+
+Stirred and loosened, what seem to be tracks of sorts, can be seen here
+
+and there on the tunnel's floor.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou brush the webs aside and move northward into darkness@n 
+
+~
+E
+to_room~
+@y$n brushes the webs aside and moves northward into darkness.@n 
+
+~
+!
+3 0 1
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou head through the tunnel eastward, ducking under a curtain of spider
+
+webs.@n 
+
+~
+E
+to_room~
+@y$n heads through the tunnel eastward, ducking under a curtain of spider
+
+webs.@n 
+
+~
+!
+3 0 2
+A
+search~
+soil~
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  act_tochar( #search, ch );
+
+  act_notchar( #rsearch, ch );
+
+  wait( 1 );
+
+  if( random( 1, 2 ) == 1 ) {
+
+    act_tochar( #find, ch );
+
+    act_notchar( #rfind, ch );
+
+    obj_to_char( oload( 81 ), ch );
+
+    end;
+
+    }
+
+  act_tochar( #nada, ch );
+
+  act_notchar( #rnada, ch );
+
+  }
+
+act_tochar( #already, ch );
+
+~
+E
+search~
+@cYou sift through the fresh-dug soil carefully.@n
+
+~
+E
+rsearch~
+@c$n sifts through the fresh-dug soil carefully.@n
+
+~
+E
+find~
+@cAfter a careful search, you find a spider's web.@n
+
+~
+E
+rfind~
+@cAfter a careful search, $n finds a spider's web.@n
+
+~
+E
+nada~
+@cAfter a careful search you come up empty handed@n
+
+~
+E
+rnada~
+@cAfter a careful search, $n comes up empty handed.@n
+
+~
+E
+already~
+@cThe soil has already been sifted through.  There's nothing left to
+
+find.@n 
+
+~
+!
+9 0 0
+1144 9 1509949540 3 0
+1144 9 1509949540 3 0
+-1
+S
+
+#47511
+Wood Spider Nest~
+Looming webs twist about the low ceiling in unfamiliar patterns, hiding
+
+sections behind a veil of silver.  At the chamber's center sits a mound
+
+of earth, riddled with holes that seem to move and shift.  The webs
+
+converge around the southern portal, and rest heavily to the west around
+
+a dark rubble-strewn wall.
+
+~
+[Eliza] reviewed.
+
+[Cyndra] acode 1: use target 1 west instead of w west
+
+[Tyrone] fixed
+
+[Eliza] Thx.:)
+
+[Eliza] dig west
+
+~
+335151108 11 6 0
+D2
+~
+~
+0 -1 47510 10 10 5
+D3
+dirt~
+~
+171 -1 47523 10 10 5
+E
+webs pattern veil~
+Spider webs swag across the soil-formed ceiling in an intricate
+
+latticework of patterns.  Like beaded, gypsy curtains they shift and
+
+dance, reflecting glass-like shimmers along their silver-spun threads.
+
+~
+E
+mound holes~
+Centered in the chamber lies a mound of earth honeycombed with holes. 
+
+The miniature hillock shifts and moves as though it were a living
+
+breathing entity.  Closer examination reveals that the undulating mass of
+
+dirt is, in reality, thousands upon thousands of newborn spiders.
+
+~
+E
+dark rubble west~
+The western wall of the chamber boasts a tapestry of webs, thickly
+
+interwoven like the finest of fabrics.  Brushing the webs aside...no easy
+
+task...bares a breastwork of rubble and dark soil, loosely packed and
+
+unstable.
+
+~
+A
+dig~
+1 west wall web rubble~
+if( is_open( room, west ) ) {
+
+act_tochar( #opened, ch );
+
+};
+
+else {
+
+act_tochar( #digmound, ch );
+
+act_notchar( #digmound2, ch );
+
+send_to_room( #appears, find_room( 47523 ) );
+
+open( room, west );
+
+}
+
+~
+E
+digmound~
+@b@WYou dig through the dirt and find an opening west.
+
+~
+E
+digmound2~
+@b@W$n digs through the dirt and finds an opening west.
+
+~
+E
+opened~
+The way has already been cleared.
+
+~
+E
+appears~
+The dirt to the west stirs and the webs begin to part, revealing an opening.
+
+~
+!
+0 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou squeeze through the narrow opening dug through the western wall of
+
+the chamber.@n 
+
+~
+E
+to_room~
+@y$n squeezes through the narrow opening dug through the western wall of
+
+the chamber.@n 
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yThe webs cling to every part of you as you leave through the southern
+
+portal.@n 
+
+~
+E
+to_room~
+@yThe webs cling to every part of $n, as $e moves through the southern
+
+portal.@n 
+
+~
+!
+3 0 4
+1169 9 1509949540 3 0
+-1
+S
+
+#47512
+Dim Passageway~
+A harsh, orange glow seeps out from the misshapen portal further to the
+
+east of the passage, casting a contorted boundary between light and
+
+shadow upon the rough root-lined walls.  The stale air is accompanied by
+
+the faint and almost sickly scent of roasted meat and the sounds of
+
+guttural coughs and hisses echoes throughout the corridor.  Strewn about
+
+the floor are wooden and metal articles in various states of disrepair. 
+
+To the west, the roots seem to swallow the passage into darkness, like
+
+the closing throat of a giant.
+
+~
+[Eliza] quest item to be added when Usiel returns.
+
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D1
+~
+~
+0 -1 47513 10 10 5
+D3
+~
+~
+0 -1 47506 10 10 5
+E
+east portal glow orange~
+A portal of sorts, a hand-hewn, misshapen archway hacked into the solidly
+
+packed dirt of the tunnel, opens into a large root-lined chamber to the
+
+east.  Pulsating in varying degrees of brightness a harsh, orange glow
+
+flows through tunnel, casting eerie patterns of highlight and shadow on
+
+the tunnel walls.
+
+~
+E
+roots walls~
+The growth of the roots change pattern here, weaving in an out of the
+
+tunnel walls vertically, plunging downward through the soil as though
+
+seeking the life's blood at the earth's heart...a source of water.
+
+~
+E
+articles junk pile~
+Strewn haphazardly around the room, debris and articles of little worth
+
+lie in scattered disarray.  None of the items are whole, each being in
+
+various states of breakage.  Wood, metal, and glass comprise the majority
+
+of the broken pieces, though cloth and even paper can be seen poking out
+
+among the rubble.
+
+~
+A
+search~
+rubble debris articles~
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  act_tochar( #search, ch );
+
+  act_notchar( #rsearch, ch );
+
+  wait( 1 );
+
+  if( random( 1, 2 ) == 1 ) {
+
+    act_tochar( #find, ch );
+
+    act_notchar( #rfind, ch );
+
+    obj_to_char( oload( 210 ), ch );
+
+    end;
+
+    }
+
+  act_tochar( #nada, ch );
+
+  act_notchar( #rnada, ch );
+
+  }
+
+act_tochar( #already, ch );
+
+~
+E
+search~
+@cYou search through the piles of broken debris carefully.@n
+
+~
+E
+rsearch~
+@c$n searches through the piles of broken debris carefully.@n
+
+~
+E
+find~
+@cAfter searching for awhile you find a shard of broken glass.@n 
+
+~
+E
+rfind~
+@cAfter searching for awhile $n finds a shard of broken glass.@n
+
+~
+E
+nada~
+@cAfter searching for awhile, you come up empty handed.@n
+
+~
+E
+rnada~
+@cAfter searching for awhile, $n comes up empty handed.@n
+
+~
+E
+already~
+@cThe debris has already been thoroughly searched and there is nothing
+
+left to find.@n 
+
+~
+!
+9 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou weave a path through the mounds of debris, moving eastward.@n
+
+~
+E
+to_room~
+@y$n weaves a path through the mounds of debris, moving eastward.@n
+
+~
+!
+3 0 2
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yHeading eastward, you continue on into the vast darkness lying in that
+
+direction.@n
+
+~
+E
+to_room~
+@yHeading eastward, $n continues on into the vast darkness lying in that
+
+direction@n 
+
+~
+!
+3 0 8
+1144 9 1509949540 3 0
+-1
+S
+
+#47513
+Smoky Chamber~
+With walls of solid-packed earth, this chamber is clouded by a dull haze
+
+of smoke, likely from the fireplace that dominates an alcove to the north. 
+
+The ceiling slopes upward away from the walls, with dozens of roots
+
+dangling down out of the enmeshed soil, all leading into a central circle... 
+
+a hollow sapling through which the accumulated smoke slowly rises and
+
+disperses to the forest without.  Scattered about the room are various
+
+broken chests and other scavenger's treasures, the most striking of which
+
+is the wheel-less body of a horse-drawn wagon.  The hollow narrows to the
+
+south where a barrier of branches is wedged into the narrow portal, while
+
+to the west the darkness of a tunnel awaits beyond the dim fire's glow.
+
+~
+[Eliza] reviewed.
+
+~
+335151109 11 5 0
+D0
+~
+~
+0 -1 47514 10 10 5
+D2
+barrier of branches~
+branches barrier south s~
+131 -1 47515 10 10 5
+D3
+~
+~
+0 -1 47512 10 10 5
+E
+north fireplace smoke~
+Wispy tendrils of gray-white smoke drift from the alcove to the north,
+
+feeling their way.  Like a blind man's groping fingers they hug the
+
+root-bound walls, searching upward for a source of escape from unwanted
+
+confinement.
+
+~
+E
+ceiling up circle hollow sapling~
+The smoke rises along the sloping ceiling, twining around pendant roots
+
+as it seeks an outlet from the confined space of the tunnel.  Its goal,
+
+an irregularly shaped circle dug into the earth, lies overhead and
+
+covered by a half-rotted hallow sapling.
+
+~
+E
+chests treasure wagons junk~
+The battered carcasses of a handful of broken chests and other treasures
+
+scavenged from unknown sources litter the room in an awe-inspiring
+
+display of disorganization.  Tucked into an out-of-the-way jog in the
+
+tunnel, the most cherished of these gems...the wheel-less carcass of a
+
+battered wagon...leans lazily against the wall.
+
+~
+E
+south barrier branches.~
+The chamber narrows to the south, dead-ending at a latticework of
+
+branches.  The frame, its larger holes blocked with daubs of mud, fits
+
+squarely into the opening, yet seems easily moved aside to allow passage
+
+beyond.
+
+~
+A
+move push pull~
+barrier 1 south branches door~
+open( room, south );
+
+send_to_char( #open, ch );
+
+act_notchar( #open2, ch );
+
+~
+E
+open~
+You push the barrier aside gently, revealing a narrow portal.
+
+~
+E
+open2~
+$n pushes aside the barrier to the south, revealing a narrow portal.
+
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #puff, room );
+
+~
+E
+puff~
+@cLazy fingers of smoke drifting in from the north fill the air with a
+
+light haze@n 
+
+~
+!
+2 100 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou duck through the low opening to the south.@n
+
+~
+E
+to_room~
+@y$n ducks through the narrow opening to the south.@n
+
+~
+!
+3 0 4
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yThe hazy smoke grows thicker as you continue to the north.@n
+
+~
+E
+to_room~
+@yThe hazy smoke grows thicker as $n contines to the north.@n
+
+~
+!
+3 0 1
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou make a turn to the west toward a junk-filled section of the
+
+tunnel.@n 
+
+~
+E
+to_room~
+@y$n makes a turn to the west toward a junk-filled section of the
+
+tunnel.@n 
+
+~
+!
+3 0 8
+1066 9 1509949540 3 0
+-1
+S
+
+#47514
+In Front of a Small Fire~
+Nestled in what appears to be an alcove, three slabs of rough-cut stone
+
+form a makeshift fireplace.  Three charred but solid logs, fastened
+
+together by rusted metal bindings, provide the footing for the battered
+
+blackened pot above the fires below.  The walls are stacked with the
+
+remnants of supplies in disarray, tipping over and often spread across
+
+the floor as though the roots and dried fruits were constantly rummaged
+
+through.  The ceiling curves away from the back wall and joins the
+
+general slope upward in the large chamber to the south.  
+
+~
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D2
+~
+~
+0 -1 47513 10 10 5
+E
+slabs stone fireplace~
+A hollowed out niche in the packed dirt walls is home to three, flat
+
+slabs of rough-cut stone arranged to form a crude fireplace.  The stones,
+
+nearly two feet square, are blackened by years of smoke and soot.
+
+~
+E
+logs bindings metal pot~
+Three charred and fire-hardened logs, crisscrossed with rusted metal
+
+bindings of unknown origin, rest atop a horizontal, soot-blackened slab
+
+of stone.  Nested solidly upon this base, a battered pot simmers with a
+
+foul-smelling concoction of various herbs and unidentifiable meat.
+
+~
+E
+walls supplies roots fruits~
+Stacked along the hard, dirt walls of the enclosure, various cartons and
+
+crates lie in tumbled disarray spilling their contents across the floor. 
+
+Dried fruits, salted meats, torn away roots and herbs of unknown variety
+
+are scattered randomly about as though little care is taken in their
+
+preserving.
+
+~
+E
+ceiling~
+The ceiling here is low, bedecked with roots, both hanging and snaking in
+
+and out of the solid earth above.  It rises upward to the south toward a
+
+much less confining chamber.
+
+~
+A
+~
+~
+send_to_room( #puff, room );
+
+~
+E
+puff~
+@cA puff of smoke belches from the fireplace, adding to the thick haze
+
+already filling the small chamber.@n 
+
+~
+!
+2 100 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou follow the tendrils of smoke southward, out of the small chamber.@n
+
+~
+E
+to_room~
+@y$n follows the tendrils of smoke southward, out of the chamber.@n
+
+~
+!
+3 0 4
+1413 9 1509949540 3 0
+-1
+S
+
+#47515
+A Circular Room~
+This large, circular chamber bears exits in all four directions, beneath
+
+the hanging forest of vine-like roots.  The floor is strewn with cloth,
+
+some of it the now-spoiled remnants of fine cotton, crumpled into a
+
+variety of beds and cushions.  Large and imposing wooden arms from the
+
+trees above weave their way in and out of the soil, appearing more
+
+frequently to the east.  Upon the base of the southern wall, a crumbled
+
+hole marks the entrance to a slanting tunnel, narrow and crossed with
+
+roots that one might, with effort, be able to crawl or climb around.  To
+
+the north, several overlapping branches have been tied together with a
+
+crudely fashioned rope, just large enough to encompass the narrow tunnel
+
+portal.
+
+~
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D0
+barrier of branches~
+barrier branches north n~
+131 -1 47513 10 10 5
+D1
+~
+~
+0 -1 47516 10 10 5
+D3
+~
+~
+0 -1 47517 10 10 5
+E
+cloth cotton bed~
+Strewn about the floor, tattered and dirty cloth is piled and formed into
+
+a variety of shapes from rumpled beds to lumpy cushions.  Some of the
+
+less ragged and least dirty fabric hints at being once-fine clothing and
+
+linens.
+
+~
+E
+arms wooden trees east~
+Thick, imposing roots weave in and out of the soil, some of their gnarled
+
+extensions forming what appears to be seating of sorts for the chamber's
+
+inhabitants.  The woody arms congregate more densely to the east and
+
+south, leaving little of the walls to peek through.
+
+~
+E
+roots vine hanging forest~
+Hanging down from above, a veritable forest of supple roots shift back
+
+and forth in an unfelt air current.  The sturdier strands, some tapering
+
+off into delicate filaments, entwine and mesh to create a spider's web of
+
+wood along the ceiling.
+
+~
+E
+north branches rope~
+A framework of interwoven branches blocks the passage to the north, its
+
+larger holes filled in with daubs of mud and dead vegetation.  For added
+
+sturdiness a vine rope is wound through the vertical slats, cross-wise
+
+from one corner to another.
+
+~
+E
+hole~
+A slanting, nearly vertical tunnel leads downward at the base of the
+
+southern wall.  Cramped and close, the hole is further imposed upon by a
+
+score of intruding roots that weave into and out of the loose, soil walls. 
+
+With some effort it might be possible to use them to descend along the
+
+sloping passage, using the root system as hand and foot holds.
+
+~
+A
+climb crawl go squeeze enter~
+hole 1 south opening tunnel~
+if( find_skill( ch, climb ) < 3 ) {
+
+send_to_char( #nope, ch );
+
+end; }
+
+send_to_char( #hole, ch );
+
+act_notchar( #hole2, ch );
+
+transfer( ch, find_room( 47518 ) );
+
+act_notchar( #emerge, ch );
+
+~
+E
+nope~
+The tunnel looks a bit steep for you to manage.
+
+~
+E
+hole~
+You crawl past the rubble and down through the roots and soil.
+
+~
+E
+hole2~
+$n kneels and wriggles through the soil into the hole, at the base of the southern wall.
+
+~
+E
+emerge~
+$n wriggles down through the dirt from the hole to the north.
+
+~
+!
+0 0 0
+A
+move push pull open~
+1 north barrier branches door~
+open( room, north );
+
+send_to_char( #open, ch );
+
+act_notchar( #open2, ch );
+
+~
+E
+open~
+You push the barrier aside gently, revealing a narrow portal.
+
+~
+E
+open2~
+$n pushes aside the barrier to the north, revealing a narrow portal.
+
+~
+!
+0 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+You climb across the rubble and loose soil, into the narrow tunnel to the south.
+
+~
+E
+to_room~
+$n climbs into the ragged hole in the southern wall, releasing a shower of loose soil onto the ground below.
+
+~
+!
+3 0 4
+A
+~
+cloth bedding cushions~
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  act_tochar( #search, ch );
+
+  act_notchar( #rsearch, ch );
+
+  wait( 1 );
+
+if( random( 1, 5 ) == 3 ) {
+
+    act_tochar( #find, ch );
+
+    act_notchar( #rfind, ch );
+
+    obj_to_char( oload( 1897 ), ch );
+
+    end;
+
+    }
+
+  act_tochar( #nada, ch );
+
+  act_notchar( #rnada, ch );
+
+  }
+
+act_tochar( #already, ch );
+
+~
+E
+search~
+@cYou dig through the crumpled and dirty piles of cloth.@n
+
+~
+E
+rsearch~
+@c$n digs through the crumpled and dirty piles of cloth.@n 
+
+~
+E
+find~
+@cYou find little of value save for a dirty, grime-covered bolt of fine linen.@n
+
+~
+E
+rfind~
+@c$n finds little of value save a dirty, grime-covered bolt of cloth.@n
+
+~
+E
+nada~
+@cAfter searching the crumpled piles thoroughly, you find nothing of
+
+value.@n 
+
+~
+E
+rnada~
+@cAfter searching the crumpled piles thoroughly, $n finds nothing of
+
+value.@n 
+
+~
+E
+already~
+@cIt seems the crumpled cloth and bedding has already been thoroughly
+
+searched.@n 
+
+~
+!
+9 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou duck through the low opening to the north.@n
+
+~
+E
+to_room~
+@y$n ducks through the low opening to the north.@n
+
+~
+!
+3 0 1
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou investigate the low cave lying westward.@n
+
+~
+E
+to_room~
+@y$n investigates teh low cave lying westward.@n
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yWeaving through the forest of dangling roots, you continue eastward.@n
+
+~
+E
+to_room~
+@yWeaving through the forest of dangling roots, $n contintues eastward.@n
+
+~
+!
+3 0 2
+-1
+S
+
+#47516
+Twisting Corridor~
+Spidery limbs grasp at the soil as the roots of trees and bushes above
+
+twine in and out of the rough walls and ceiling.  The passageway seems to
+
+wind between the thicker concentrations of submerged branches, which form
+
+uneven...almost haunting portals to the east and west.  The northern
+
+wall bears a multitude of scratches and scrapes, as though a new path had
+
+begun to be dug, while the the twisting passage extends in darkness to
+
+the south.
+
+~
+[Eliza] extras added - Usiel
+
+~
+335151109 11 5 0
+D1
+wooden door~
+~
+0 -1 47524 10 10 5
+D2
+~
+~
+0 -1 47526 10 10 5
+D3
+~
+~
+0 -1 47515 10 10 5
+E
+west w~
+Through a narrow opening to the west, the musty, weed-ridden expanse of a
+
+large circular room is visible.
+
+~
+E
+wall north n scratches scratch scrapes~
+Concave and rough in texture, the northern wall appears to have suffered
+
+a fair amount of digging.  By the multitude of rocks strewn about the
+
+corner of the passage, the tunnel's progress seems slow at best.
+
+~
+E
+rocks pile piles multitude~
+A gathering of dirty rocks and stones, riddled by various minerals.  A
+
+few appear to be soft and grained with sand, a reminder that the soil
+
+rests uneasily upon a rock base not far from sea.
+
+~
+E
+e east roots~
+The thick roots to the east branch apart and support the soil, allowing
+
+entry to a narrow portal.  From beyond the roots, the stale and putrid
+
+stench of rot drifts upon the moist air of the lair.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yHeading west, you leave through a root-formed portal.@n
+
+~
+E
+~
+No description.
+
+~
+!
+3 0 8
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yHeading east, you move through a misshapen portal into a smaller
+
+room.@n 
+
+~
+E
+to_room~
+@yHeading east, $n moves through a misshapen portal into a smaller
+
+room.@n 
+
+~
+!
+3 0 2
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou ascend the slight incline to the south.@n
+
+~
+E
+to_room~
+@y$n ascends the slight incline to the south.@n
+
+~
+!
+3 0 4
+1340 9 1509949540 3 0
+-1
+S
+
+#47517
+Small Room~
+This tiny room houses several bundles of logs and branches, as well as a
+
+stack of crudely-made spears.  A few sharp-edged stones lay upon the dirt
+
+floor, possible used for carving.  Roots jut out from the rough-dug
+
+walls, some used to hang torn hats or battered and useless studded helms.
+
+~
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D1
+~
+~
+0 -1 47515 10 10 5
+E
+spears stack crude~
+Piled into one corner of the small room, a jumbled stack of crude spears
+
+rises halfway to the low-lying ceiling.  Representing several stages of
+
+craftsmanship, the wooden weapons are made of thumb-thick branches,
+
+relatively straight with sharply honed points.  Some of the tips are
+
+fire-blacked for hardness; others have been left in their natural state.
+
+~
+E
+roots helm hat~
+A handful of the most gnarled roots has been freed from the hard, dirt
+
+walls to act as hooks for a variety of hats and helms.  The material of
+
+the hats is tattered and worn, the helms' leather weathered and cracked
+
+with rusted studs and broken chinstraps.
+
+~
+E
+stone dirt floor~
+Scattered haphazardly around the dirt floor, some half-buried under an
+
+accumulation of dust, hand-sized stones with sharpened edges look to be
+
+some form of crude carving tool.
+
+~
+2355 9 1509949540 3 0
+-1
+S
+
+#47518
+A Narrow Passage~
+The passage winds its way through root-laden earth, irreverently
+
+tunneling through the jagged and rock-strewn soil.  The rather circular
+
+crawlspace narrows slightly to the south, crisscrossed by submerged arms
+
+of gnarled wood from the forest above.  To the north, a short scramble
+
+leads to the faint glow of a larger room.
+
+~
+[Eliza] reviewed
+
+[Tyrone] require using climb to go north?
+
+[Eliza] It does, doesn't it?
+
+~
+335151109 11 5 0
+D0
+~
+~
+1024 -1 47515 10 10 5
+D2
+~
+~
+0 -1 47519 10 10 5
+E
+passage earth soil crawlspace~
+The passage is confined, narrowing to little more than a crawlspace as it
+
+continues on.  Thick wooden arms, roots from the forest above, weave in
+
+and out of bare earthen walls, crossing the cramped space in some spots,
+
+disappearing into the earth in others.
+
+~
+E
+wood arms 1 south~
+Thick roots from an ancient tree crisscross the confined passage, nearly
+
+blocking it in some places.  The only way to continue is to crawl over,
+
+under, and around the intrusive wooden arms.
+
+~
+A
+climb~
+1 north~
+send_to_char( #climb, ch );
+
+act_notchar( #climb2, ch );
+
+transfer( ch, find_room( 47515 ) );
+
+act_notchar( #emerge, ch );
+
+~
+E
+climb~
+You climb towards the exit and crawl out onto the ground of the chamber
+
+to the north.
+
+~
+E
+climb2~
+$n climbs towards the opening to the north, sliding out of sight.
+
+~
+E
+emerge~
+$n crawls out of the hole in the southern wall, covered in dirt.
+
+~
+!
+0 0 0
+546 9 1509949540 3 0
+-1
+S
+
+#47519
+A Narrow Crawlspace~
+The tunnel is barely more than an extended crawlspace, sloping away on a
+
+steep decline to the south.  The dirt is loose and somewhat moist, and
+
+the passageway winds between large and gnarled roots deep within the
+
+forest soil, providing both handholds and hindrances.  To the north, the
+
+passageway expands as it snakes its way towards a faint orange glow.
+
+~
+[Eliza] reviewed
+
+~
+335151108 11 5 0
+D0
+~
+~
+0 -1 47518 10 10 5
+E
+roots handholds hindrance dirt~
+Angling sharply downward to the south, the tunnel narrows even further. 
+
+The loose dirt walls, somewhat moist to the touch, are crisscrossed by
+
+gnarled roots; the tunnel in some places actually built around them.  The
+
+roots provide both handholds and hindrances to continuing.
+
+~
+E
+markings walls burrowing scrapes~
+The walls of the tunnels look as though something, barely small enough to
+
+fit within the enclosed space were dragged forcibly along, imprinting
+
+odd, concentric circles into the dirt.
+
+~
+A
+climb~
+1 down 1 south~
+if( find_skill( ch, climb ) > 4 ) {
+
+if( find_stat( ch, dex ) > 12 ) {
+
+send_to_char( #climb, ch ); 
+
+act_notchar( #watch, ch );
+
+wait( 1 );
+
+transfer( ch, find_room(47520) );
+
+send_to_char( #arrive, ch );
+
+act_notchar( #land, ch );
+
+end; }
+
+}
+
+send_to_char( #fall, ch );
+
+act_notchar( #watch_fall, ch );
+
+transfer( ch, find_room(47525) );
+
+send_to_char( #fall_arrive, ch );
+
+act_notchar( #fall_land, ch );
+
+wait( 1 );
+
+~
+E
+climb~
+You climb down the narrow passage, using the roots as handholds.
+
+~
+E
+watch~
+$n twists about in the confined space of the tunnel, and climbs down to
+
+the south using the protruding roots.
+
+~
+E
+arrive~
+You emerge from the narrow passageway along a wall of loose earth, and
+
+slide down feet first to the solid ground below.
+
+~
+E
+land~
+$n emerges from the passageway and slides down the incline to the solid
+
+ground below.
+
+~
+E
+fall~
+You lose your grip on the slippery roots and tumble down the narrow
+
+passageway...
+
+~
+E
+watch_fall~
+$n begins to climb, but loses $s grip on the roots and tumbles down the
+
+passageway.
+
+~
+E
+fall_arrive~
+Battered against the root-woven walls of the narrow dirt tunnel, you
+
+tumble out and slide down a gravelly incline, landing in a heap in the
+
+loose soil several yards from the northern wall.
+
+~
+E
+fall_land~
+With a shower of dirt and a series of grunts, $n tumbles out of the
+
+root-lined passage, down the incline, and lands in a heap in the loose
+
+soil to the south.
+
+~
+!
+0 0 0
+1066 9 1509949540 3 0
+-1
+S
+
+#47520
+At the Base of a Cavern Wall~
+The loose soil and rubble of the northern wall spills out onto a brief
+
+and level ledge.  Beyond the southern lip of the narrow, flat of rock and
+
+dirt, the twisting tunnel continues at a downward slope, almost a dozen
+
+feet wide, walls carved and etched with strange spiraling patterns.  The
+
+soil to the south is rich and soft, dark and apparently freshly turned. 
+
+To the north, the tunnel comes to a close in a rather steep incline of
+
+pebbles and dirt, leading up the the root-entwined mouth of another,
+
+smaller, winding passageway.
+
+~
+[Eliza] reviewed
+
+~
+335151108 11 5 0
+D2
+~
+~
+0 -1 47525 10 10 5
+E
+chute~
+Angling sharply upward to the north, the tunnel widens, its loose dirt
+
+walls somewhat moist to the touch.  Crisscrossed by gnarled roots; the
+
+tunnel is in some places actually built around them.  The roots provide
+
+both handholds and hindrances to continuing.
+
+~
+E
+floor peelings food~
+On the floor is a moldy, squishy pile of rotten fruit cores and peels. 
+
+As the air in the room moves, a cloud of tiny flies rises and falls like
+
+a living dustcloud, a sentinel to the rot.  The pile spreads across the
+
+room, a true example of compost in production.
+
+~
+E
+pile dung feces trail dirt~
+A rank stench wafts up from the pile of clumpy dirt here.  As you strain
+
+your watering eyes to look, you see a pile of dung and dirt rapidly
+
+forming a rich compost for the trees above.
+
+~
+A
+3 climb crawl~
+up u n north hole wall tunnel~
+if( find_skill( ch, climb ) > 4 ) {
+
+if( find_stat( ch, dex ) > 12 ) {
+
+send_to_char( #climb, ch ); 
+
+act_notchar( #watch, ch ); 
+
+wait( 1 );
+
+transfer( ch, find_room(47519) ); 
+
+send_to_char( #arrive, ch ); 
+
+act_notchar( #see_arrive, ch ); 
+
+}
+
+}
+
+send_to_char( #fail, ch );
+
+act_notchar( #see_fail, ch );
+
+~
+E
+climb~
+You scramble up the loose dirt of the incline, pulling yourself up to the
+
+roots that run like veins across the entrance to the narrow tunnel.
+
+~
+E
+watch~
+$n climbs up the base of the wall, scrambling through the loose soil, and
+
+disappears through the mouth of the tunnel.
+
+~
+E
+arrive~
+You slowly make your way up the winding tunnel as the roots grow more
+
+numerous and easier to traverse.
+
+~
+E
+see_arrive~
+$n reaches up and grasps the edge of a dirt-covered root, scrambling
+
+upwards from the steep and winding slope to the south.
+
+~
+E
+fail~
+You try to climb the base of the wall, but the soil is too loose and you
+
+slide down to the ledge on hands and knees.
+
+~
+E
+see_fail~
+$n begins to climb the base of the northern wall, but slides back down in
+
+a cascade of loose soil.
+
+~
+!
+0 0 0
+1066 9 1509949540 3 0
+546 9 1509949540 3 0
+-1
+S
+
+#47521
+A Large Cavern~
+The sediment-veined walls curve around the large pool of sand and dry
+
+dirt, forming a wide and tear-drop shaped end to the cavern.  Every step
+
+sinks into the soft ground, sending small granular cascades down the
+
+rippled contours.  The far wall, to the west, is dark and almost ragged,
+
+a far cry from the smooth and gently-lined surfaces to the east, as
+
+though it has remained untouched for no short time.  To the east, the
+
+cavern closes in about a tunnel, branching off and upwards to darker
+
+earth.
+
+~
+~
+335151108 11 5 0
+D1
+~
+~
+0 -1 47529 10 10 5
+E
+ground sand dirt pool~
+Formed into the shape of a falling tear, the counters of the pool contain
+
+a deep layer of sand.  The surface of the sand is rippled, not by wind
+
+but by some underlying upheaval and the traces of tracks of movement.
+
+~
+E
+1 west wall ragged~
+The tunnel deadends at the jagged, irregular westward-lying wall, formed
+
+of dark, rich dirt.  Curving back to the east, the sides of the cramped
+
+passage smooth out and take on an almost polished appearance.
+
+~
+546 9 1509949540 3 0
+-1
+S
+
+#47522
+A Skinny Passageway~
+REUSE OUTSIDE
+
+~
+~
+301465601 3 9 0
+-1
+S
+
+#47523
+Web Shrouded Chamber~
+Shrouded in layer upon layer of gossamer webs, the chamber is small and
+
+cramped, hardly high enough to stand in and no wider than three bodies
+
+abreast.  Underfoot and along the walls there are grooves and scratches
+
+in no certain pattern, as though something or someone has been digging. 
+
+Having been closed off for so long, the air here is stale and musty and
+
+the smell of dust pervades the room.  To the east a loose pile of dirt
+
+and rubble rises against the wall.
+
+~
+[Eliza] reviewed
+
+[Cyndra] acode 2: use 1 east instead of e east
+
+[Cyndra] same with acode 4
+
+[Eliza] fixed
+
+~
+335151116 11 5 0
+D1
+dirt~
+~
+171 -1 47511 10 10 5
+E
+pile dirt rubble 1 east~
+Rising along the eastern wall a loose pile of dirt and rubble...mostly
+
+pebbles and bits of twigs...provides a stark contrast to the hard-packed
+
+density of the chambers other sides.
+
+~
+E
+webs layer gossamer~
+Intricately woven webs of silken threads, swath the small, cramped
+
+chamber in shimmering curtains of gossamer lace.  Swaying in time to the
+
+breath of an unfelt breeze, they dance with a life of their own, casting
+
+contorted shadows upon the hard dirt walls.
+
+~
+E
+scratch grooves wall floor~
+Strange markings, scratches and grooves of unknown origin, mark the walls
+
+and floor of the confined space.  Some are shallow, irregular scrabblings
+
+but others are deep, wide gouges.
+
+~
+A
+~
+floor~
+if( !is_player( ch ) )
+
+  end;
+
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  i = random( 1, 20 );
+
+  if( i > 19 ) {
+
+    act_tochar( #chain, ch );
+
+    act_notchar( #chain2, ch );
+
+    obj_to_char( oload( 1898 ), ch );
+
+    }
+
+  else {
+
+    send_to_char( #none, ch );
+
+    act_notchar( #none2, ch );
+
+    }
+
+  end;
+
+  }
+
+act_tochar( #done, ch );
+
+act_notchar( #done2, ch );
+
+~
+E
+chain~
+You feel through the dirt and pull out a fine gold chain.
+
+~
+E
+chain2~
+$n feels through the dirt and pulls out a fine gold chain.
+
+~
+E
+none~
+You feel through the dirt but don't find anything.
+
+~
+E
+none2~
+$n feels through the dirt but doesn't find anything.
+
+~
+E
+done~
+You notice the soil has been dug up already.
+
+~
+E
+done2~
+$n inspects the upturned soil.
+
+~
+!
+9 0 0
+A
+dig~
+dirt 1 east wall~
+if( is_open( room, east ) ) {
+
+act_tochar( #opened, ch );
+
+};
+
+else {
+
+act_tochar( #dirt, ch );
+
+act_notchar( #dirt2, ch );
+
+send_to_room( #appears, find_room( 47511 ) );
+
+open( room, east );
+
+}
+
+~
+E
+opened~
+The way to the east is already clear.
+
+~
+E
+dirt~
+You dig through the dirt and make an opening east.
+
+~
+E
+dirt2~
+$n digs through the dirt and makes an opening east.
+
+~
+E
+appears~
+The wall to the east opens slightly to reveal the next room.
+
+~
+!
+0 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou squeeze through the narrow opening dug through the east wall.@n
+
+~
+E
+to_room~
+@y$n squeezes through the narrow opening dug through the west wall.@n
+
+~
+!
+3 0 2
+A
+close~
+1 east dirt wall~
+send_to_char( #nope, ch );
+
+end;
+
+~
+E
+nope~
+You can deduce no way to fill the wall aside from hours of digging.
+
+~
+!
+0 0 0
+1001 19 1509949465 -2 0
+81 17 1509949450 -2 0
+8 0 1509949445 -2 0
+8 0 1509949540 -2 0
+-1
+S
+
+#47524
+A Rubble-Filled Cavern~
+Like a forboding cloud, the smell of earth is made more pungent by the
+
+stench of rot, blanketing the room.  Hanging roots and jagged walls
+
+decorate this simple and misshapen chamber, littered with the rubble of
+
+misplaced soil, rocks, wood, and piles of what appears to be scavenged
+
+junk.  Like crevices in a wheel of cheese, several holes, partially
+
+covered or filled, riddle the base of the walls and ground at the
+
+northeastern end of the room, and resting amidst a colony of chittering
+
+insects lay the wretched remains of an elongated corpse.
+
+~
+[Eliza] reviewed.
+
+~
+335151109 11 5 0
+D3
+wooden door~
+~
+0 -1 47516 10 10 5
+E
+rubble piles junk scavenged~
+Various piles of junk, much of it recognizable as rotted armor or the
+
+rusted hilts of broken weapons, lie in mounds as much as three feet high
+
+in some places.  Quite obviously, there is nothing of value in the
+
+misshapen piles.
+
+~
+E
+holes hole~
+Partially filled, the holes appear to have been dug from beneath and
+
+quickly filled with excess soil, rocks and rubble.  About a foot and a
+
+half wide, they twist down and away into the musky darkness of the uneven
+
+ground.
+
+~
+A
+dig move clear~
+holes down dirt~
+send_to_char( #nope, ch ); 
+
+~
+E
+nope~
+The holes are too small to dig...it would be a very lengthy and strenuous chore.
+
+~
+!
+0 0 0
+A
+climb enter crawl~
+hole down~
+send_to_char( #toosmall, ch );
+
+~
+E
+toosmall~
+The hole is too small, and the ground too difficult to dig.
+
+~
+!
+0 0 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou hurry from this eery chamber.@n
+
+~
+E
+to_room~
+@y$n hurries from this eery chamber.@n
+
+~
+!
+3 0 8
+3419 49 1509949540 -2 0
+1 64 1509949540 0 0
+-1
+S
+
+#47525
+South of the Rock Shelf~
+Clay-rich soil mixes with fine, dark sand at the base of the winding
+
+tunnel, soft and loose, sinking and grasping longingly at each step.  The
+
+walls are riddled with unnatural patterns, spiraling and twining ridges
+
+that seem to collect towards the bottom, dotted erratically with jagged,
+
+shadowed holes.  The deep sand and clay recede to the north just below a
+
+brief and unobtrusive rock shelf, like the shore of a dark and placid
+
+lake.  The tunnel levels out to the southwest, curving around a gentle
+
+bend, the walls expanding outward to form a natural cavern.
+
+~
+[Eliza] reviewed
+
+~
+335151108 11 5 0
+D0
+~
+~
+0 -1 47520 10 10 5
+D3
+~
+~
+0 -1 47529 10 10 5
+E
+clay soil sand dirt soft loose floor ground~
+The ground is loose and unsettled, composed of sand and the sediments of
+
+various stone and mineral veins.  Occasionally a thin trail of sand
+
+cascades down a gentle contour, settling slowly along the rough surface
+
+that hints at recent upheaval.
+
+~
+E
+walls patterns spiral twining ridges holes~
+The walls are as though carved by a demented artist, ridges and grooves
+
+spiraling up and down, fresh and distinct towards the bottom and more
+
+faint as the walls curve up and become ceiling.  At no apparent interval,
+
+the grooves move into a circle, like the designs of polished wood, and
+
+surround the shadowed mouths of small and inaccessible holes.
+
+~
+546 9 1509949540 3 0
+-1
+S
+
+#47526
+End of a Twisting Corridor~
+As though the creation of a large and coiling snake, the passage twists
+
+about with no definitive floor.  A particularly large root runs from the
+
+south along the ceiling and across to the opposing wall, almost cutting
+
+the corridor in half.  Just beyond the root, up a slight rise in the
+
+tunnel's floor, the walls seem to converge upon a small portal, covered
+
+with ragged and worn cloth, while the passage continues to twist away and
+
+slightly downward to the north.
+
+~
+[Eliza] reviewed
+
+~
+335151109 11 5 0
+D0
+~
+~
+0 -1 47516 10 10 5
+D2
+Flap-covered opening~
+s south flap cloth portal burlap~
+0 -1 47528 10 10 5
+E
+root ceiling wall corridor~
+Gnarled and twisted, a vast root nearly splits the tunnel in twain,
+
+exiting the wall to the west only to disappear into the eastern one.  A
+
+living rafter that offers ceiling support, the passageway appears to have
+
+been carved around it.
+
+~
+E
+portal 1 south cloth door~
+The portal to the south is covered by a ragged and tattered cloth that
+
+barely covers the hole it is suspended above.  The patch of material is
+
+filthy, covered in grime and other unsavory substances, whatever pattern
+
+it might have had long lost.
+
+~
+A
+~
+~
+send_to_room( #arrive, find_room( 47528 ) );
+
+continue;
+
+~
+E
+to_char~
+You draw the cloth flap aside and duck through the portal.
+
+~
+E
+to_room~
+$n draws the cloth flap aside and ducks through the portal.
+
+~
+E
+arrive~
+The cloth flap is pulled aside.
+
+~
+!
+3 0 4
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@yYou descend the slight incline to the north@n
+
+~
+E
+to_room~
+@y$n descends the slight incline to the north.@n
+
+~
+!
+3 0 1
+1066 9 1509949540 3 0
+1066 9 1509949540 3 0
+-1
+S
+
+#47527
+A Large, Rotted Tree Stump~
+Amidst the thick and winding forest of looming trees, bushes and creeping
+
+vines dance about the roots in quiet abandon.  The soft soil rises ever
+
+so slightly about the base of a long-dead guardian of the forest, a large
+
+and spidery tree stump whose rotting wood lends a sickly-sweet aroma to
+
+the moist, salty air.  Underfoot, the ground of the gradual incline is
+
+soft, blanketed by an eon's accumulation of fallen leaves and debris.  A
+
+wall of intertwining brambles blocks movement to the west.
+
+~
+[Usiel] action: climb enter crawl - hole root roots down d leaves stump
+
+[Usiel] NOTE to Eliza: the action moves people one at a time down into
+
+the stump.  The exit exists for imms only, for ease of movement.
+
+[Eliza] south is 21071
+
+[Cyndra] acode 4: use target 1 down instead of just down.
+
+[Cyndra] rextra 2: set keywords to hole 1 down opening
+
+[Eliza] done
+
+~
+301465608 3 9 0
+D0
+~
+~
+0 -1 47530 10 10 5
+D1
+~
+~
+0 -1 47532 10 10 5
+D2
+~
+~
+46 -1 21071 10 10 5
+E
+stump tree root spidery wood rotting~
+Standing nearly as high as a tall man, a massive stump rots away through
+
+the passing years, its worm-eaten wood decayed and soft.  Gaily festooned
+
+with moisture-beaded webs, the remnants of the ancient tree are encircled
+
+by intrusive vines that crawl slowing up its vast girth and form
+
+serpentine coils around its winding roots.  Twigs and leaves litter the
+
+ground, both inside and outside of the stump.
+
+~
+E
+hole 1 down opening~
+Hidden beneath the bed of leaves and branches is a hole, winding down
+
+into the earth and beneath the gnarled tree stump.
+
+~
+E
+bushes vines creeping~
+Twining in and about earth-hugging roots, serpentine tendrils of creeping
+
+vines snake along the ground from tree to tree, their foliage hand-sized,
+
+heart-shaped leaves.  Bravely holding their own amidst the encroaching
+
+plants, lush bushes with dark, green leaves grow heavy with their burden
+
+of ripening fruit.
+
+~
+A
+move clear open brush push~
+leaves twigs branches leaf twig branch brush bushes bush~
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  act_tochar( #open, ch );
+
+  act_notchar( #oopen, ch );
+
+  end;
+
+  }
+
+act_tochar( #already, ch );
+
+act_notchar( #ralready, ch );
+
+~
+E
+open~
+You brush aside the leaves and branches, and discover a sizable hole
+
+hidden among the roots.
+
+~
+E
+oopen~
+$n brushes aside the leaves and branches that surround the stump, and
+
+discovers a rather sizable hole leading down.
+
+~
+E
+already~
+You start clearing the leaves and discover they have been already been
+
+moved.
+
+~
+E
+ralready~
+$n begins clearing the leaves and stops, looking slightly puzzled.
+
+~
+!
+0 0 4
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@gYou wind through the looming trees toward the north.@n
+
+~
+E
+to_room~
+@g$n winds through the looming trees toward the north.@n
+
+~
+!
+3 0 1
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@gYou work your way eastward toward a towering pine.@n
+
+~
+E
+to_room~
+@g$n works $s way eastward toward a towering pine.@n
+
+~
+!
+3 0 2
+A
+climb enter crawl~
+hole roots 1 down leaves stump~
+if( !rflag( reset0, room ) ) {
+
+  act_tochar( #crawl, ch );
+
+  act_notchar( #rcrawl, ch );
+
+  transfer( ch, find_room( 47500 ) );
+
+  act_notchar( #arrive, ch );
+
+  end;
+
+  }
+
+act_tochar( #leave, ch );
+
+act_notchar( #rleave, ch );
+
+~
+E
+crawl~
+@gConcerned with what might lie below, you inch your way into the
+
+fair-sized hole.@n 
+
+~
+E
+rcrawl~
+@gLooking more than a little concerned about what might light below, $n
+
+inches $s way into the fair-sized hole.@n 
+
+~
+E
+arrive~
+@g$n drops down through the hole above.@n
+
+~
+E
+rleave~
+@g$n takes a step then stops, looking around in confusion.@n
+
+~
+E
+leave~
+@gYou can't go that way. Leaves obscure everything underfoot.@n
+
+~
+!
+0 0 0
+587 17 1509949540 -2 0
+-1
+S
+
+#47528
+Beneath Some Twisted Roots~
+The roots of an ancient oak, gnarled and twisted, clutch the small and
+
+cramped chamber in a giant's grip, enclosing erose walls and ragged
+
+ceiling in the musty scent of rising sap and dark, rich earth.  Scattered
+
+across the dusty floor, tattered and worn scraps of woven cloth serve as
+
+sitting and sleeping mats.  In one niche at the base of a wall, a
+
+flat-topped rock sports makeshift pots of woven leaves that hold dried
+
+herbs, both of the fragrant and not-so-fragrant variety.  A shallow,
+
+stone-lined pit is littered with charred sticks and ashes, remnants of a
+
+day-old fire.
+
+~
+[Eliza] reviewed.
+
+~
+335151108 11 5 0
+D0
+~
+~
+0 -1 47526 10 10 5
+E
+oak roots walls ceiling~
+Claw-like roots, gnarled and twisted like an old man's hand, spread
+
+across the ceiling and halfway down the walls of the confined space,
+
+digging into the soft dirt of the walls in spots, groping outward into
+
+the open area in others.
+
+~
+E
+floor cloth mats~
+A dozen or so tattered and filthy remnants of once-fine cloth, lie
+
+scattered about the room.  Some of the raggedy pieces are small, of a
+
+size to be used for sitting or kneeling.  Others pieces are large and
+
+crumpled, forming comfortable, if dirty, beds.
+
+~
+E
+niche rock pots leaves herbs~
+Tucked into a fair-sized niche, a flat-topped rock holds a handful of
+
+makeshift pots, created from woven leaves.  Dried herbs fill each of the
+
+pots to varying degrees of fullness.  A pungent and oft times acrid aroma
+
+rises from the unstoppered pots.
+
+~
+E
+pit ashes fire~
+A crudely shaped pit dug into the center of the room holds a pile of
+
+cooling ashes and charred sticks and twigs.  Small stones and minimally
+
+bigger rocks surround the pit, containing what fire might burn there on
+
+occasion.  Suspicious, dark red stains appear on several of the larger
+
+rocks.
+
+~
+A
+~
+~
+send_to_room( #arrive, find_room( 47526 ) );
+
+continue;
+
+~
+E
+to_char~
+You draw the cloth flap aside and duck through the portal.
+
+~
+E
+to_room~
+$n draws the cloth flap aside and ducks through the portal.
+
+~
+E
+arrive~
+The cloth flap is pulled aside.
+
+~
+!
+3 0 1
+1142 9 1509949540 3 0
+1756 49 1509949540 -2 0
+893 81 1509949445 -2 0
+1531 81 1509949445 -2 0
+1018 81 1509949445 -2 0
+1019 81 1509949445 -2 0
+1029 81 1509949445 -2 0
+2 81 1509949540 -2 0
+2 81 1509949490 -2 0
+2 81 1509949465 -2 0
+1039 81 1509949490 -2 0
+-1
+S
+
+#47529
+The Edge of a Large Cavern~
+From the mouth of the tunnel to the east, the walls of this cavern slope
+
+outward and upward in a gradual, expansive growth.  Smooth and gently
+
+contoured by ripples and waves, the surface of grey rock, sand and
+
+limestone curves down from the jagged ceiling to disappear beneath the
+
+deep bed of soft sand and dirt that blankets the ground.  The cavern
+
+grows larger to the west, as the sea of dark sediment stretches out to a
+
+distant tunnel's end.
+
+~
+[Eliza] reviewed
+
+~
+335151108 11 5 0
+D1
+~
+~
+0 -1 47525 10 10 5
+D3
+~
+~
+0 -1 47521 10 10 5
+E
+surface rock limestone~
+Running a hand along the rough wall, a sheen of grit clings to the skin. 
+
+Porous, it absorbs the minute moisture from the pores and falls loose, to
+
+mingle with the sand and dirt collected underfoot.
+
+~
+E
+bed sand dirt~
+Crunching underfoot, rough sand scours your soles.  Worn down from the
+
+tunnel walls and absorbing the moisture in the air, the dry rock dust 
+
+slowly mixes with organic waste and forms a rich soil.
+
+~
+1066 9 1509949540 3 0
+-1
+S
+
+#47530
+A Fern Covered Mound~
+The tangle of bushes and vines gives way to a low mound that lies beneath
+
+an area of tall, lush ferns, their delicate green fronds bedewed with
+
+beaded moisture.  Pines of all sizes crowd close together, hovering over
+
+the rise protectively, while still more brambles fill the spaces between,
+
+forbidding progress to the north and west.  A blur of movement, a whisper
+
+of sound just at the edge of awareness piques the senses and is gone as
+
+though it had never been.
+
+~
+[Eliza] Extra - Skurva
+
+[Eliza] done/reviewed
+
+~
+301465604 3 9 0
+D1
+~
+~
+0 -1 47531 10 10 5
+D2
+~
+~
+0 -1 47527 10 10 5
+E
+fern fronds~
+Shining, moisture-beaded ferns catch the eye as they twist in the breeze. 
+
+In the passing wind, the delicate fronds ripple, a wave of green, and
+
+tiny silvery droplets of dew fall to the low mound below.  Behind one
+
+wavering frond, a delicate, grey web clings tenaciously, a tiny spider
+
+lurking on its edge.
+
+~
+E
+brambles north west n w spaces~
+Sharp, wicked spines, covered with tiny bristles, dominate the nasty
+
+patches of brambles that fill the area to the north and west.  Mere inches
+
+above the center of the twisted patches hangs one solitary blackberry,
+
+homage to the old adage that the sweetest fruit is always just out of
+
+reach.
+
+~
+A
+~
+~
+send_to_room( #chatter, room );
+
+if( random( 1, 2 ) == 1 )
+
+  end;
+
+if( players_room( room ) == 0 )
+
+  end;
+
+if( mob_in_room( 2319, room ) )
+
+  end;
+
+if( !rflag( reset0, room ) )
+
+  end;
+
+remove_rflag( reset0, room );
+
+send_to_room( #appears, room );
+
+wait( 1 );
+
+mload( 2319, room );
+
+~
+E
+chatter~
+@cJust at the edge of sound, you hear something akin to whispering and
+
+stifled snickers.@n 
+
+
+~
+E
+appears~
+@cA blur of movement catches your eye and a tiny creature appears,
+
+hovering just above ground level.@n 
+
+~
+!
+2 100 0
+A
+~
+~
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappear, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+disappear~
+BAM
+
+~
+E
+to_char~
+@gYou make your way southward through the looming trees.@n
+
+~
+E
+to_room~
+@g$n makes $s way southward through the looming trees.@n
+
+~
+!
+3 0 4
+A
+~
+~
+if( players_room( room ) < 2 ) {
+
+  mob = mob_in_room( 2319, room );
+
+  if( mob ) {
+
+    send_to_room( #disappear, room );
+
+    junk_mob( mob );
+
+    }
+
+  }
+
+continue;
+
+~
+E
+to_char~
+@gYou squeeze between two, close-growing trees lying to the east.@n
+
+~
+E
+to_room~
+@g$n squeezes between two, close-growing trees lying to the east.@n
+
+~
+E
+disappear~
+BOOM
+
+~
+!
+3 0 2
+-1
+S
+
+#47531
+Wisps of Rising Smoke~
+Regal pines crowd close together, standing tall and straight and silent
+
+like mute sentinels guarding their charge.  Beneath the canopy of
+
+intertwining limbs, the undergrowth is less apparent, just a few scant
+
+bushes and one lone vine that curls around what at first appears to be
+
+the remains of a felled sapling.  Oddly enough, wispy fingers of smoke
+
+drift upward from the small stump, only to dissipate into nothingness a
+
+few feet off the ground.  The heavy scent of burning wood permeates the
+
+damp, cool air.
+
+~
+[Eliza] Extras - Skurva
+
+[Eliza] done/reviewed
+
+east is 21264
+
+[Cyndra] nice random smoke.
+
+~
+301465608 3 9 0
+D1
+~
+~
+46 -1 21264 10 10 5
+D2
+~
+~
+0 -1 47532 10 10 5
+D3
+~
+~
+0 -1 47530 10 10 5
+E
+pines canopy limbs~
+Intertwined like a chaotic tapestry, the branches overhead seem to have
+
+grown into a tight latticework of rich browns and lush greens.  As the
+
+regal pines fight for the light above, very little can escape to the
+
+ground below, making it dark and difficult to perceive details.
+
+~
+E
+stump remains sapling~
+Down from the canopy, one grey ray of light illuminates the broken base
+
+of a pine sapling.  Looking more closely, the sapling is hollow and seems
+
+to sink slightly into the soil at an odd angle.  A tiny wisp of smoke
+
+drifts out of this hollow tube at irregular intervals, an peculiar event
+
+in the forest.  One lone, green vine creeps up the old wood, the first to
+
+reclaim the dim light as its own.
+
+~
+E
+wispy fingers smoke~
+Wispy filaments of smoke drift wherever the breeze commands.  The smoky
+
+tendrils carry, along with smell of burning wood, the scent of various
+
+herbs...  and the vague aroma of burning flesh.  The combination both
+
+disorients and disturbs you somehow...
+
+~
+A
+~
+~
+act_notchar( #arrive, ch );
+
+~
+E
+arrive~
+@G$n squeezes between two, close-growing trees lying westward.@n 
+
+~
+!
+1 0 8
+A
+~
+south~
+continue;
+
+~
+E
+to_char~
+@gYou work your way through the trees, toward a lone pine to the south.@g 
+
+~
+E
+to_room~
+@g$n makes $s way through the trees, toward a lone pine to the south@n
+
+~
+!
+3 0 4
+A
+~
+west~
+continue;
+
+~
+E
+to_char~
+@gYou head west toward a rising wall of close-growing trees.@n 
+
+~
+E
+to_room~
+@g$n heads west toward a rising wall of close-growing trees.@n 
+
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #puff, room );
+
+~
+E
+puff~
+@cTendrils of smoke rise from a small, hollow stump and dissipate into
+
+the cool, damp air.@n 
+
+~
+!
+2 100 0
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@gMaking your way through two, close-growing pines, you move back onto
+
+the sea trail.@n 
+
+~
+E
+to_room~
+@gMaking $s way through two, close-growing pints, $n moves back onto the
+
+sea trail.@n 
+
+~
+!
+3 0 2
+-1
+S
+
+#47532
+Beneath a Venerable Pine~
+The most ancient of ancient pines in this mountainside forest towers over
+
+its surroundings like a gnarled and aging giant.  Sharp-needled branches
+
+stretch outward like groping fingers far above the height a man could
+
+reach, and below where the trunk is laid bare to sight, patches of soft,
+
+green moss cling to its rough, brown bark.  Beneath the tree, a few
+
+scraggly bushes struggle to survive in this eternally shadowed place.
+
+~
+Extras - Skurva
+
+[Eliza] Done/reviewed.
+
+~
+301465604 3 9 0
+D0
+~
+~
+0 -1 47531 10 10 5
+D3
+~
+~
+0 -1 47527 10 10 5
+E
+ancient pine giant tree branches~
+Looking at this impressive giant, the eye is drawn inexorably upward into
+
+the heights.  Against high-floating clouds, a small, dark silhouette
+
+takes shape at the end of a distant branch and moves.  A bird taking
+
+flight is soon lost to sight in the vast collection of greenery of the
+
+lofty canopy.
+
+~
+E
+trunk bark moss~
+A mosaic with hundreds of interconnecting colors covers vast areas of
+
+this majestic tree.  Mosses, fungi, and lichen silently wage a timeless
+
+war to control the thick bark, using evolutionary adaptation and natural
+
+selection to grasp control across the trunk.  As new species grow, the
+
+old fall to the blade of change, forced into memory.
+
+~
+E
+bushes~
+A few brittle bushes are spread throughout the area, fighting for the
+
+sparse sunlight and moisture in the shadow of the giant pine.  Tiny
+
+leaves and innumerable spines epitomize their desperate battle for
+
+survival.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@gYou move northward through the trees, following the faint aroma of
+
+burning wood.@n 
+
+~
+E
+to_room~
+@g$n moves northward through the trees, following the faint aroma of
+
+burning wood.@n 
+
+~
+!
+3 0 1
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@gYou skirt a line of younger trees as you make your way to the west.@n
+
+~
+E
+to_room~
+@g$n skirts a line of younger trees as $e makes $s way to the west.@n
+
+~
+!
+3 0 8
+-1
+S
+
+#0
+

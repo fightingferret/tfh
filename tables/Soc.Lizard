@@ -1,0 +1,2501 @@
+#TABLE
+
+104
+
+accuse~
+6
+0
+0
+0
+Looking for someone to blame, you angrily twitch your tail.~
+$n angrily twitches $s tail while looking for someone to blame.~
+You hiss accusingly at $N.~
+$n narrows $s eyes and hisses accusingly at $N~
+$n narrows $e eyes and hisses accusingly at you!~
+You can vaguely hear accusatory hissing.~
+You hiss while pointing accusingly at yourself with your tail.~
+$n hisses while pointing accusingly at $mself with $s tail.~
+You hiss at $1 accusingly.~
+$n hisses at $2 accusingly.~
+Looking $t, you hiss accusingly.~
+Looking $t, $n hisses accusingly.~
+You point $3 at $N and hiss accusingly.~
+$n points $3 at you and hisses accusingly.~
+$n points $3 at $N and hisses accusingly.~
+Something prods you in your sleep.~
+Hissing, you accuse $2 for your failure.~
+Hissing, $n accuses $2 for $s failure.~
+
+agree~
+6
+0
+1
+1
+You nod your scaly head in agreement.~
+$n nods $s scaly head in agreement.~
+You nod your scaly head in agreement with $N.~
+$n nods $s scaly head in agreement with $N.~
+$n nods $s scaly head in agreement with you.~
+~
+You nod your scaled head merrily to yourself in agreement.~
+$n nods $s scaled head merrily in agreement with $mself. How peculiar.~
+You give a scaly nod to $1, as if to agree with it.~
+$n gives a scaly nod to $2, as if to agree with it.~
+You nod $tward, in agreement.~
+$n nods $tward, in agreement.~
+You hiss in agreement to $N, pointing to $3.~
+$n hisses in agreement with you and points to $3.~
+$n hisses in agreement to $N, pointing to $3.~
+You hear hissing in your dreams.~
+You hiss in agreement to yourself and at $2.~
+$n hisses in agreement to $mself and at $2.~
+
+battle~
+8
+1
+1
+1
+Hissing wildly and claws flashing, you are eager for battle.~
+Hissing wildly and claws flashing, $n looks eager to fight.~
+Hissing wildly and claws flashing, you are eager to battle $N.~
+Hissing wildly and claws flashing, $n seems eager to battle $N.~
+Hissing wildly and claws flashing, $n seems eager to battle you.~
+~
+You flash your claws, assuring yourself that you are ready for battle.~
+$n flashes $s claws, assuring $mself that $e is ready for battle.~
+You hiss at $1, wanting to do battle with it.~
+$n hisses at $2, wanting to do battle with it.~
+Hissing wildly, you turn $twards, ready for battle.~
+Hissing wildly, $n turns $tward, ready for battle.~
+Your tail perks up as you get ready to battle $N with $3.~
+$n's tail perks up as $e get ready to battle you with $3.~
+$n's tail perks up as $e get ready to battle $N with $3.~
+~
+Hissing softly, you are torn between yourself and $2.~
+Hissing softly, $n seems torn between $mself and $2.~
+
+beckon~
+6
+0
+1
+1
+With an extended claw, you beckon to everyone nearby.~
+With an extended claw, $n beckons to everyone nearby.~
+You beckon for $N to follow you with one of your claws.~
+$n beckons for $N to follow $m with one of $s claws.~
+$n beckons for you to follow with one of $s claws.~
+~
+Beckoning to yourself does not make sense.~
+~
+You crook a claw and beckon to $1.~
+$n beckons to $2 with a crooked claw.~
+You motion with your claws $twards.~
+$n motions with $s claws $twards.~
+You wave $3, hissing and beckoning to $N with it.~
+$n waves $3, hissing and beckoning to you with it.~
+$n waves $3, hissing and beckoning to $N with it.~
+~
+You beckon to yourself, holding $2 in one scaly hand.~
+$n beckons to $mself, holding $2 in one scaly hand.~
+
+blush~
+6
+0
+0
+0
+Your scales become slightly rosy around the edges.~
+$n's scales turn a nice, rosy shade around the edges.~
+Your scales are showing how flustered you are at seeing $N.~
+$n's scales show how flustered $e is at seeing $N.~
+$n's scales show how flustered $e is at seeing you.~
+~
+Your scales can't help but redden at what you just did.~
+$n's scales redden slightly as $e realizes what $e just did.~
+Your scales redden with embarrassment as you look at $1.~
+$n's scales redden on the edges as $e sees $2.~
+Looking $t, your scales redden a bit from embarrassment.~
+$n looks $t, and $s scales redden from embarrassment.~
+You look from $N to $3 and your scales redden from embarrassment.~
+$n look from you to $3 and $s scales redden from embarrassment.~
+$n look from $N to $3 and $s scales redden from embarrassment.~
+~
+Your scales redden as you gaze upon $2.~
+$n scales redden as $e gaze upon $2.~
+
+bonk~
+6
+0
+1
+1
+You whip your tail around and bonk everyone in the room on the head.~
+$n whips $s tail around and bonks everyone in the room on the head.~
+You bonk $N on the head with your tail.~
+$n bonks $N on the head with $s tail.~
+$n bonks you on the head with $s tail.~
+~
+You bonk yourself over the head with your tail.~
+$n bonks $mself over the head with $s tail.~
+You bonk the side of $1 with your tail.~
+$n bonks the side of $2 with $s tail.~
+~
+~
+You give $N a scaly bonk with $3.~
+$n gives you a scaly bonk with $3.~
+$n gives $N a scaly bonk with $3.~
+~
+You bonk yourself over your scaly head with $2.~
+$n bonks $mself over $s scaly head with $2.~
+
+bounce~
+8
+0
+1
+0
+You bounce up and down on your tail.~
+$n bounces up and down on $s tail.~
+Coiled upon your tail, you bounce up and down on $M.~
+Coiled upon $s tail, $n bounces up and down on $N.~
+Coiled upon $s tail, $n bounces up and down all over you.~
+You can feel something scaly bouncing down upon you while you sleep.~
+Your tail kinks painfully under you as you try to bounce on yourself. Ouch!~
+$n's tail twists as $e tries bouncing on $mself. Looks painful!~
+You bounce up and down upon $1 with your tail.~
+$n bounces up and down upon $2 with $s tail.~
+You bounce off on your tail, heading $t.~
+$n bounces off on $s tail, heading $t.~
+You bounce around on your tail, showing $3 to $N.~
+$n bounces around on $s tail and shows you $3.~
+$n bounces around on $s tail, showing $3 to $N.~
+~
+You bounce $2 up and down on your tail, like a seal.~
+$n bounces $2 up and down on $s tail, like a seal.~
+
+bow~
+8
+0
+1
+0
+You bow deeply over your tail.~
+$n bows deeply over $s tail.~
+You bow before $M, holding your tail politely in your hands.~
+$n bows before $N, holding $s tail politely in $s hands.~
+$n bows before you, holding $s tail politely in $s hands.~
+~
+You try bowing to yourself, but your tail gets in the way.~
+$n tries bowing to $mself, but $s tail gets in the way.~
+You bow deeply over your tail to $1.~
+$n bows deeply over $s tail to $2.~
+With your tail held reverently, you bow $tward.~
+With $s tail held reverently, $n bows $tward.~
+You bow over your tail to $N, holding $3.~
+$n bows over $s tail to you, holding $3.~
+$n bows over $s tail to $N, holding $3.~
+~
+You bow to yourself, holding $2 reverently in your claws.~
+$n bows to $mself, holding $2 reverently in $s claws.~
+
+brag~
+6
+0
+1
+0
+You brag in a proud, sibilant voice.~
+$n brags in a proud but droning sibilant voice.~
+You brag to $M, thumping your scaly chest in pride.~
+$n brags to $N, thumping $s scaly chest in pride.~
+$n brags to you, thumping $s scaly chest in pride.~
+~
+You hiss in pride, bragging to yourself.~
+$n hisses in pride, bragging to $mself it seems.~
+You point with one claw to $1, and brag about it.~
+$n points with one claw to $2, and brags about it.~
+You brag and boast in excited hisses at what lies $t.~
+$n brags and boasts in excited hisses at what lies $t.~
+You brag in excited hisses to $N about $3.~
+$n brags in excited hisses to you about $3.~
+$n brags in excited hisses to $N about $3.~
+You hear hissing in your sleep.~
+You brag in soft hisses to yourself about $2.~
+$n brags in soft hisses to $mself about $2.~
+
+challenge~
+8
+0
+1
+1
+You hiss angrily in challenging tones.~
+$n hisses angrily in challenging tones.~
+You hiss at $N angrily and challenge $M to a duel!~
+$n hisses at $N angrily and challenges $M to a duel!~
+$n hisses at you angrily and challenges you to a duel!~
+~
+You have enough challenge keeping your scaly self alive.~
+~
+You glare at $1 and hiss at it challengingly.~
+$n glares at $2 and hisses at it challengingly.~
+Your spines bristle in challenge as you see what is $t.~
+$n's spines bristle in challenge as $e sees what is $t.~
+In an angry hiss, you challenge $N, slapping $M with $3.~
+$n challenge you in an angry hiss, slapping you with $3.~
+In an angry hiss, $n challenge $N, slapping $M with $3.~
+Something slaps you in your dreams, causing you to turn over.~
+You challenge yourself jokingly with $2 as a weapon.~
+$n challenges $mself jokingly with $2 as a weapon.~
+
+cheer~
+6
+0
+0
+0
+You cheer, hissing loudly.~
+$n cheers, hissing loudly.~
+You cheer for $N in a cacophony of wild hissing.~
+Hissing wildly, $n cheers for $N.~
+Hissing wildly, $n cheers for you.~
+~
+You hiss loudly, cheering for yourself.~
+$n hisses loudly, cheering for $mself.~
+You hiss with cheer at $1.~
+$n hisses a cheer for $2.~
+You hiss wildly, cheering for what lies $t.~
+$n hisses wildly, cheering for what lies $t.~
+You cheer your $N, hissing and using $3 for inspiration.~
+$n cheers for you, hissing and using $3 for inspiration.~
+$n cheers for $N, hissing and using $3 for inspiration.~
+You hear some vague hissing in your sleep.~
+You cheer for yourself in a wild hiss, waving $2 excitedly.~
+$n cheers for $mself in a wild hiss, waving $2 excitedly.~
+
+chuckle~
+5
+0
+0
+0
+You chuckle in a series of short hisses.~
+$n chuckles in a series of short hisses.~
+You hiss at $M, chuckling jovially.~
+$n hisses at $N, chuckling jovially. ~
+$n hisses at you, chuckling jovially. ~
+~
+You chuckle to yourself in a jovial hiss.~
+$n chuckles to $mself in a jovial hiss.~
+You hiss at $1, chuckling jovially.~
+$n hisses at $2, chuckling jovially.~
+You chuckle in a jovial hiss at what lies $t.~
+$n chuckles in a jovial hiss at what lies $t.~
+You chuckle to $N in a jovial hiss and point to $3.~
+$n chuckles to you in a jovial hiss and points to $3.~
+$n chuckles to $N in a jovial hiss and points to $3.~
+A vague hissing sound, almost as of a strange laughter, invades your sleep.~
+You chuckle to yourself in a jovial hiss, pointing to $2.~
+$n chuckles to $mself in a jovial hiss, pointing to $2.~
+
+clap~
+6
+0
+1
+0
+You clap your claws together.~
+$n claps $s claws togethers.~
+You clap your claws at $S performance.~
+$n claps $s claws at $N's performance.~
+$n claps $s claws at your performance.~
+~
+You clap your claws together in delight.~
+$n claps $s claws together in delight.~
+You clap your claws together, astonished to see $1.~
+$n claps $s claws together, astonished to see $2.~
+Seeing what lies $t, you clap your scaly claws together in glee.~
+Seeing what lies $t, $n claps $s scaly claws together in glee.~
+You clap your scaly claws together, trying to get $N to notice $3.~
+$n claps $s scaly claws together, trying to get you to notice $3.~
+$n claps $s scaly claws together, trying to get $N to notice $3.~
+Faint clacking sounds filter through your dreams.~
+You clap your claws in surprise upon seeing $2.~
+$n claps $s claws in surprise upon seeing $2.~
+
+comb~
+6
+0
+1
+1
+You comb back your mane of spikes with one clawed-hand.~
+$n combs back $s mane of spikes with one clawed-hand.~
+You run your claws through $N's hair, combing it out.~
+$n run $s claws through $N's hair, combing it out.~
+$n run $s claws through your hair, combing it out.~
+You feel someone running their claws through your hair as you sleep.~
+You try combing out your spikes with you claws but find them all tangled.~
+$n tries combing down $s spiky mane, but finds it tangled.~
+You try combing down your spiky mane with $1, but do not meet with much success.~
+$n tries combing down $s spiky mane with $2, but does not meet with much success.~
+~
+~
+Holding $3 in your clawed hand, you try combing $N's hair.~
+Holding $3 in $s clawed hand, $n tries combing your hair.~
+Holding $3 in $s clawed hand, $n tries combing $N's hair.~
+~
+You try combing your hair spines with $2.~
+$n tries combing $s hair spines with $2.~
+
+comfort~
+6
+0
+1
+0
+Who here deserves your scaly comfort?~
+~
+Genially, you lend $N a scaly arm in comfort.~
+Genially, $n offers $N a scaly arm in comfort.~
+$n genially offers you $s arm for comfort.~
+You feel something scaly and cool comfort you while you sleep.~
+You smooth down your scales, trying to comfort yourself.~
+$n smoothes down $s scales, trying to comfort $mself.~
+You hiss softly, trying to comfort yourself with $1.~
+$n hisses softly, trying to comfort $mself with $2.~
+~
+~
+Hissing softly, you try comforting $N with $3.~
+Hissing softly, $n tries comforting you with $3.~
+Hissing softly, $n tries comforting $N with $3.~
+You hear soft hissing in your sleep and are tentatively prodded.~
+Hissing forelornly, you try to comfort yourself with $2.~
+Hissing forelornly, $n tries to comfort $mself with $2.~
+
+cower~
+8
+0
+1
+0
+You cower in fear, ducking your tail between your legs.~
+$n ducks $s tail between $s legs and cowers.~
+You try to cower behind your tail at the sight of $N.~
+$n tries cowering behind $s tail, once $e sees $N.~
+$n tries cowering behind $s tail, once $e sees you.~
+~
+Your tail cowers in fear, afraid of your thoughts.~
+Scared of $mself, $n's tail quivers as $e cowers in fear. ~
+You cower at the sight of $1, which sends your tail quivering.~
+$n's tail quivers as $e cowers at the sight of $2.~
+Even your tail cowers in fear at what lies $t.~
+Even $n's tail cowers in fear at what lies $t.~
+Even your tail cowers in fear at the thought of $3 and $N together.~
+Even $n's tail cowers in fear at the thought of you and $3.~
+Even $n's tail cowers in fear at the thought of $3 and $N together.~
+~
+You try and cower behind $2, but your tail sticks out!~
+$n tries to cower behind $2, but $s tail sticks out!~
+
+cringe~
+6
+0
+0
+0
+You cringe in terror, covering your eyes with your tail.~
+$n cringes in terror and $s tail comes up to cover $s eyes.~
+Cringing in terror, your tail shields your eyes from seeing $N.~
+Cringing in terror, $n's tail shields $s eyes from seeing $N.~
+Cringing in terror, $n raises $s tail to block $s view of you.~
+~
+Even your tail cringes in terror. You must be really scary.~
+$n's tail cringes in terror at something $e just thought. ~
+You cringe in terror and flick your tongue nervously at $1.~
+$n cringes in terror and flicks $s tongue nervously at $2.~
+You cringe and your tail refuses to move after seeing what lies $t.~
+$n cringes and $s tail refuses to move after seeing what lies $t.~
+Your scaly body cringes at the thought of $3 and $N.~
+$n's scaly body cringes as $e looks from you to $3.~
+$n's scaly body cringes as $e looks from $3 to $N.~
+~
+Your scaly body cringes as you look upon $2.~
+$n's scaly body cringes as $e looks upon $2.~
+
+cross~
+6
+0
+0
+0
+You cross your claws.~
+$n crosses $s claws.~
+You cross your claws and nod to $M.~
+$n crosses $s claws and nods to $N.~
+$n crosses $s claws and nods to you.~
+~
+You cross your claws and hope for the best.~
+$n crosses $s fingers and hisses softly to $mself.~
+You cross your claws and rub $1 for luck.~
+$n crosses $s claws and rubs $2. For luck, maybe?~
+You cross your claws in hope as you gaze $tward.~
+$n crosses $s claws as $e gazes $tward.~
+You cross your claws and rub $3 for luck against $N.~
+$n crosses $s claws and rubs $3 for luck against you.~
+$n crosses $s claws and rubs $3 for luck against $N.~
+~
+You cross your claws and rub $2 for luck in what you are attempting.~
+$n crosses $s claws and rubs $2 for luck in what $e is attempting.~
+
+cry~
+6
+0
+1
+1
+Hot tears splash against your scales as you begin to cry.~
+$n begins crying. Tears fall from $s eyes and splash $s scales.~
+You lay your scaly head on $S shoulder and begin to cry.~
+$n lays $s scaly head on $S shoulder and begins to cry.~
+$n lays $s scale head on your shoulder and begins to cry.~
+You feel something scaly press against you and hear crying.~
+You cry softly to yourself until even your eye ridges hurt.~
+$n cries and hisses softly to $mself in sorrow.~
+You cry your reptilian eyes out at the sight of $1.~
+$n cries $s reptilian eyes out at the sight of $2.~
+You cry and hiss at what lies $tward.~
+$n cries and hisses at something that lies $tward.~
+~
+~
+~
+~
+~
+~
+
+cuddle~
+6
+0
+1
+1
+Your scales chafe uncomfortably as you look for someone to cuddle with.~
+$n looks to be in a cuddling mood.~
+You cuddle up against $N, rubbing your scales against $M.~
+$n cuddles up to $N, rubbing $s scales against $M.~
+$n cuddles and rubs $s scales against you.~
+You feel scales rubbing against your body.~
+You cuddle with yourself, enjoying the feel of your scales.~
+$n cuddles with $mself, evidently enjoying the feel of $s scales.~
+You cuddle up to $1, rubbing your scales against it.~
+$n cuddles $2, rubbing $s scales against it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+curse~
+0
+0
+0
+0
+You hiss in frustration, cursing: @#%#*!!!~
+$n hisses in frustration, cursing: @#%#*!!!~
+You hiss vigorously at $N, cursing $M.~
+$n hisses vigorously at $N, cursing $M.~
+$n hisses vigorously, cursing you soundly, it seems.~
+~
+You hiss wildly, cursing your stupidity.~
+$n hisses wildly, cursing at $mself.~
+Hissing loudly, you curse at $1.~
+Hissing loudly, $n curses at $2.~
+Hissing frantically, you curse at what lies $tward.~
+Hissing frantically, $n curses at what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+curtsey~
+8
+0
+0
+0
+Daintily, you lift your tail a bit and curtsey.~
+Daintily, $n lifts $s tail a bit and curtseys.~
+You lift your tail daintily and curtsey to $N.~
+$n lifts $s tail daintily and curtseys to $N.~
+$n lifts $s tail daintily and curtseys to you.~
+~
+You try to curtsey to yourself, but your tail gets in the way.~
+$n tries to curtsey to $mself, but $s tail gets in the way.~
+You curtsey delicately before $1.~
+$n curtseys delicately before $2.~
+You raise your tail in a delicate pose and curtsey $tward.~
+$n raises $s tail in a delicate pose and curtseys $tward.~
+~
+~
+~
+~
+~
+~
+
+dance~
+8
+0
+1
+0
+You dance about, your tail held high in the air.~
+$n dances around, $s tail held high in the air.~
+Cheek to scaly cheek, you sweep $N into a waltz.~
+Cheek to scaly cheek, $n sweeps $N into a waltz.~
+Cheek to scaly cheek, $n sweeps you into a waltz.~
+~
+You turn about wildly, dancing with your tail.~
+$n dances about wildly, dancing with $s tail.~
+Hissing merrily, you dance with $1.~
+Hissing merrily, $n dances with $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+defend~
+8
+0
+1
+1
+Whom do you wish to defend?~
+$n seems to take on a more protective look.~
+With your tail trailing behind, you jump in front of $N to defend $M.~
+With $s tail trailing behind, $n jumps in front of $N to defend $M.~
+With $s tail trailing behind, $n jumps in front of you protectively.~
+~
+You hiss with agitation as you try to defend your actions.~
+$n hisses with agitation as $e tries to defend $s actions.~
+How do you wish to defend $1?~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+drool~
+0
+0
+0
+0
+A puddle of drool begins collecting about your clawed feet.~
+A puddle of drool begins collecting about $n's clawed feet.~
+Drool runs down your scaly mouth and onto $N.~
+Drool runs down $n's scaly mouth and onto $N.~
+Drool runs down $n's scaly mouth and onto you - gross!~
+Something wet and slimy begins creeping down your back.~
+You drool on yourself, covering your scales in saliva.~
+$n drools on $mself, covering $s scales in saliva.~
+You drool over $1.~
+$n drools over $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+faint~
+8
+0
+1
+1
+You fall forward, fainting, with your tail straight in the air.~
+$n falls forward, fainting, with $s tail straight in the air.~
+Your scaly body faints from exhaustion, landing at $N's feet.~
+$n's scaly form faints from exhaustion, landing at $N's feet.~
+$n scaly body slumps at your feet, having fainted.~
+~
+You fall to the ground in a crumpled mass of scales, fainting over yourself.~
+$n falls to the ground in a mass of scales, fainting over $mself.~
+You feel faint as your claws brush over $1.~
+$n faints as soon as $e brushes $s claws against $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+flex~
+8
+0
+0
+0
+You flex, rippling the muscles beneath your scales.~
+$n flexes and the muscles beneath $s scales ripple.~
+You flex, rippling your scale-covered muscles for $N's benefit.~
+$n flexes, rippling $s scale-covered muscles for $N's benefit.~
+$n flexes, rippling $s scale-covered muscles for your benefit.~
+~
+You flex, rippling your scale-covered muscles for your own benefit.~
+$n flexes, rippling $s scale-covered muscles for $s own benefit.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+flick~
+6
+0
+1
+0
+@b@GYou flick your forked tongue in and out of your maw rapidly.@n~
+@b@G$n flicks $s forked tongue in and out of $s maw rapidly.@n~
+@n@GYou flick out your forked tongue, tasting the air about $N.@n~
+@b@G$n flicks out $s forked tongue, tasting the air about $N.@n~
+@b@G$n flicks out $s forked tongue, tasting the air about you.@n~
+@b@GA wet, forked tongue flicks past your slumbering face.~
+You flick your forked tongue around and touch your nostrils with it.~
+$n flicks out $s forked tongue and touches $s nostrils with it.~
+You flick you forked tongue at $1 disdainfully.~
+$n flicks $s forked tongue at $2 disdainfully.~
+You flick out your forked tongue, testing the air $tward.~
+$n flicks out $s forked tongue, testing the air $tward.~
+~
+~
+~
+~
+~
+~
+
+flip~
+8
+0
+1
+0
+Using your tail for balance, you flip head over heels.~
+Using $s tail for balance, $n deftly flips head over heels.~
+You flip $N over your scaly shoulder.~
+$n flips $N over $s scaly shoulder.~
+$n merrily flips you over $s scaly shoulder.~
+~
+You hisses become erratic. It seems you are losing your mind.~
+$n's hisses become erratic. Perhaps $e has lost $s mind.~
+You flip $1 end over end in your claws.~
+$n flips $2 end over end in $s claws.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+flirt~
+6
+0
+0
+1
+You sweep your tail around in a flirtatious manner.~
+$n sweeps $s tail around in a flirtatious manner.~
+You shake your tail at $N flirtatiously.~
+$n shakes $s tail at $N flirtatiously.~
+$n shakes $s tail at you flirtatiously.~
+~
+Your tail dances around yourself in flirtation.~
+$n's tail dances around $mself in flirtation.~
+You swish your tail at $1, flirting with it.~
+$n swishes $s tail at $2, flirting with it.~
+You lift your tail up and down, flirting with what lies $t.~
+$n lifts $s tail up and down, flirting with what lies $t.~
+With a coy hiss, you flirt with $N, showing $M $3.~
+With a coy hiss, $n flirts with you, showing you $3.~
+With a coy hiss, $n flirts with $N, showing $M $3.~
+~
+You hiss at $2 as you flirt with an idea.~
+$n hisses at $2 as $e flirts with an idea.~
+
+french~
+6
+0
+1
+0
+Whom do you wish to french?~
+~
+@b@GYou press your maw to $N's mouth, kissing $M deeply with your tongue.~
+@b@G$n kisses $N passionately with $s long, forked tongue.~
+@b@G$n kisses you deeply with $s long, forked tongue. @n~
+You feel a cold, wet tongue brush past you as you sleep.~
+@b@GYou try frenching yourself, but end up biting your forked tongue.~
+$n tries to do something with $s tongue, but bites it instead.~
+You wrap your forked tongue fondly around $1.~
+$n wraps $s forked tongue fondly around $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+frolic~
+8
+0
+0
+0
+You frolic about in happy abandon with your tail trailing merrily behind.~
+$n frolics about in happy abandon with $s tail trailing merrily behind.~
+You and your tail frolic happily before $N.~
+$n and $s tail frolic happily before $N.~
+$n and $s tail frolic happily before you.~
+~
+You frolic about merrily, chasing your tail.~
+$n frolics about merrily, chasing $s tail.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+frown~
+6
+0
+0
+0
+The edges of your maw turn down. What's wrong?~
+$n's maw creases in a frown.~
+Your jowls crease in a frown at what $E just did.~
+$n's jowls crease in a frown at what $N just did.~
+$n's jowls crease in a frown at what you just did.~
+~
+The corners of your maw turn down in a frown at yourself.~
+$n frowns at $mself, the corners of $s maw turning down.~
+Your scaly jaw clenches as you frown at $1.~
+$n's scaly jaw clenches as $e frowns at $2.~
+You clench your jaw in a frown as you look $t.~
+$n clenches $s scaly jaw in a frown as $e looks $t.~
+~
+~
+~
+~
+~
+~
+
+fwhap~
+6
+0
+1
+1
+You swing a cold, slimy, swamp fish around.~
+$n swings a cold, slimy, swamp fish around.~
+You grab a cold, wiggling swamp fish and whap $M with it!~
+$n grabs a cold, wiggling swamp fish and whaps $N with it!~
+$n grabs a cold, wiggling swamp fish and whaps you with it!~
+A cold, slimy swamp fish nibbles on your toes!~
+A slimy swamp fish jumps out of your claws and attacks you!~
+A slimy swamp fish jumps out of $n's claws and attacks $m!~
+You whap a cold, slimy swamp fish on $1 expectantly.~
+$n whaps a slimy swamp fish on $2 viciously.~
+You motion $twards with a cold, slimy swamp fish in your claws.~
+$n motions $tward with a cold, slimy swamp fish in $s claws.~
+~
+~
+~
+~
+~
+~
+
+gasp~
+6
+0
+0
+0
+You breathe a sibilant gasp of astonishment!~
+$n breathes a sibilant gasp of astonishment!~
+You let loose a sibilant gasp as you realize what $E just did.~
+$n lets loose a sibilant gasp as $e realizes what $N just did.~
+$n lets loose a sibilant gasp as $e realizes what you just did.~
+~
+You breathe a sibilant gasp of astonishment at yourself!~
+$n breathes a sibilant gasp of astonishment at $mself!~
+You gasp at $1 in a sputtering hiss.~
+$n gasps at $2 in a sputtering hiss.~
+You breathe an astonished, sibilant gasp at what lies $tward.~
+$n breathes an astonished, sibilant gasp at what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+giggle~
+6
+0
+0
+0
+You giggle in a tittering hiss.~
+$n giggles in a tittering hiss.~
+You giggle at $N in a tittering hiss.~
+$n giggles at $N in a tittering hiss.~
+$n giggles at you in a tittering hiss.~
+A series of tittering hisses fill your dreams.~
+You let loose a tittering hiss, giggling to yourself.~
+$n giggles to $mself, letting loose a tittering giggle.~
+You hiss in a tittering giggle at $1.~
+$n hisses in a tittering giggle at $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+gloat~
+6
+0
+0
+0
+You gloat in a deep, croaking hiss.~
+$n gloats in a deep, croaking hiss.~
+You gloat to $M in a full, exuberant hiss.~
+$n gloats to $N in a full, exuberant hiss.~
+$n gloats to you in a full, exuberant hiss.~
+A nightmare of $n's gloating hisses disturbs your slumber.~
+You gloat quietly to yourself, hissing with excitement.~
+$n gloats quietly to $mself, hissing with excitement.~
+You hiss in excitement, gloating over $1.~
+$n hisses in excitement, gloating over $2.~
+You gloat, hissing in glee at what lies in wait $twards.~
+$n gloats, hissing in glee at what lies in wait $twards.~
+~
+~
+~
+~
+~
+~
+
+greet~
+6
+0
+0
+0
+Whom do you want to greet with open claws?~
+~
+You greet $M warmly with open claws.~
+$n greets $N warmly with open claws.~
+$n greets you warmly with open claws.~
+~
+Crossing your claws over your chest, you prepare to greet your destiny.~
+$n crosses $s claws over $s chest, preparing to greet destiny.~
+You greet $1 with open claws.~
+$n greets $2 with open claws.~
+You bow your scaly head and greet the unknown that lies $tward.~
+$n bows $s scaly head and greets something unseen $tward.~
+~
+~
+~
+~
+~
+~
+
+grimace~
+6
+0
+0
+0
+Your scaly features contort in a tortured grimace.~
+$n's scaly features contort in a tortured grimace.~
+Your scaly features contort in a grimace at the sight of $N.~
+$n's scaly features contort in a grimace at the sight of $N.~
+$n's scaly features contort in a grimace at the sight of you.~
+~
+Your scales twist in a tortured grimace of pain.~
+All of $n's scales seem to twist in a tortured grimace of pain.~
+Your scaly features become pinched as you grimace at $1.~
+$n's scaly features become pinched as $e grimaces at $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+grin~
+6
+0
+0
+0
+You grin, openly flashing rows of needle-sharp teeth.~
+$n grins, openly flashing rows of needle-sharp teeth.~
+You grin to $N, flashing $M your needle-sharp teeth.~
+$n grins at $N, flashing $M $s needle-sharp teeth.~
+$n grins at you, flashing you $s needle-sharp teeth.~
+~
+You grin mischievously.~
+$n grins mischievously at nothing in particular.~
+You grin openly, flashing your needle-sharp teeth at $1.~
+$n grins openly, flashing $s needle-sharp teeth at $2.~
+You point a claw $tward and give a toothy grin.~
+$n points a claw $tward and give a toothy grin.~
+~
+~
+~
+~
+~
+~
+
+grovel~
+8
+0
+1
+0
+You throw your scaly body to the ground and grovel.~
+$n throws $s scaly body to the ground and grovels.~
+You sink down and grovel before $N, getting your scales dirty.~
+$n sinks down and grovels before $N, getting $s scales dirty.~
+$n sinks down and grovels before you, getting $s scales dirty.~
+~
+Why grovel before yourself? You know you are unworthy already.~
+~
+You grovel before $1, getting your scales dirty in the process.~
+$n grovels before $2, getting $s scales dirty in the process.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+growl~
+6
+0
+0
+0
+You growl in a low, gutteral hiss.~
+$n growls in a low, gutteral hiss.~
+You growl at $M. Hssssssssss...take that $N.~
+$n growls at $N in a gutteral hiss.~
+$n growls at you in a gutteral hiss.~
+Your slumber is filled with hissing. Something seems to be growling at you.~
+You growl and hiss at yourself in frustration.~
+$n growls and hiss at $mself in clear frustration.~
+Your hissing growl causes $1 to shake slightly.~
+$n's sibilant growl causes $2 to shake slightly.~
+You growl $tward, disturbed by what your reptilian eyes perceive.~
+$n growls $tward, disturbed by what $s reptilian eyes perceive.~
+~
+~
+~
+~
+~
+~
+
+highfive~
+8
+0
+1
+1
+Whom do you wish to give a highfive to?~
+~
+Bouncing and hissing, you give $N an excited highfive.~
+Bouncing and hissing, $n gives $N an excited highfive.~
+Bouncing and hissing, $n gives you an excited highfive.~
+~
+Hissing loudly, you give yourself a highfive. Good job!~
+Hissing loudly, $n gives $mself a highfive. ~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+hiss~
+6
+0
+1
+1
+You hiss quietly to yourself.~
+$n hisses softly.~
+You hiss angrily at $M.~
+$n hisses angrily at $N.~
+$n hisses angrily at you.~
+Your sleep is nearly disturbed by the sound of hissing.~
+You hiss angrily at yourself for being so stupid!~
+$n hisses angrily at $mself.~
+You hiss furiously at $1.~
+$n hisses furiously at $2.~
+You turn $tward and hiss apprehensively.~
+$n turns $tward and hisses with apprehension.~
+~
+~
+~
+~
+~
+~
+
+hkiss~
+6
+0
+1
+1
+Whose hand do you wish to kiss?~
+~
+You press your scaly maw to $N's hand in a kiss.~
+$n presses $s scaly maw to $N's hand in a kiss.~
+$n presses $s scaly maw to your hand and kisses it.~
+Something scaly and cool just kissed your hand! ~
+You kiss the tips of your claws. Perfect!~
+$n kisses the tips of $s claws. Such magnificence!~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+hshake~
+6
+0
+1
+1
+You shake your scaly claws before your snout.~
+$n shakes $s scaly claws before $s snout.~
+You shake $N's hand with your scaly claws.~
+$n shakes $N's hand with $s scaly claws.~
+$n shakes your hand with $s scaly claws.~
+Something scaly is trying its best to shake you awake.~
+You shake your clawed hands out in front of you. That hurt!~
+$n shakes $s clawed hands before $m. Something must have hurt!~
+You shake $1 back and forth with your clawed hands.~
+$n shakes $2 back and forth with $s clawed hands.~
+You shake your clawed hand in pain, glaring $tward.~
+$n shakes $s clawed hand in pain, glaring $tward.~
+You shake your clawed hand at $3 and $N in admonition.~
+$n shakes $s clawed hand at $3 and you in admonition.~
+$n shakes $s clawed hand at $3 and $N in admonition.~
+~
+You shake your clawed hand at $2, admonishing your own stupidity.~
+$n shakes $s clawed hand at $2, admonishing $mself.~
+
+hug~
+8
+0
+0
+0
+Whom do you wish to give a hug?~
+~
+You hug $N, drawing $M close to your scaly body.~
+$n hugs $N, drawing $M close to $s scaly body.~
+$n hugs you, drawing you close to $s scaly body.~
+You feel someone cool and scaly give you a nice hug.~
+You wrap your tail around your body and give yourself a hug.~
+$n wraps his tail around $sr body and gives $mself a hug.~
+You enclose $1 in a scaly hug.~
+$n encloses $2 in a scaly hug.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+jump~
+6
+1
+0
+0
+You jump up and down and bang your tail on the ground.~
+$n jumps up and down while banging $s tail on the ground.~
+You jump up and down on $N, accidentally smacking $M with your tail.~
+$n jumps up and down on $N, accidentally smacking $M in with $s tail.~
+$n jumps up and down on you, accidentally smacking you with $s tail.~
+~
+You jump around excitedly, tripping over your own tail.~
+$n jumps around excitedly, tripping over $s own tail.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+kiss~
+6
+0
+0
+1
+Whom do you wish to kiss?~
+~
+You plant a very large, lipless kiss on $N.~
+$n plants a very large and lipless kiss on $N.~
+$n plants a very large and lipless kiss on you.~
+Your dreams are invaded by a soft hissing and a wet kiss.~
+Try as you might, you can't adjust your maw to kiss yourself.~
+In an interesting display, $n tries to kiss $mself. How desperate!~
+You press your mouth to $1 and give it an audible kiss.~
+$n presses $s mouth to $2 and give it an audible kiss.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+laugh~
+6
+0
+1
+0
+You laugh in a cacophony of hisses.~
+$n hisses merrily, in what you can only guess to be laughter.~
+You hiss at $N, laughing at what $E just did.~
+$n hisses at $N, evidently laughing at what $E just did.~
+$n hisses at you, evidently laughing at what you just did.~
+A merry hissing, that sounds suspiciously like laughter, fills your dreams.~
+You hiss in laughter at what you just did.~
+$n hisses in laughter at what $e just did.~
+You hiss at $1, laughing madly at it.~
+$n hisses at $2, laughing madly at it.~
+You break out in a gale of laughing hisses and point $tward. ~
+$n breaks out in a gale of laughing hisses and points $tward.~
+~
+~
+~
+~
+~
+~
+
+lick~
+6
+0
+0
+0
+Whom do you want to lick with your long, forked tongue?~
+~
+@b@GYou lick $N with your long, forked tongue.~
+@b@G$n licks $N with $s long, forked tongue.~
+@b@G$n licks you with $s long, forked tongue.~
+You feel something cold and wet flicker across your face.~
+You start preening and licking your scales with your forked tongue.~
+$n starts to lick $s scales, cleaning them like a cat.~
+You wrap your forked tongue around $1.~
+$n wraps $s forked tongue around $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+massage~
+8
+0
+1
+1
+What or who do you wish to massage?~
+$n limbers up $s claws, looking to offer someone a massage.~
+You massage $N's shoulders with your strong yet gentle claws.~
+$n massages $N's shoulders with $s strong yet gentle claws.~
+$n massages your shoulders with $s strong yet gentle claws.~
+Strong yet gentle claws massage your worries away while you sleep.~
+You give yourself a much needed massage with your strong claws.~
+$n gives $mself a massage, kneading $s shoulders with $s claws~
+You massage the surface of $1 gently with your claws.~
+$n massages the surface of $2 gently with $s claws.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+mutter~
+6
+0
+1
+1
+You mutter to yourself in a soft chorus of hisses.~
+$n mutters to $mself in a chorus of soft hisses.~
+In a chorus of hissing, you mutter softly at $N.~
+$n, in what sounds like muttering, hisses at $N.~
+$n mutters at you in a low, agitated hiss.~
+You can hear the sound of agitated hissing being directed at you in your sleep.~
+You mutter in a low and quiet hiss at yourself.~
+$n mutters in a low, quiet hiss at $mself.~
+You mutter at $1 in a soft, even hiss.~
+$n mutters at $2 in a soft, even hiss.~
+Looking $t, you mutter in a cacophany of hisses.~
+Looking $t, $n mutters in a cacophany of hissing.~
+~
+~
+~
+~
+~
+~
+
+nod~
+6
+0
+0
+0
+You nod your scaly head.~
+$n nods $s scaly head.~
+You nod your scaly head in agreement with $M.~
+$n nods $s scaly head in agreement with $N.~
+$n nods $s scaly head in agreement with you.~
+~
+You nod your scaly head in conviction.~
+$n nods $s scaly head in conviction.~
+You nod your scaly head at $1, acknowledging it.~
+$n nods $s scaly head at $2, acknowledging it.~
+You nod $tward, pointing with your head spikes.~
+$n nods $tward, pointing with $s head spikes.~
+~
+~
+~
+~
+~
+~
+
+nudge~
+6
+0
+1
+0
+Whom do you wish to nudge?~
+~
+You nudge $M with an extended claw.~
+$n nudges $N with an extended claw.~
+$n nudges you with an extended claw.~
+You feel something scaly nudge you in your sleep.~
+You give yourself a nudge with your claws.~
+$n gives $mself a nudge with $s claws.~
+You nudge $1 with one of your claws.~
+$n nudges $2 with one of $s claws.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+nuzzle~
+6
+0
+1
+1
+Nuzzle whom with your scaly snout?~
+~
+You nuzzle $S neck with your cool, scaly snout.~
+$n nuzzles $N's neck with $s scaly snout.~
+$n nuzzles your neck with $s cool, scaly snout.~
+Something scaly nuzzles you while you slumber.~
+You curl up and nuzzle your tail for warmth.~
+$n curls up and nuzzles $s tail. Hopefully for warmth.~
+You nuzzle $1 with your scaly jowls.~
+$n nuzzles $2 with $s scaly jowls.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+peer~
+6
+0
+0
+0
+Your eyes peer warily out from beneath their eye ridges.~
+$n's eyes peer warily out from beneath their eye ridges.~
+You peer warily at $M with your ever watchful, reptilian eyes.~
+$n peers warily at $N with $s ever watchful, reptilian eyes.~
+$n peers warily at you with $s ever watchful, reptilian eyes.~
+~
+You peer down at yourself with your slitted eyes. What have you done?~
+$n peers down at $mself through $s slitted eyes. What has $e done?~
+You focus your slitted eyes on $1, peering at it.~
+$n focuses $s slitted eyes on $2, peering at it.~
+You peer $tward and hiss with apprehension.~
+$n peers $tward and hisses with apprehension.~
+~
+~
+~
+~
+~
+~
+
+point~
+6
+0
+0
+0
+You point in random directions with one crooked claw.~
+$n points in random directions with one crooked claw.~
+You point to $2 with an extended claw.~
+$n points to $N with an extended claw.~
+$n points to you with an extended claw.~
+~
+You point to yourself proudly with one of your claws.~
+$n points to $mself proudly with one of $s claws.~
+You point to $1 with an extended claw.~
+$n points to $2 with an extended claw.~
+You point $tward with one of your sharp claws.~
+$n points $tward with one of $s sharp claws.~
+~
+~
+~
+~
+~
+~
+
+pout~
+6
+0
+0
+0
+You swish you tail back and forth, pouting.~
+$n swishes $s tail back and forth, pouting.~
+Your tail wilts and crumples since $E is ignoring you.~
+$n's tail wilts and crumples since $N is ignoring $m.~
+$n's tail wilts and crumples since you are ignoring $m.~
+~
+You hiss quietly to yourself, pouting.~
+$n hisses quietly to $mself, pouting.~
+You hiss mournfully at $1, pouting at it.~
+$n hisses mournfully at $2, pouting at it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+purr~
+6
+0
+0
+0
+Your soft hissing becomes a warm purr.~
+$n's soft hissing becomes a warm purr.~
+You purr to $N with a few soft hisses.~
+$n purrs to $N with a few soft hisses.~
+$n purrs to you, softly hissing.~
+A raspy, purring hiss fills your dreams.~
+You purr to yourself in quiet hisses.~
+$n purrs to $mself in quiet hisses.~
+Hissing quietly, you purr over $1.~
+$n hisses quietly, purring over $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+raise~
+0
+0
+0
+0
+You raise an eyeridge.~
+$n raises an eyeridge.~
+You raise an eyeridge at $N.~
+$n raises an eyeridge at $N.~
+$n raises an eyeridge at you.~
+~
+You raise an eyeridge.~
+$n raises an eyeridge.~
+You raise an eyeridge questioningly at $1.~
+$n raises a questioning eyeridge at $2.~
+You raise a questioning eyeridge, looking $tward.~
+$n raises a questioning eyeridge, looking $tward.~
+~
+~
+~
+~
+~
+~
+
+raspberry~
+6
+0
+1
+0
+@GYou stick out your forked tongue. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n ~
+@G$n sticks out $s forked tongue. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n ~
+@GYou stick your forked tongue out at $N. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@G$n sticks $s forked tongue out at $N. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@G$n sticks $s forked tongue out at you. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+~
+@GYou flick yourself with your forked tongue. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@G$n flicks $mself with $s forked tongue. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@GYou flick your forked tongue at $1. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@G$n flicks $s forked tongue at $2. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@GTurning, you stick your forked tongue out $tward. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+@GTurning, $n sticks $s forked tongue out $tward. @GP@Bb@Gb@Bb@Gb@Bl@Gl@Bl@Gt@Bt@G!@n~
+~
+~
+~
+~
+~
+~
+
+rofl~
+6
+0
+1
+1
+You roll on the floor, hissing with laughter.~
+$n rolls on the floor, hissing with laughter.~
+You roll on the floor, hissing with laughter at $N.~
+$n rolls on the floor, hissing with laughter at $N.~
+$n rolls on the floor, hissing with laughter at you.~
+~
+You roll on the floor, hissing at yourself in laughter.~
+$n rolls on the floor, hissing at $mself in laughter.~
+You roll on the floor, hissing in laughter at $1.~
+$n rolls on the floor, hissing in laughter at $2.~
+You roll on the floor, hissing in laughter at what lies $tward.~
+$n rolls on the floor, hissing in laughter at what lies $twards.~
+You roll on the floor before $M, hissing with laughter at $3.~
+$n rolls on the floor before you, hissing with laughter at $3.~
+$n rolls on the floor before $N, hissing with laughter at $3.~
+~
+You roll on the floor, hissing with laughter at $2 and yourself.~
+$n rolls on the floor, hissing with laughter at $2 and $mself.~
+
+roll~
+6
+0
+0
+0
+You roll your slitted, reptilian eyes.~
+$n rolls $s slitted, reptilian eyes.~
+You roll your slitted, reptilian eyes at $M.~
+$n rolls $s slitted, reptilian eyes at $N.~
+$n rolls $s slitted, reptilian eyes at you.~
+~
+You roll your slitted, reptilian eyes and slap your scaly forehead. Doh!~
+$n rolls $s slitted, reptilian eyes and slaps $s scaly forehead. Doh!~
+You roll your slitted, reptilian eyes at $1.~
+$n rolls $s slitted, reptilian eyes at $2.~
+You roll your slitted, reptilian eyes at what lies $tward.~
+$n rolls $s slitted, reptilian eyes at what lies $tward.~
+You roll your slitted, reptilian eyes at $3 and $N.~
+$n rolls $s slitted, reptilian eyes at you and $3.~
+$n rolls $s slitted, reptilian eyes at $3 and $N.~
+~
+You roll your reptilian eyes. You forgot about $2!~
+$n rolls $s reptilian eyes. He forgot about $2!~
+
+rub~
+6
+0
+1
+0
+You rub your scaly stomach with your claws.~
+$n rubs $s scaly stomach with $s claws.~
+You rub $N's shoulders with your strong but gentle claws.~
+$n rubs $N's shoulders with $s strong but gentle claws.~
+$n rubs your shoulders with $s strong but gentle claws.~
+You feel something strong and scaly running against your body.~
+You rub your long, scaly tail. Ouch, that HURT!~
+$n rubs $s long, scaly tail. Ouch, that must have HURT!~
+You rub $1 between your two clawed hands.~
+$n rubs $2 between $s two clawed hands.~
+You point $twards with one claw and pat your scaly stomach.~
+$n points $twards with one claw and pats $s scaly stomach.~
+~
+~
+~
+~
+~
+~
+
+salute~
+8
+0
+1
+1
+You give a crisp salute with your tail.~
+$n stomps and gives a crisp tail salute.~
+You give $N a crisp tail salute.~
+$n gives $N a crisp tail salute.~
+$n gives you a crisp salute with $s tail.~
+~
+You salute yourself with your tail.~
+$n salutes $mself with $s tail.~
+You give $1 an acknowledging tail salute.~
+$n acknowledges $2 with a tail salute.~
+You give a respectful salute to what lies $tward with your tail.~
+$n gives a respectful salute to what lies $tward with $s tail.~
+You give $N a scaly salute with $3 in hand.~
+$n gives you a scaly salute with $3 in hand.~
+$n gives $N a scaly salute with $3 in hand.~
+~
+You give yourself a scaly salute with $2 in hand.~
+$n gives $mself a scaly salute with $2 in hand.~
+
+scowl~
+6
+0
+0
+0
+You scowl from beneath your eyeridges.~
+$n scowls from beneath $s eyeridges.~
+You scowl furiously from beneath your eyeridges at $N.~
+$n scowls furiously from beneath $s eyeridges at $N.~
+$n scowls furiously from beneath $s eyeridges at you.~
+~
+You scowl down at yourself, hissing quietly.~
+$n scowls down at $mself, hissing quietly.~
+You raise an eyeridge and scowl at $1.~
+$n raises an eyeridge and scowls at $2.~
+You scowl furiously and hiss at what lies $tward.~
+$n scowls furiously and hisses at what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+scratch~
+6
+0
+0
+0
+You scratch at one of your scales.~
+$n scratches at one of $s scales.~
+Mindful of your claws, you scratch $N's back.~
+Mindful of $s claws, $n scratches $N's back.~
+Mindful of $s claws, $n scratches your back. Ahh, that feels good.~
+Suddenly, you feel sharp claws scratching your back tenderly.~
+You scratch at a scale absently, lost in thought.~
+$n scratches at a scale absently, lost in thought.~
+You rake your claws over $1, hoping to scratch it.~
+$n rakes $s claws over $2, hoping to scratch it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+shake~
+6
+0
+1
+0
+You shake your scaly head.~
+$n shakes $s scaly head.~
+You shake your scaly head at $M.~
+$n shakes $s scaly head at $N.~
+$n shakes $s scaly head at you.~
+~
+You shake your scaly head quietly to yourself.~
+$n shakes $s scaly head at $mself.~
+You grab $1 in your claws and shake it.~
+$n grabs $2 in $s claws and shakes it.~
+You shake your head vigorously at what lies $tward.~
+$n shakes $s scaly head vigorously at what lies $tward.~
+Looking at $3, you shake your scaled-head at $N.~
+Looking at $3, $n shakes $s scaled-head at you.~
+Looking at $3, $n shakes $s scaled-head at $N.~
+~
+You shake your scaly head as you see $2.~
+$n shakes $s scaly head as $e glimpses $2.~
+
+shiver~
+6
+0
+1
+0
+You shiver, sending ripples through your tail.~
+$n shivers, sending ripples through $s tail.~
+You and your tail shiver at the thought of fighting $N.~
+$n and $s tail shiver at the thought of fighting $N.~
+$n and $s tail shiver at the thought of fighting you.~
+~
+Your tail shivers and twinges at what you just did.~
+$n's tail shivers and twinges at what $e just did.~
+Shivers ripple your scaly flesh as you gaze upon $1.~
+Shivers ripple $n's scaly flesh as $e gazes upon $2.~
+Shivers ripple your scaly flesh as you gaze $tward.~
+Shivers ripple $n's scaly flesh as $e gazes $tward.~
+~
+~
+~
+~
+~
+~
+
+shrug~
+6
+0
+0
+0
+You shrug your scaly shoulders.~
+$n shrugs $s scaly shoulders helplessly.~
+You shrug your scaly shoulders in response to $N.~
+$n shrugs $s scaly shoulders in response to $N.~
+$n shrugs $s scaly shoulders in response to you.~
+~
+You shrug your scaly shoulders to yourself. Oh, brother.~
+$n shrugs $s scaly shoulders to $mself.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+sing~
+6
+0
+0
+0
+You raise your sibilant voice in a hearty song.~
+$n raises $s sibilant voice in hearty song.~
+You sing a lizardman ballad, full of lively hisses, to $M.~
+$n sings a lizardman ballad, full of lively hisses, to $N.~
+$n sings a lizardman ballad, full of lively hisses, to you.~
+A lively song full of hisses invades your sleep.~
+You sing a nice, lizardman song to yourself. It's good to stay in practice.~
+$n sings a nice, lizardman song to $mself, obviously practicing.~
+You sing to $1 in a sibilant voice.~
+$n sings to $2 in a sibilant voice.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+skip~
+8
+0
+0
+0
+You skip merrily, with your tail bobbing up and down.~
+$n skip merrily, with $s tail bobbing up and down.~
+You skip to and fro around $N even as your tail does its own dance.~
+$n skips to and fro around you while $s tail does its own dance.~
+~
+~
+You skip and jump happily, with your tail swinging side to side.~
+$n skips and jumps happily, with $s tail swinging side to side.~
+You deftly skip around $1, even as your tail swishes.~
+$n deftly skips around $2, even as $s tail swishes.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+slap~
+6
+0
+1
+1
+You slap yourself with your tail.~
+$n slaps $mself with $s tail.~
+You whip yourself around quickly, slapping $N with your tail.~
+$n whips $mself around quickly, slapping $N with $s tail.~
+$n whips $mself around quickly, slapping you with $s tail.~
+Something cool and scaly slaps across you as you sleep.~
+You slap yourself with your tail. How bad can you be?~
+$n slaps $mself with $s tail. How bad can $e be?~
+You slap $1 with the side of your tail.~
+$n slaps $2 with the side of $s tail.~
+You slap your tail on the ground, pointing it $t.~
+$n slaps $s tail on the ground, pointing it $t.~
+Hissing merrily, you slap $N with $3~
+Hissing merrily, $n slaps you with $3.~
+Hissing merrily, $n slaps $N with $3.~
+You hear a faint hissing noise and feel a slap.~
+You slap $2 against your scales.~
+$n slaps $2 against $s scales.~
+
+smile~
+6
+0
+0
+0
+You flash your needle-sharp teeth in a happy smile.~
+$n flashes $s needle-sharp teeth in a happy smile.~
+You flash your needle-sharp teeth in a smile at $M.~
+$n flashes $s needle-sharp teeth in a smile at $N.~
+$n flashes $s needle-sharp teeth, smiling at you.~
+~
+With a flash of needle-sharp teeth, you smile to yourself.~
+With a flash of needle-sharp teeth, $n smiles to $mself.~
+You flash your needle-sharp teeth in a smile at $p.~
+$n flashes $s needle-sharp teeth in a smile at $p.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+smirk~
+6
+0
+0
+0
+The corners of your scaly maw turn up in a smirk.~
+The corners of $n's scaly maw turn up in a smirk.~
+The corners of your scaly maw turn up as you smirk at $M.~
+The corners of $n's scaly maw turn up as $e smirks at $N.~
+The corners of $n's scaly maw turn up as $e smirks at you.~
+~
+You smirk to youself, hissing softly.~
+$n smirks to $mself and hisses softly in laughter.~
+Your maw scales tighten as you smirk at $1.~
+$n's maw scales tighten as $e smirks at $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+snap~
+6
+0
+0
+1
+You snap your claws.~
+$n snaps $s claws.~
+You snap your claws at $M.~
+$n snaps $s claws at $N.~
+$n snaps $s claws at you.~
+You hear the snap of scaly claws while you slumber.~
+You snap your claws. That's it!~
+$n snaps $s claws - $e has an idea!~
+You snap you claws at $1 in agitation.~
+$n snaps $s claws at $2 in agitation.~
+You snap your claws $twards.~
+$n snaps $s claws $tward.~
+You snap your claws at $M and point to $3.~
+$n snaps $s claws at you and point to $3.~
+$n snaps $s claws at $N and point to $3.~
+~
+You snap your claws, having found a use for $2.~
+$n snaps $s claws, having found a use for $2.~
+
+snicker~
+6
+0
+0
+0
+You flick your tongue in and out, snickering.~
+$n flicks $s tongue in and out, snickering.~
+You flick your tongue in $N's direction and snicker.~
+$n flicks $s tongue in $N's direction and snickers.~
+$n flicks $s tongue in your direction, snickering.~
+~
+You flick you tongue in and out, snickering to yourself.~
+$n flicks $s tongue in and out, snickering to $mself.~
+You snicker at $1, flicking your tongue out at it.~
+$n snickers at $2, flicking $s tongue out at it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+snuggle~
+6
+0
+0
+0
+Whom do you wish to snuggle with?~
+~
+You curl your scaly body around $N and snuggle up to $M.~
+$n curls $s scaly body around $N and snuggles up to $M.~
+$n snuggles up to you and curls $s scaly body around you.~
+Something cool and scaly snuggles up to you while you sleep.~
+You curl into a ball and snuggle up to your tail sleepily.~
+$n curls into a ball and snuggles up to $s tail sleepily.~
+You snuggle your scaly body up to $1.~
+$n snuggles $s scaly body up to $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+sputter~
+6
+0
+0
+0
+Your soft hisses turn into sputters.~
+$n's soft hisses come out as sputters.~
+You end up sputtering to $N as your hisses become raspy.~
+$n's hisses become raspy sputters as $e addresses $N.~
+$n's hisses become raspy sputters as $e addresses you.~
+You are vaguely aware of a raspy, sputtering sound.~
+You hiss raspily, sputtering in surprise at yourself.~
+$n hisses raspily, sputtering in surprise at $mself.~
+Your hisses turn to sputters as you regard $1.~
+$n's hisses turn to sputters as $e regards $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+stretch~
+5
+0
+0
+0
+You stretch your claws and tail lazily.~
+$n stretches $s claws and tail lazily.~
+You stretch your claws and tail lazily before $N.~
+$n stretches $s claws and tail lazily before $N.~
+$n stretches $s claws and tail lazily before you.~
+~
+You stretch you scaly limbs and tail, limbering up.~
+$n stretches $s scaly limbs and tail, limbering up.~
+You pull at $1 with your claws, trying to stretch it.~
+$n pulls at $2 with $s your claws, trying to stretch it.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+swear~
+0
+0
+0
+0
+You hiss rapidly, swearing in frustration: @#%#*!!!~
+$n hisses rapidly, swearing in frustration: @#%#*!!!~
+You hiss vigorously at $N, swearing at $M.~
+$n hisses rapidly, swearing in frustration: @#%#*!!!~
+$n hisses vigorously at you, swearing up a storm.~
+~
+You hiss wildly at yourself, swearing.~
+$n hisses wildly to $mself, swearing.~
+Hissing loudly, you swear at $1.~
+Hissing loudly, $n swears at $2.~
+Hissing frantically, you swear at what lies $tward.~
+Hissing frantically, $n swears at what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+swish~
+8
+0
+1
+1
+You swish your tail about from side to side.~
+$n swishes $s tail from side to side.~
+You swish your tail to and fro, looking at $N expectantly.~
+$n swishes $s tail to and fro, looking at $N expectantly.~
+$n swishes $s tail to and fro, looking at you expectantly.~
+A faint but cool rush of air swishes over you.~
+You swish your tail around, trying to pass the time.~
+$n swishes $s tail around, clearly just to pass the time.~
+You swish you tail and prod $1 experimentally.~
+$n swishes $s tail and prods $2 experimentally.~
+You swish your tail $tward.~
+$n swishes $s tail $tward,~
+~
+~
+~
+~
+~
+~
+
+tackle~
+8
+0
+1
+1
+And just whom do you wish to tackle?~
+$n looks ready to tackle someone!~
+Springing off your tail, you tackle $N to the ground.~
+$n springs off $s tail and tackles $N to the ground.~
+$n springs off $s tail and tackles you to the ground.~
+You feel someone scaly trying to tackle you in your sleep.~
+You tackle yourself and go down in a flurry of arms, legs, and tail.~
+$n tackles $mself and goes down in a flurry of arms, legs, and tail.~
+You tackle and pin $1 with your tail.~
+$n tackles and pins $2 with $s tail.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+tap~
+6
+0
+0
+1
+You tap your clawed foot impatiently.~
+$n taps $s clawed foot impatiently.~
+You tap $N on the forehead with one of your claws.~
+$n taps $N on the forehead with one of $s claws.~
+$n taps you on the forehead with one of $s claws.~
+Something scaly taps into you while you slumber.~
+You tap your claws upon your scales expectantly.~
+$n taps $s scales with $s claws expectantly.~
+You tap your claws on $1, trying to get it to work.~
+$n taps $s claws on $2, trying to get it to work.~
+You tap your clawed foot at what lies $t.~
+$n taps $s clawed foot at what lies $t.~
+You tap $N on the shoulder with $3 in your scaly claws.~
+$n taps you on the shoulder with $3 in $s scaly claws.~
+$n taps $N on the shoulder with $3 in $s scaly claws.~
+Someone taps you on the shoulder with something. You hear hissing nearby.~
+You tap $2 against your scales.~
+$n taps $2 against $s scales.~
+
+taunt~
+6
+0
+0
+0
+You begin hissing, ready to @Gt@Ba@b@Cu@Bn@Gt@n someone.~
+$n begins hissing, ready to @Gt@Ba@Cu@Bn@Gt@n someone.~
+@CYou@n @Gt@Ba@Cu@Bn@Gt@n @C$N@n @Bsoundly@n, @Glashing@b @C$M@n @Bwith@n @Gyour@n @Bforked@n @Ctongue.@n~
+@C$n@n @Gt@Ba@Cu@Bn@Gt@Cs@n @B$N@n @Gsoundly@n, @Clashing@b @B$M@n @Gwith@n @B$s@n @Cforked@n @Gtongue.@n~
+@C$n@n @Gt@Ba@Cu@Bn@Gt@Cs@n @Byou@n @Gsoundly@n, @Clashing@b @Byou@n @Gwith@n @B$s@n @Cforked@n @Gtongue.@n~
+@BThe @Gsound @Cof @Bsibilant @Gtaunts @Cfills @Byour @Gslumber.~
+@GHissing @Binsanely, @Cyou @Gtaunt @Byourself @Csilly.~
+@GHissing @Binsanely, @C$n @Gtaunts @B$mself @Csilly.~
+@GHissing @Band @Cslapping @Gyour @Btail @Con @Gthe @Bground, @Cyou @Gtaunt @B$1.@n~
+@GHissing @Band @Cslapping @G$s @Btail @Con @Gthe @Bground, @C$n @Gtaunts @B$2.@n~
+@GY@Bo@Cu @Gh@Bi@Cs@Gs @Ba@Cn@Gd @Bs@Ch@Go@Bu@Ct, @Gs@Be@Cn@Gd@Bi@Cn@Gg @Bt@Ca@Gu@Bn@Ct@Gs @B$t@Cw@Ga@Br@Cd.~
+@G$n @Bh@Ci@Gs@Bs@Ce@Gs @Ba@Cn@Gd @Bs@Ch@Go@Bu@Ct@Gs, @Bs@Ce@Gn@Bd@Ci@Gn@Bg @Ct@Ga@Bu@Cn@Gt@Bs @C$t@Gw@Ba@Cr@Gd.~
+~
+~
+~
+~
+~
+~
+
+thank~
+5
+0
+0
+0
+You bow your scaly head in thanks.~
+$n bows $s scaly head in thanks.~
+You thank $M with a hearty hiss.~
+$n thanks $N with a hearty hiss.~
+$n thanks you with a hearty hiss.~
+~
+You thank your lucky scales that you are still in one piece!~
+$n thanks $s lucky scales that $e is still in one piece!~
+You thank $1 with a jubilant hiss.~
+$n thanks $2 with a jubilant hiss.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+tickle~
+6
+0
+1
+0
+Whom do you wish to tickle?~
+~
+You tickle $N with the tip of your tail.~
+$n tickles $N with the tip of $s tail.~
+$n tickles you with the tip of $s tail.~
+Something scaly tickles your ribs playfully while you slumber.~
+You tickle yourself around the ribs with your tail.~
+$n tickles $mself around the ribs with $s tail. How odd.~
+You tickle the edges of $1 with your tail.~
+$n tickles the edges of $2 with $s tail.~
+Your tail squirms $tward, looking for someone to tickle.~
+$n's tail squirms $tward, looking for someone to tickle.~
+~
+~
+~
+~
+~
+~
+
+tongue~
+0
+0
+0
+0
+You stick out your forked tongue and taste the air.~
+$n's forked tongue darts off of $s mouth as $e tastes the air.~
+You stick your forked tongue out at $M.~
+$n sticks $s forked tongue out at $N.~
+$n sticks $s forked tongue out at you.~
+~
+With ease, you touch your long, forked tongue to between your nostrils.~
+$n sticks $s long, forked tongue to between $s nostrils.~
+Tentatively, you tough your forked tongue to $1.~
+$n touches $s forked tongue to $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+tpoke~
+6
+0
+0
+0
+Your tail seems eager! Choose wisely!~
+~
+You slip your tail up and poke $N in the side.~
+$n pokes $N with $s tail.~
+$n pokes you in the side with $s tail.~
+Someone just proded you in your sleep.~
+Your tail pokes you to get your attention.~
+$n pokes $mself with $s tail.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+twave~
+8
+0
+0
+0
+You wave goodbye to everyone with your tail.~
+$n waves goodbye to all of you with a scaly tail.~
+You wave your tail goodbye at $N.~
+$n tailwaves goodbye at $N.~
+$n waves $s tail goodbye to you.~
+~
+Your tail waves at you!  Where does it think it's going!?!~
+$n's tail waves goodbye at $mself?  It doesn't seem to be going anywhere...~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+twhap~
+8
+0
+1
+0
+You whip your tail around, looking for someone to whap with it.~
+$n waves $s tail around, look to whap someone.~
+You whip your tail around and whap $N in the head with it.~
+$n whips $s tail around and whaps $N in the head with it.~
+$n whips $s tail around and whaps you in the head with it.~
+~
+You whap yourself along side the head with your tail. What were you thinking?~
+$n whaps $mself along side the head with $s tail. ~
+You whap $1 soundly with your tail.~
+$n whaps $2 soundly with $s tail.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+twiddle~
+0
+0
+0
+0
+You twiddle your claws.~
+$n twiddles $s claws.~
+You twiddle your claws for $N, showing $M how bored you are.~
+$n twiddles $s claws for $N, showing $M how bored $e is.~
+$n twiddles $s claws at you, displaying $s obvious boredom.~
+~
+You twiddle your claws mindlessly, hoping to amuse yourself.~
+$n twiddles $s claws mindlessly, trying to entertain $mself.~
+You twiddle $1 around your claws idly.~
+$n twiddles $2 around $s claws idly.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+twitch~
+6
+0
+0
+0
+You and your tail both twitch nervously.~
+$n and $s tail both twitch nervously.~
+You and your tail twitch nervously at $N's actions.~
+$n and $s tail twitch nervously at $N's actions.~
+$n and $s tail twitch nervously upon seeing your actions.~
+~
+Your tail twitches on its own voalition.~
+$n's tail twitches on its own voalition.~
+Your tail twitches reflexively at the thought of $1.~
+$n's tail twitches reflexively at the thought of $2.~
+Your tail twitches and quivers as you see what lies $tward.~
+$n's tail twitches and quivers as $e sees what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+waggle~
+6
+0
+0
+0
+You waggle your eyeridges.~
+$n waggles $s eyeridges.~
+You waggle your eyeridges at $N suggestively.~
+$n waggles $s eyeridges at $N suggestively.~
+$n waggles $s eyeridges at you suggestively.~
+~
+You waggle your eyeridges suggestively to yourself.~
+$n waggles $s eyeridges suggestively to $mself.~
+You waggle your eyeridges at $1.~
+$n waggles $s eyeridges at $2.~
+You waggle your eyeridges, having seen what is $t.~
+$n waggles $s eyeridges, having seen what is $t.~
+Seeing $3 and $N, you waggle your eyeridges.~
+$n waggles $s eyeridges from $3 to you.~
+$n waggles $s eyeridges from $3 to $N.~
+~
+Gazing at $2, you waggle your eyeridges at yourself.~
+$n looks at $2 and waggles $s eyeridges suggestively.~
+
+wave~
+0
+0
+0
+0
+You wave your claws in the air.~
+$n waves $s claws in the air.~
+You wave your claws to $N.~
+$n waves $s claws to $N.~
+$n waves $s claws towards you.~
+~
+You wave your claws to yourself.~
+$n waves $s claws to $mself.~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+whap~
+6
+0
+1
+1
+You swing a pillow sewn of skliss skin around threateningly.~
+$n swings a pillow sewn of skliss skin around threateningly.~
+You whap $N over the head with a skliss skin pillow.~
+$n whaps $N over the head with a skliss skin pillow.~
+$n whaps you over the head with a skliss skin pillow.~
+Someone whaps you with a rough, scaly pillow.~
+You whap yourself over the head with a skliss skin pillow.~
+$n whaps $mself over the head with a skliss skin pillow.~
+You viciously attack $1 with a skliss skin pillow.~
+$n viciously attacks $2 with a skliss skin pillow.~
+You throw a skliss skin pillow $tward, hoping to whap someone with it.~
+$n throws a skliss skin pillow $tward, hoping to whap someone with it.~
+~
+~
+~
+~
+~
+~
+
+whimper~
+6
+0
+0
+0
+Air escapes through your nostrils, creating a whimpering sound.~
+$n's nostrils flare as a whimper of air escapes from them.~
+You give a quiet, hissing whimper in $N's direction.~
+$n gives a quiet, hissing whimper in $N's direction.~
+$n gives a quiet, hissing whimper in your direction.~
+A quiet whimper, more like a hiss, pervades your sleep.~
+You permit yourself a soft, hissing whimper.~
+$n whimpers in a soft hiss to $mself.~
+Looking at $1, you let out an involuntary, hissing whimper.~
+$n looks at $2 and lets out an involuntary, hissing whimper.~
+Glancing $t, you let loose an audibly, hissing whimper.~
+Glancing $t, $n lets loose an audibly, hissing whimper.~
+You point at $3 and send a hissing whimper $N's way.~
+$n points at $3 and sends a hissing whimper your way.~
+$n points at $3 and sends a hissing whimper $N's way.~
+~
+Glancing from $2 to yourself, you let loose a whimpering hiss.~
+$n lets loose a whimpering hiss as $e glances from $2 to $mself.~
+
+whine~
+0
+0
+0
+0
+You let loose a pathetic, sibilant whine.~
+$n whines in a pathetic, sibilant tone.~
+You whine in a sibilant tone in front of $N, trying to get attention.~
+$n whines in a sibilant tone in front of $N, trying to get attention.~
+$n whines in a sibilant tone to you, trying to get your attention.~
+A high pitched yet sibilant whine feels your dreams.~
+You whine to yourself in a sibilant voice. And still, no one cares.~
+$n whines to $mself in a sibilant voice. ~
+You whine in a sibilant voice at $1.~
+$n whines in a sibilant voice at $2.~
+You whine in a pathetic, sibilant voice at what lies $tward.~
+$n whines in a pathetic, sibilant voice at what lies $tward.~
+~
+~
+~
+~
+~
+~
+
+wiggle~
+8
+0
+0
+0
+You wiggle your tail back and forth.~
+$n's tail wiggles to and fro.~
+You wiggle your tail in $N's general direction.~
+$n's tail starts to wiggle towards $N.  What's happening here?~
+$n's tail is wiggling at you!~
+~
+With a life of its own, it seems, your tail wiggles at you.~
+With a life of its own, $n's tail wiggles at $m.~
+You wiggle $1 back and forth with glee.~
+$n wiggles $2 back and forth with glee.~
+You wiggle your tail around to the $t.~
+$n wiggles $s tail around to the $t.~
+~
+~
+~
+~
+~
+~
+
+wink~
+6
+0
+0
+0
+You close the inner eye lid over one slitted pupil, winking.~
+$n winks, closing the inner eye lid over one slitted pupil.~
+Closing the inner eye lid over one slitted pupil, you wink at $M.~
+$n closes inner lids over one slitted pupil,~
+Eerily, $n closes inner lids over one slitted pupil, winking at you.~
+~
+Your inner eye lids wink over one pupil in sly introspection.~
+$n's inner eye lids wink over one pupil in sly introspection.~
+You wink one slitted eye at $1.~
+$n winks one slitted eye at $2.~
+~
+~
+~
+~
+~
+~
+~
+~
+
+worship~
+6
+0
+1
+1
+You kneel down on one scaly knee in reverant awe.~
+$n kneels down on one scaly knee in reverant awe.~
+You prostrate your scaly form before $N in awed worship.~
+$n prostrates $s scaly form before $N in awed worship.~
+$n prostrates $s scaly form before you in awed worship.~
+~
+Your tail bobs up and down in worship of you.~
+$n's tail bobs up and down in worship of $m.~
+You bow your scaly form before $1 in worship.~
+$n bows $s scaly form before $2 in worship.~
+You turn $tward and fall to one scaly knee in holy worship.~
+$n turns $tward and falls to one scaly knee in holy worship.~
+~
+~
+~
+~
+~
+~
+
+wrinkle~
+6
+0
+0
+0
+You wrinkle your soft, scaly nostrils.~
+$n wrinkles $s soft, scaly nostrils.~
+You wrinkle your soft, scaly nostrils in regard to $N.~
+$n wrinkles $s soft, scaly nostrils in regard to $N.~
+$n wrinkles $s scaly nostrils at you.~
+~
+You wrinkle your scaly nostrils at yourself in disgust.~
+$n wrinkles $s scaly nostrils in self-disgust.~
+You wrinkle your soft, scaly nostrils at $1.~
+$n wrinkles $s soft, scaly nostrils at $2.~
+Glancing $t, you wrinkle your scaly nostrils in disgust.~
+$n glances $t and wrinkles $s scaly nostrils in disgust.~
+~
+~
+~
+~
+~
+~
+
+yawn~
+6
+0
+1
+0
+Your scaly maw parts, yawning deeply.~
+$n's scaly maw parts, yawning deeply.~
+Your scaly maw opens, yawning deeply at $M.~
+$n's scaly maw yawns deeply in $N's face.~
+$n's scaly maw yawns deeply in your face.~
+~
+You try to cover a yawn but your scaly maw has other ideas.~
+$n's scaly maw opens in a deep yawn - $e must be tired. Or bored.~
+Your scaly maw yawns deeply at $1.  You are not impressed.~
+$n's scaly maw yawns deeply at $2 - $e does not look impressed.~
+Your scaly maw parts in a wide yawn as you look $twards.~
+$n's scaly maw parts in a wide yawn as $e looks $tward.~
+~
+~
+~
+~
+~
+~
+
+

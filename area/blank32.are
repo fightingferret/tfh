@@ -1,0 +1,27 @@
+#AREA
+Ice Caverns~
+Nereus~
+~
+
+0 0
+3
+#ROOMS
+
+#36500
+Ice Caverns - North of an Ice Archway~
+~
+Begin the snow witch zone
+
+no.mob, no wandering stuff back to plateau
+
+~
+301465601 12 5 0
+D2
+~
+~
+0 -1 62548 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,3062 @@
+#AREA
+Dragonspire Plateau~
+Nereus Morrach~
+~
+
+0 0
+3
+#ROOMS
+
+#62500
+Snowy Plateau~
+Under Construction.
+
+~
+beginning of plateau zone
+
+no.mob
+
+~
+335151116 0 9 0
+D0
+~
+~
+0 -1 62505 10 10 5
+D1
+~
+~
+0 -1 62501 10 10 5
+D2
+~
+~
+0 -1 78278 10 10 5
+D3
+~
+~
+0 -1 62502 10 10 5
+-1
+S
+
+#62501
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62503 10 10 5
+D3
+~
+~
+0 -1 62500 10 10 5
+-1
+S
+
+#62502
+Snowy Plateau~
+Under Construction.
+
+~
+~
+335151108 0 9 0
+D0
+~
+~
+0 -1 62506 10 10 5
+D1
+~
+~
+0 -1 62500 10 10 5
+-1
+S
+
+#62503
+Snowy Plateau~
+Under Construction.
+
+~
+slopes dangerously down to the east
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62516 10 10 5
+D1
+~
+~
+0 -1 62504 10 10 5
+D2
+~
+~
+0 -1 62501 10 10 5
+D3
+~
+~
+0 -1 62505 10 10 5
+-1
+S
+
+#62504
+Snowy Plateau - Dangerous Slope~
+Under Construction.
+
+~
+dangerous slope - can't move north cause it slopes up
+
+can't go east, down cause it drops down
+
+~
+301465601 5 9 0
+D3
+~
+~
+0 -1 62503 10 10 5
+-1
+S
+
+#62505
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62515 10 10 5
+D1
+~
+~
+0 -1 62503 10 10 5
+D2
+~
+~
+0 -1 62500 10 10 5
+D3
+~
+~
+0 -1 62506 10 10 5
+-1
+S
+
+#62506
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62514 10 10 5
+D1
+~
+~
+0 -1 62505 10 10 5
+D2
+~
+~
+0 -1 62502 10 10 5
+D3
+~
+~
+0 -1 62507 10 10 5
+-1
+S
+
+#62507
+Start of a Precipitous Trail~
+A narrow, precipitous trail leads from here to a narrow, icy ridge in the
+
+distance to the northwest.  Just north of the start of the path, a deep,
+
+icy gorge stretches northward like an angry gash in the snowy plateau. 
+
+The mountain falls away dangerously to the south, the distant bottom of
+
+the slope lost in the featureless white below.  Deep, undisturbed drifts
+
+of snow cover the ground here; it appears that even the animals avoid
+
+this treacherous trail.
+
+~
+no.mob- nomobs on trail
+
+~
+301465609 5 9 0
+D1
+~
+~
+0 -1 62506 10 10 5
+D3
+~
+~
+0 -1 62508 10 10 5
+E
+1 north deep icy gorge~
+The gorge is deep, although it is difficult to make out any details in
+
+the blurred white landscape below.
+
+~
+E
+drifts~
+The snow has been collecting here for some time, although it is only
+
+perhaps as deep as a man's waist in most places.  A thin crust of ice has
+
+formed over the drifts of snow, preventing any additional snow from
+
+accumulating.
+
+~
+A
+1 north~
+~
+act_tochar( #baaaad, ch );
+
+~
+E
+baaaad~
+Perhaps it would be best to not hurl yourself into the deep, rocky gorge
+
+to the north.
+
+~
+!
+0 0 0
+-1
+S
+
+#62508
+Precipitous Trail~
+The icy path, merely a foot wide in some places, can barely be called a
+
+trail.  It is unclear what has formed this track, since the icy rock
+
+would offer virtually no traction for any sort of boot or paw.  A deep,
+
+icy gorge looms a mere step off the path to the east and a dizzying drop
+
+into empty whiteness to the west.  The path appears a bit wider further
+
+along to the north, and to the east leads back down to the relative
+
+safety of the plateau.
+
+~
+Dangerous area, can slip and fall back down all the way to the mountain
+
+trail for big damage 
+
+[Nereus] Yes, this trap does a _lot_ of damage.  But if players read the
+
+rdescs to the east, they'll know it's risky to walk up here.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62509 10 10 5
+D1
+~
+~
+0 -1 62507 10 10 5
+E
+path icy trail track~
+No description.
+
+~
+E
+gorge 1 east~
+No description.
+
+~
+A
+~
+~
+if( find_stat( ch, level ) > 92 )
+
+  end;
+
+if( !is_player( ch ) )
+
+  end;
+
+if( find_stat( ch, dex ) > random( 12, 17 ) ) {
+
+  act_tochar( #danger, ch );
+
+  act_notchar( #hisdanger, ch );
+
+  }
+
+else {
+
+  act_tochar( #youslip, ch );
+
+  act_notchar( #slips, ch );
+
+  wait( 1 );
+
+  i = random( 78267, 78270 );
+
+  transfer( ch, find_room( i ) );
+
+  act_notchar( #arrives, ch );
+
+  i = 12d5+195;
+
+  dam_message( ch, i, "falling off a mountain" );
+
+  inflict( ch, mob, i, "falling off a mountain" );
+
+  interpret( ch, "+sit" );
+
+  }
+
+~
+E
+youslip~
+You slip off the narrow trail, and plummet down the mountainside!
+
+~
+E
+danger~
+You nearly slip on the narrow, icy trail, but manage to catch yourself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+hisdanger~
+$n nearly slips on the narrow, icy trail, but manage to catch $mself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+slips~
+$n slips off the narrow trail, and plummets down the mountainside!
+
+~
+E
+arrives~
+With a scream of terror, $n falls from high above on the mountainside,
+
+landing solidly at your feet!
+
+~
+!
+1 0 3
+-1
+S
+
+#62509
+Precipitous Trail~
+This peak of the trail is little more than an icy footpath along the top
+
+of this steep ridge.  The view of the Dragonspires that surround you is
+
+breathtaking from this ridge, their ice-capped peaks visible on the
+
+horizon in all directions.  A knee-high drift of snow has collected in
+
+the one wide spot on the trail, partially covering the remains of a
+
+humanoid frozen into the snow.  Both to the north and south, the track
+
+becomes impossibly narrow; only the most sure-footed climber would
+
+attempt to venture down such a slope.
+
+~
+[Nereus] skeleton pops a few things - but it's not easy to run
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62510 10 10 5
+D2
+~
+~
+0 -1 62508 10 10 5
+E
+drift knee-high~
+A knee-high drift of fine, loosely-packed snow has collected in the
+
+widest spot along the trail.  The corpse of some sort of humanoid is
+
+partially covered by the snow.
+
+~
+E
+dragonspires~
+A giant peak dwarfs the others around it in the distance to the west,
+
+while a huge plateau stretches off to the east.  Beyond the plateau to
+
+the east, another set of peaks lines the horizon as far as the eye can
+
+see.  To the north, a great wall of what could be ice or rock rises above
+
+the plateau.
+
+~
+E
+trail footpath track~
+This narrow, treacherous path leads down the narrow ridge to the north
+
+and south.  It is unclear what type of creature would be agile enough to
+
+manuver along the icy ridge to form such a trail, as no footprints are
+
+evident.
+
+~
+A
+~
+~
+send_to_room( #wind, room );
+
+loop( all_in_room ) {
+
+i = 3d3+5;
+
+dam_message_cold( rch, i, "The icy blast of wind" );
+
+inflict_cold( rch, mob, i, "icy blast of wind" );
+
+}
+
+~
+E
+wind~
+@BA cold wind gusts fiercely from the north, chilling you to the bone.@n
+
+~
+!
+2 500 0
+3225 49 1509949540 -2 0
+2123 81 1509949490 -2 0
+3223 81 1509949444 -2 0
+76 81 1509949480 -2 0
+3222 81 1509949475 -2 0
+-1
+S
+
+#62510
+Precipitous Trail~
+Under Construction.
+
+~
+[Nereus] slipping code here
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62511 10 10 5
+D2
+~
+~
+0 -1 62509 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) > 92 )
+
+  end;
+
+if( !is_player( ch ) )
+
+  end;
+
+if( find_stat( ch, dex ) > random( 12, 17 ) ) {
+
+  act_tochar( #danger, ch );
+
+  act_notchar( #hisdanger, ch );
+
+  }
+
+else {
+
+  act_tochar( #youslip, ch );
+
+  act_notchar( #slips, ch );
+
+  wait( 1 );
+
+i = random( 78267, 78270 );
+
+  transfer( ch, find_room( i ) );
+
+  act_notchar( #arrives, ch );
+
+i = 12d5+195;
+
+  dam_message( ch, i, "falling off a mountain" );
+
+  inflict( ch, mob, i, "falling off a mountain" );
+
+  interpret( ch, "+sit" );
+
+}
+
+~
+E
+youslip~
+You slip off the narrow trail, and plummet down the mountainside!
+
+~
+E
+danger~
+You nearly slip on the narrow, icy trail, but manage to catch yourself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+hisdanger~
+$n nearly slips on the narrow, icy trail, but manage to catch $mself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+slips~
+$n slips off the narrow trail, and plummets down the mountainside!
+
+~
+E
+arrives~
+With a scream of terror, $n falls from high above on the mountainside, landing solidly at your feet!
+
+~
+!
+1 0 5
+-1
+S
+
+#62511
+Precipitous Trail~
+Under Construction.
+
+~
+[Nereus] slipping code's in place here also
+
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62512 10 10 5
+D2
+~
+~
+0 -1 62510 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) > 92 )
+
+  end;
+
+if( !is_player( ch ) )
+
+  end;
+
+if( find_stat( ch, dex ) > random( 12, 17 ) ) {
+
+  act_tochar( #danger, ch );
+
+  act_notchar( #hisdanger, ch );
+
+  }
+
+else {
+
+  act_tochar( #youslip, ch );
+
+  act_notchar( #slips, ch );
+
+  wait( 1 );
+
+  i = random( 78267, 78270 );
+
+  transfer( ch, find_room( i ) );
+
+  act_notchar( #arrives, ch );
+
+  i = 12d5+195;
+
+  dam_message( ch, i, "falling off a mountain" );
+
+  inflict( ch, mob, i, "falling off a mountain" );
+
+  interpret( ch, "+sit" );
+
+  }
+
+~
+E
+youslip~
+You slip off the narrow trail, and plummet down the mountainside!
+
+~
+E
+danger~
+You nearly slip on the narrow, icy trail, but manage to catch yourself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+hisdanger~
+$n nearly slips on the narrow, icy trail, but manage to catch $mself
+
+before what would have almost certainly been a lethal fall.
+
+~
+E
+slips~
+$n slips off the narrow trail, and plummets down the mountainside!
+
+~
+E
+arrives~
+With a scream of terror, $n falls from high above on the mountainside,
+
+landing solidly at your feet!
+
+~
+!
+1 0 6
+-1
+S
+
+#62512
+Snowy Plateau~
+Under Construction.
+
+~
+no.mob to keep mobs off this trail
+
+~
+301465609 5 9 0
+D1
+~
+~
+0 -1 62513 10 10 5
+D3
+~
+~
+0 -1 62511 10 10 5
+-1
+S
+
+#62513
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62529 10 10 5
+D1
+~
+~
+0 -1 62526 10 10 5
+D2
+~
+~
+0 -1 62523 10 10 5
+D3
+~
+~
+0 -1 62512 10 10 5
+-1
+S
+
+#62514
+Snowy Plateau - East of a Deep Gorge~
+Under Construction.
+
+~
+big ol' gorge west
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62523 10 10 5
+D1
+~
+~
+0 -1 62515 10 10 5
+D2
+~
+~
+0 -1 62506 10 10 5
+A
+1 west~
+~
+act_tochar( #hurl, ch );
+
+~
+E
+hurl~
+Perhaps it would be best to not hurl yourself in the deep, icy gorge.
+
+~
+!
+0 0 0
+-1
+S
+
+#62515
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62522 10 10 5
+D1
+~
+~
+0 -1 62516 10 10 5
+D2
+~
+~
+0 -1 62505 10 10 5
+D3
+~
+~
+0 -1 62514 10 10 5
+-1
+S
+
+#62516
+Snowy Plateau~
+Under Construction.
+
+~
+slope to steep east
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62517 10 10 5
+D2
+~
+~
+0 -1 62503 10 10 5
+D3
+~
+~
+0 -1 62515 10 10 5
+-1
+S
+
+#62517
+Snowy Plateau - Brittle Ice~
+Under Construction.
+
+~
+break through ice, fall into bear cave here.  Ouch.
+
+no.mob, animals know better than to walk here
+
+action won't occur to imms, thankfully
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62525 10 10 5
+D1
+~
+~
+0 -1 62518 10 10 5
+D2
+~
+~
+0 -1 62516 10 10 5
+D3
+~
+~
+0 -1 62522 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+
+  end;
+
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  wait( 1 );
+
+  send_to_room( #breaks, room );
+
+  loop( all_in_room ) {
+
+    if( is_player( rch ) ) {
+
+      mob = mob_in_room( 2287, find_room( 62521 ) );
+
+      interpret( mob, "wake" );
+
+      act_tochar( #fall, rch );
+
+      transfer( rch, find_room( 62521 ) );
+
+      }
+
+    }
+
+  }
+
+else
+
+  act_tochar( #skirt, ch );
+
+~
+E
+breaks~
+The brittle ice breaks, sending you plummeting through a crevice in the
+
+ice!
+
+~
+E
+fall~
+You fall into the crevice and tumble down into blackness!
+
+~
+E
+skirt~
+You skirt around a deep crevice in the ice.
+
+~
+!
+1 0 15
+-1
+S
+
+#62518
+Snowy Plateau - Before a Great Cave Mouth~
+The deep, windblown drifts are disturbed by giant footprints and deep trails pushed through the snow by some large creature.
+
+~
+slope too steep south
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62524 10 10 5
+D1
+~
+~
+0 -1 62519 10 10 5
+D3
+~
+~
+0 -1 62517 10 10 5
+-1
+S
+
+#62519
+Mouth of a Great Cavern~
+The mouth of this large, natural cavern is partially covered in fallen
+
+snow from the top of the cave above.  Large, clawed footprints have
+
+packed down the snow in a trail leading further to the west, while there
+
+is also evidence of travel along the worn grey stone further into the
+
+cave.  Large, dangerous-looking icicles hang from the top of the cave
+
+mouth, although along the center of the lip of the cave above the packed
+
+snow a few icicles have recently been broken off.
+
+~
+no.mob so crap doesn't wander in here
+
+~
+301465609 5 9 0
+D3
+~
+~
+0 -1 62518 10 10 5
+D5
+~
+~
+0 -1 62520 10 10 5
+E
+clawed footprints~
+Upon closer examination, you can see that there are several different
+
+sizes of footprints of what appears to be the same species of creature. 
+
+The footprints range from around a foot long to nearly three feet long,
+
+and have long claw marks at the tip of each print.
+
+~
+E
+dangerous-looking icicles~
+These icicles hang from the ceiling of the cave.  Some are nearly fifteen
+
+feet long, and look quite heavy.  Near the center of the cave underneath
+
+the packed-down snow, a few of the icicles have been broken off rather
+
+recently.
+
+~
+E
+trail~
+This trail is more of a randomly packed region of snow, packed down by
+
+the footprints of a large, four-footed animal.  Apparently, there has
+
+been recent movement in and out of the cave.
+
+~
+A
+break take get snap~
+icicles~
+act_tochar( #toohigh, ch );
+
+~
+E
+toohigh~
+The icicles are too high above your head to reach.
+
+~
+!
+0 0 0
+-1
+S
+
+#62520
+Inside a Great Cavern~
+You stand in a roughly round natural cavern, nearly thirty feet in
+
+diameter.  This section of the natural cavern is substantially warmer
+
+than above.  It warms substantially deeper into the cave to the south,
+
+while a chill draft blows in from above.  The grey stone of the cavern
+
+ground has been worn smooth by the passing of innumerable creatures.  The
+
+cavern slopes up towards the light of outside to the east, or curves
+
+downwards to the south.
+
+~
+bear cave, bear cubs south
+
+no.mob so cubs don't wander
+
+random bear-noise action to scare people away
+
+~
+301596685 5 9 0
+D2
+~
+~
+0 -1 62521 10 10 5
+D4
+~
+~
+0 -1 62519 10 10 5
+E
+floor cavern ground~
+The cold, grey stone has been worn smooth by the repeated passing of
+
+someone or something through this area.  Upon closer inspection, you can
+
+see the traces of stalagmites that have been almost completely worn away
+
+over time.
+
+~
+A
+~
+~
+send_to_room( #lumber, room );
+
+~
+E
+lumber~
+You hear the gruff noises of a large animal moving about deeper into the
+
+cave.
+
+~
+!
+2 300 0
+-1
+S
+
+#62521
+Inside a Great Cave - Bear's Den~
+This cavern is quite large, perhaps twenty feet in all directions and is
+
+roughly circular.  Although there are stalagmites visible along the
+
+cavern floor, they have been worn smooth over time, some of them worn
+
+almost to the floor of the cavern.  The stalactites hanging from the
+
+ceiling are also worn, although not nearly to the extent that the
+
+stalagmites are.  Near the top of the cavern on the western side is a
+
+hole about four feet in diameter.  This section of the cave has a damp,
+
+musky odor, obviously the den of a large animal of some sort.  The cavern
+
+continues to the north.
+
+~
+mountain bear cubs + mother here
+
+can fall into this room from brittle ice above, it wakes the mob up and
+
+makes her unhappy 
+
+~
+301596677 5 9 0
+D0
+~
+~
+0 -1 62520 10 10 5
+E
+stalagmites~
+The stalagmites have been worn down to the floor in places along the
+
+ground of this cavern.
+
+~
+E
+stalactites~
+The stalactites in this natural cavern have also been worn away in
+
+places, although not nearly to the same extent as the stalagmites.
+
+~
+E
+hole~
+The hole is in the western side of the ceiling, and is about four feet in
+
+diameter.  Faint light can be seen coming through the hole from high
+
+above, leading you to believe that the hole leads outside.  Although
+
+perhaps you could drop through the hole to the ground safely from above,
+
+it is doubtful that you could climb back up.
+
+~
+A
+climb~
+hole up~
+act_tochar( #toofar, ch );
+
+~
+E
+toofar~
+The hole is too far up to reach from the ground.
+
+~
+!
+0 0 0
+2287 137 1509949540 0 0
+2289 9 1509949540 3 0
+2289 9 1509949540 2 0
+-1
+S
+
+#62522
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62526 10 10 5
+D1
+~
+~
+0 -1 62517 10 10 5
+D2
+~
+~
+0 -1 62515 10 10 5
+D3
+~
+~
+0 -1 62523 10 10 5
+-1
+S
+
+#62523
+Snowy Plateau - East of a Deep Gorge~
+Under Construction.
+
+~
+big ol' gorge west
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62513 10 10 5
+D1
+~
+~
+0 -1 62522 10 10 5
+D2
+~
+~
+0 -1 62514 10 10 5
+A
+1 west~
+~
+act_tochar( #hurl, ch );
+
+~
+E
+hurl~
+Perhaps it would be best to not hurl yourself into the deep, rocky gorge.
+
+~
+!
+0 0 0
+-1
+S
+
+#62524
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D2
+~
+~
+0 -1 62518 10 10 5
+D3
+~
+~
+0 -1 62525 10 10 5
+-1
+S
+
+#62525
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62527 10 10 5
+D1
+~
+~
+0 -1 62524 10 10 5
+D2
+~
+~
+0 -1 62517 10 10 5
+D3
+~
+~
+0 -1 62526 10 10 5
+-1
+S
+
+#62526
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62528 10 10 5
+D1
+~
+~
+0 -1 62525 10 10 5
+D2
+~
+~
+0 -1 62522 10 10 5
+D3
+~
+~
+0 -1 62513 10 10 5
+-1
+S
+
+#62527
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62530 10 10 5
+D2
+~
+~
+0 -1 62525 10 10 5
+D3
+~
+~
+0 -1 62528 10 10 5
+-1
+S
+
+#62528
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62532 10 10 5
+D1
+~
+~
+0 -1 62527 10 10 5
+D2
+~
+~
+0 -1 62526 10 10 5
+D3
+~
+~
+0 -1 62529 10 10 5
+-1
+S
+
+#62529
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62533 10 10 5
+D1
+~
+~
+0 -1 62528 10 10 5
+D2
+~
+~
+0 -1 62513 10 10 5
+-1
+S
+
+#62530
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62537 10 10 5
+D1
+~
+~
+0 -1 62531 10 10 5
+D2
+~
+~
+0 -1 62527 10 10 5
+D3
+~
+~
+0 -1 62532 10 10 5
+-1
+S
+
+#62531
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62536 10 10 5
+D3
+~
+~
+0 -1 62530 10 10 5
+-1
+S
+
+#62532
+Snowy Plateau~
+Under Construction.
+
+~
+[Nereus] Resets to test wander, etc. are here
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62538 10 10 5
+D1
+~
+~
+0 -1 62530 10 10 5
+D2
+~
+~
+0 -1 62528 10 10 5
+D3
+~
+~
+0 -1 62533 10 10 5
+2265 9 1509949540 3 0
+2273 9 1509949540 3 0
+-1
+S
+
+#62533
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62539 10 10 5
+D1
+~
+~
+0 -1 62532 10 10 5
+D2
+~
+~
+0 -1 62529 10 10 5
+D3
+~
+~
+0 -1 62534 10 10 5
+-1
+S
+
+#62534
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62540 10 10 5
+D1
+~
+~
+0 -1 62533 10 10 5
+D3
+~
+~
+0 -1 62535 10 10 5
+-1
+S
+
+#62535
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62541 10 10 5
+D1
+~
+~
+0 -1 62534 10 10 5
+D3
+~
+~
+0 -1 62557 10 10 5
+-1
+S
+
+#62536
+Snowy Plateau~
+Under Construction.
+
+~
+up exit will eventually be a climb up thing
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62542 10 10 5
+D2
+~
+~
+0 -1 62531 10 10 5
+D3
+~
+~
+0 -1 62537 10 10 5
+D4
+~
+~
+0 -1 62549 10 10 5
+-1
+S
+
+#62537
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62543 10 10 5
+D1
+~
+~
+0 -1 62536 10 10 5
+D2
+~
+~
+0 -1 62530 10 10 5
+D3
+~
+~
+0 -1 62538 10 10 5
+-1
+S
+
+#62538
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62544 10 10 5
+D1
+~
+~
+0 -1 62537 10 10 5
+D2
+~
+~
+0 -1 62532 10 10 5
+D3
+~
+~
+0 -1 62539 10 10 5
+-1
+S
+
+#62539
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62545 10 10 5
+D1
+~
+~
+0 -1 62538 10 10 5
+D2
+~
+~
+0 -1 62533 10 10 5
+D3
+~
+~
+0 -1 62540 10 10 5
+-1
+S
+
+#62540
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62546 10 10 5
+D1
+~
+~
+0 -1 62539 10 10 5
+D2
+~
+~
+0 -1 62534 10 10 5
+D3
+~
+~
+0 -1 62541 10 10 5
+-1
+S
+
+#62541
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62547 10 10 5
+D1
+~
+~
+0 -1 62540 10 10 5
+D2
+~
+~
+0 -1 62535 10 10 5
+-1
+S
+
+#62542
+Snowy Plateau - Before a Great Wall of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D2
+~
+~
+0 -1 62536 10 10 5
+D3
+~
+~
+0 -1 62543 10 10 5
+-1
+S
+
+#62543
+Snowy Plateau - Before a Great Wall of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62542 10 10 5
+D2
+~
+~
+0 -1 62537 10 10 5
+D3
+~
+~
+0 -1 62544 10 10 5
+-1
+S
+
+#62544
+Snowy Plateau - South of an Archway of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62548 10 10 5
+D1
+~
+~
+0 -1 62543 10 10 5
+D2
+~
+~
+0 -1 62538 10 10 5
+D3
+~
+~
+0 -1 62545 10 10 5
+-1
+S
+
+#62545
+Snowy Plateau - Before a Great Wall of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62544 10 10 5
+D2
+~
+~
+0 -1 62539 10 10 5
+D3
+~
+~
+0 -1 62546 10 10 5
+-1
+S
+
+#62546
+Snowy Plateau - Before a Great Wall of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62545 10 10 5
+D2
+~
+~
+0 -1 62540 10 10 5
+D3
+~
+~
+0 -1 62547 10 10 5
+-1
+S
+
+#62547
+Snowy Plateau - Before a Great Wall of Ice~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62546 10 10 5
+D2
+~
+~
+0 -1 62541 10 10 5
+-1
+S
+
+#62548
+Beneath a Great Archway of Ice~
+Stretching thirty feet above the icy ground, a dazzling archway of ice
+
+spans the width of this corridor leading further into the glacier. 
+
+Crushed white gravel litters the area, offering traction on the slippery
+
+ice.  A small firepit has been dug into the cold ground on the western
+
+side of the arch, while a bedroll made up of white pelts lies a few feet
+
+away.  In the distance further into the heart of the glacier, the dim
+
+light of flickering torches can be made out.
+
+~
+northern end of zone - ice witch caverns north of here
+
+no.mob
+
+blocking code works correctly
+
+~
+301465609 5 9 0
+D0
+~
+~
+0 -1 36500 10 10 5
+D2
+~
+~
+0 -1 62544 10 10 5
+E
+1 north flickering torchlight~
+Flickering torchlight from far down the tunnel reflects off the icy
+
+walls, illuminating them with a hellish glow.
+
+~
+E
+dazzling archway ice~
+The ice archway spans a corridor that ten men could easily enter standing
+
+side by side, and stretches thirty feet overhead at its peak.  Uncovered
+
+by any snow or frost, it glimmers dully in the light.
+
+~
+E
+white gravel~
+Quite a bit of white gravel has been spread around the ground here to
+
+offer traction to those travelling through the area.  However, the only
+
+footprints that can be made out in the gravel are those of a man and a
+
+wolf, leading you to believe that there are few who journey this way.
+
+~
+E
+firepit~
+The firepit is about two feet across, dug from the frozen, icy earth. 
+
+The embers of a fire glow a dim red.
+
+~
+E
+bedroll white pelts~
+The bedrolls are made of a soft, downy, white fur as the lining, and a
+
+coarse, gray fur to protect against the biting wind of the plateau.  They
+
+look as if they have been recently used and are well cared-for.
+
+~
+A
+~
+~
+if( !is_player( ch ) )
+
+  end;
+
+mob = mob_in_room( 2276, room );
+
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  wait( 1 );
+
+  interpret( mob, "stand" );
+
+  interpret( mob, "growl" );
+
+  wait( 1 );
+
+  mob = mob_in_room( 2275, room );
+
+  interpret( mob, "pat wolf" );
+
+  mob = mob_in_room( 2276, room );
+
+  wait( 1 );
+
+  interpret( mob, "sit" );
+
+  }
+
+else {
+
+  if( rflag( reset1, room ) ) {
+
+    remove_rflag( reset1, room );
+
+    interpret( mob, "emote eyes you warily as you arrive." );
+
+    wait( 4 );
+
+    set_rflag( reset1, room );
+
+    }
+
+  }
+
+~
+!
+1 0 4
+A
+~
+~
+set_rflag( reset1, room );
+
+continue;
+
+~
+!
+3 0 4
+A
+search~
+firepit~
+act_tochar( #yousearch, ch );
+
+act_notchar( #hesearches, ch );
+
+i = 3d3+6;
+
+dam_message_fire( ch, i, "being burned by hot coals" );
+
+inflict_fire( ch, mob, i, "being burnt by hot coals" );
+
+~
+E
+yousearch~
+You reach into the smoldering embers of the fire and sift through them
+
+with your fingers.
+
+~
+E
+hesearches~
+$n reaches into the smoldering embers of the fire and sifts through them
+
+with $s fingers.
+
+~
+!
+0 0 0
+A
+~
+~
+if( !is_player( ch ) )
+
+  end;
+
+if( !has_quest( ch, 54 ) ) {
+
+  if( mob_in_room( 2275, room ) ) {
+
+    act_tochar( #block, ch );
+
+    act_notchar( #blocks, ch );
+
+    }
+
+  else
+
+    continue;
+
+  }
+
+else
+
+  continue;
+
+~
+E
+block~
+You attempt to move down the icy corridor to the north, but the barbarian
+
+steps in front of you, blocking your way.
+
+~
+E
+blocks~
+$n attempts to move down the icy corridor to the north, but the barbarian
+
+steps in front of $m, blocking $s way.
+
+~
+!
+3 0 1
+A
+~
+~
+wait( 2 );
+
+send_to_room( #mournful, room );
+
+~
+E
+mournful~
+@YA terrible baying fills the air, echoing from the plateau as if in
+
+answer to the great wolf's call.@n 
+
+~
+!
+0 0 0
+2275 9 1509949540 3 0
+2276 9 1509949540 3 0
+1358 17 1509949540 -2 0
+-1
+S
+
+#62549
+Pass Between Icy Cliffs~
+Under Construction.
+
+~
+Temporary exit down - will be able to climb up a path to here eventually
+
+via acode 
+
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62550 10 10 5
+D5
+~
+~
+0 -1 62536 10 10 5
+-1
+S
+
+#62550
+Pass Between Icy Cliffs~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62551 10 10 5
+D3
+~
+~
+0 -1 62549 10 10 5
+-1
+S
+
+#62551
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+put something up here
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62552 10 10 5
+D1
+~
+~
+0 -1 62553 10 10 5
+D2
+~
+~
+0 -1 62554 10 10 5
+D3
+~
+~
+0 -1 62550 10 10 5
+-1
+S
+
+#62552
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62556 10 10 5
+D2
+~
+~
+0 -1 62551 10 10 5
+-1
+S
+
+#62553
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62556 10 10 5
+D2
+~
+~
+0 -1 62555 10 10 5
+D3
+~
+~
+0 -1 62551 10 10 5
+-1
+S
+
+#62554
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62551 10 10 5
+D1
+~
+~
+0 -1 62555 10 10 5
+-1
+S
+
+#62555
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62553 10 10 5
+D3
+~
+~
+0 -1 62554 10 10 5
+-1
+S
+
+#62556
+Cliff Ledge Overlooking a Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D2
+~
+~
+0 -1 62553 10 10 5
+D3
+~
+~
+0 -1 62552 10 10 5
+-1
+S
+
+#62557
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62535 10 10 5
+D3
+~
+~
+0 -1 62558 10 10 5
+-1
+S
+
+#62558
+Snowy Plateau~
+Under Construction.
+
+~
+plateau rises to east
+
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62557 10 10 5
+D2
+~
+~
+0 -1 62559 10 10 5
+D3
+~
+~
+0 -1 62560 10 10 5
+-1
+S
+
+#62559
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62558 10 10 5
+D3
+~
+~
+0 -1 62561 10 10 5
+-1
+S
+
+#62560
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62562 10 10 5
+D1
+~
+~
+0 -1 62558 10 10 5
+D2
+~
+~
+0 -1 62561 10 10 5
+D3
+~
+~
+0 -1 62564 10 10 5
+-1
+S
+
+#62561
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62560 10 10 5
+D1
+~
+~
+0 -1 62559 10 10 5
+D2
+~
+~
+0 -1 62584 10 10 5
+D3
+~
+~
+0 -1 62570 10 10 5
+-1
+S
+
+#62562
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D2
+~
+~
+0 -1 62560 10 10 5
+D3
+~
+~
+0 -1 62563 10 10 5
+-1
+S
+
+#62563
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62562 10 10 5
+D2
+~
+~
+0 -1 62564 10 10 5
+-1
+S
+
+#62564
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62563 10 10 5
+D1
+~
+~
+0 -1 62560 10 10 5
+D2
+~
+~
+0 -1 62570 10 10 5
+D3
+~
+~
+0 -1 62565 10 10 5
+-1
+S
+
+#62565
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62564 10 10 5
+D2
+~
+~
+0 -1 62571 10 10 5
+D3
+~
+~
+0 -1 62566 10 10 5
+-1
+S
+
+#62566
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62565 10 10 5
+D2
+~
+~
+0 -1 62572 10 10 5
+D3
+~
+~
+0 -1 62567 10 10 5
+-1
+S
+
+#62567
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62566 10 10 5
+D2
+~
+~
+0 -1 62573 10 10 5
+D3
+~
+~
+0 -1 62568 10 10 5
+-1
+S
+
+#62568
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62567 10 10 5
+D2
+~
+~
+0 -1 62574 10 10 5
+D3
+~
+~
+0 -1 62569 10 10 5
+-1
+S
+
+#62569
+Snowy Plateau~
+Under Construction.
+
+~
+[Morrach] Cliff rises to the west, frozen lake to the south. Big snowdrift to the north.
+
+Slopes downward to the lake in the south.
+
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62568 10 10 5
+D2
+~
+~
+0 -1 62575 10 10 5
+-1
+S
+
+#62570
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62564 10 10 5
+D1
+~
+~
+0 -1 62561 10 10 5
+D2
+~
+~
+0 -1 62583 10 10 5
+D3
+~
+~
+0 -1 62571 10 10 5
+-1
+S
+
+#62571
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62565 10 10 5
+D1
+~
+~
+0 -1 62570 10 10 5
+D2
+~
+~
+0 -1 62582 10 10 5
+D3
+~
+~
+0 -1 62572 10 10 5
+-1
+S
+
+#62572
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62566 10 10 5
+D1
+~
+~
+0 -1 62571 10 10 5
+D2
+~
+~
+0 -1 62581 10 10 5
+D3
+~
+~
+0 -1 62573 10 10 5
+-1
+S
+
+#62573
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62567 10 10 5
+D1
+~
+~
+0 -1 62572 10 10 5
+D2
+~
+~
+0 -1 62580 10 10 5
+D3
+~
+~
+0 -1 62574 10 10 5
+-1
+S
+
+#62574
+Snowy Plateau~
+Under Construction.
+
+~
+[Morrach] Frozen lake to the west.
+
+Slopes downward to the west, upward to the east and north.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62568 10 10 5
+D1
+~
+~
+0 -1 62573 10 10 5
+D2
+~
+~
+0 -1 62579 10 10 5
+D3
+~
+~
+0 -1 62575 10 10 5
+-1
+S
+
+#62575
+Edge of a Frozen Lake~
+Under Construction.
+
+~
+[Morrach] Frozen lake here, continues south and west.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62569 10 10 5
+D1
+~
+~
+0 -1 62574 10 10 5
+D2
+~
+~
+0 -1 62578 10 10 5
+D3
+~
+~
+0 -1 62576 10 10 5
+-1
+S
+
+#62576
+Frozen Lake Near a Cliff Face~
+Under Construction.
+
+~
+[Morrach] Frozen lake here, west and north are cliffs.  Lake continues
+
+south and east.
+
+~
+301465601 5 9 0
+D1
+~
+~
+0 -1 62575 10 10 5
+D2
+~
+~
+0 -1 62577 10 10 5
+-1
+S
+
+#62577
+Frozen Lake Near a Cliff Face~
+The ground beneath your feet is actually the icy face of a long frozen
+
+over lake.  The ceaseless winds have accumulated miniature drifts of snow
+
+upon the ice's caliginous surface.  The western edge of the ice comes to
+
+an abrupt halt as it runs into the base of a towering cliff.  Numerous
+
+rocks and snow have been spilled onto the ice from the smaller cliff just
+
+to the south, apparently from a small avalanche.  The ice's surface is
+
+level except for a small hole just near the western cliff face that
+
+appears to have been dug up only recently.
+
+~
+[Morrach] Added some acodes, not sure if they'll actually turn out to do
+
+anything important.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62576 10 10 5
+D1
+~
+~
+0 -1 62578 10 10 5
+E
+drifts snow~
+The snow drifts are very small, only a few inches tall in some cases. 
+
+They appear to have been piled up by the driving winds over a long period
+
+of time.
+
+~
+E
+1 west towering cliff~
+The rock face to the west is simply massive.  It soars skywards almost
+
+perpendicular to the lake surface to heights that can only be imagined. 
+
+No apparent hand or footholds can be seen, and not even the best climbing
+
+equipment could help you scale this towering peak of the Dragonspires.
+
+~
+E
+1 south rocks avalanche~
+Many small and mid-sized boulders have been scattered across the southern
+
+edge of the icy lake.  The rocks and the snow surrounding them have not
+
+settled, as if they are the result of a recent avalanche.  The boulders
+
+lead directly up to the southern cliff face, which doesn't appear to be
+
+very steep.
+
+~
+E
+hole~
+The hole is nearly five feet deep, and it's jagged edges are at most four
+
+feet across.  The haphazard manner in which the ice was torn apart
+
+suggests that whomever made this hole was in a hurry.  A myriad of small
+
+to large ice chunks are piled in and around the hole.
+
+~
+A
+~
+~
+send_to_room( #wind, room );
+
+~
+E
+wind~
+@cSheets of snow are blown across the icy surface of the lake.@n 
+
+~
+!
+2 150 0
+A
+climb~
+1 south 1 up boulders~
+if( find_skill( ch, climb ) >= random( 2, 5 ) ) {
+
+     act_tochar( #nowhere, ch );
+
+     act_notchar( #nowhere2, ch );
+
+} else {
+
+     i = 5d7+10;
+
+     act_tochar( #smack, ch );
+
+     act_notchar( #smack2, ch );
+
+     inflict( ch, mob, i, "hitting the ice" );
+
+     dam_message( ch, i, "crashing into the lake's frozen surface" );
+
+     interpret( ch, "+sit" );
+
+}
+
+~
+E
+nowhere~
+You climb as high as possible before realizing that the slope is steeper
+
+than you first thought.  You carefully make your way back to the lake
+
+surface below.
+
+~
+E
+nowhere2~
+$n attempts to climb the slope to the south, but gives up after a short
+
+time.
+
+~
+E
+smack~
+@bShortly after you begin your climb, you realize that the slope is much
+
+steeper than you first thought.  You slip and plummet towards the
+
+unforgiving ice below you!@n 
+
+~
+E
+smack2~
+@bAfter a few moments of climbing, $n makes a wrong move and plummets
+
+toward the icy lake surface below!@n 
+
+~
+!
+0 0 0
+A
+search~
+hole~
+~
+!
+0 0 0
+-1
+S
+
+#62578
+Edge of a Frozen Lake~
+Under Construction.
+
+~
+[Morrach] Frozen lake here, continues north and west.
+
+[Morrach] Steep slope to the south, inaccessable.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62575 10 10 5
+D1
+~
+~
+0 -1 62579 10 10 5
+D3
+~
+~
+0 -1 62577 10 10 5
+-1
+S
+
+#62579
+Snowy Plateau~
+Under Construction.
+
+~
+[Morrach] Frozen lake to the west.
+
+[Morrach] Ground slopes downward to the west and up to the east and south.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62574 10 10 5
+D1
+~
+~
+0 -1 62580 10 10 5
+D2
+~
+~
+0 -1 62589 10 10 5
+D3
+~
+~
+0 -1 62578 10 10 5
+-1
+S
+
+#62580
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62573 10 10 5
+D1
+~
+~
+0 -1 62581 10 10 5
+D2
+~
+~
+0 -1 62588 10 10 5
+D3
+~
+~
+0 -1 62579 10 10 5
+-1
+S
+
+#62581
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62572 10 10 5
+D1
+~
+~
+0 -1 62582 10 10 5
+D2
+~
+~
+0 -1 62587 10 10 5
+D3
+~
+~
+0 -1 62580 10 10 5
+-1
+S
+
+#62582
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62571 10 10 5
+D1
+~
+~
+0 -1 62583 10 10 5
+D2
+~
+~
+0 -1 62586 10 10 5
+D3
+~
+~
+0 -1 62581 10 10 5
+-1
+S
+
+#62583
+Snowy Plateau~
+Under Construction.
+
+~
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62570 10 10 5
+D1
+~
+~
+0 -1 62584 10 10 5
+D2
+~
+~
+0 -1 62585 10 10 5
+D3
+~
+~
+0 -1 62582 10 10 5
+-1
+S
+
+#62584
+Snowy Plateau~
+Under Construction.
+
+~
+snowy slope east
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62561 10 10 5
+D3
+~
+~
+0 -1 62583 10 10 5
+-1
+S
+
+#62585
+Snowy Plateau~
+Under Construction.
+
+~
+cliff s e
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62583 10 10 5
+D3
+~
+~
+0 -1 62586 10 10 5
+-1
+S
+
+#62586
+Snowy Plateau~
+Under Construction.
+
+~
+cliff s
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62582 10 10 5
+D1
+~
+~
+0 -1 62585 10 10 5
+D3
+~
+~
+0 -1 62587 10 10 5
+-1
+S
+
+#62587
+Snowy Plateau~
+Under Construction.
+
+~
+cliff s
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62581 10 10 5
+D1
+~
+~
+0 -1 62586 10 10 5
+D3
+~
+~
+0 -1 62588 10 10 5
+-1
+S
+
+#62588
+Snowy Plateau~
+Under Construction.
+
+~
+cliff s, w
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62580 10 10 5
+D1
+~
+~
+0 -1 62587 10 10 5
+D3
+~
+~
+0 -1 62589 10 10 5
+-1
+S
+
+#62589
+Snowy Plateau~
+Under Construction.
+
+~
+cliff s, w
+
+[Morrach] Cliff westward.
+
+~
+301465601 5 9 0
+D0
+~
+~
+0 -1 62579 10 10 5
+D1
+~
+~
+0 -1 62588 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,35 @@
+#AREA
+~
+None~
+~
+
+0 0
+5
+#ROOMS
+
+#44500
+Nothing~
+~
+~
+301465600 0 5 0
+A
+~
+~
+act_tochar( #care, ch );
+
+continue;
+
+~
+E
+care~
+You carefully slide open the door.
+
+~
+!
+8 0 10
+1 17 1509949540 -2 0
+-1
+S
+
+#0
+

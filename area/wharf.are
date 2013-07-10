@@ -1,0 +1,39 @@
+#AREA
+~
+None~
+~
+
+0 0
+5
+#ROOMS
+
+#8500
+Nothing~
+~
+~
+301465600 2 9 0
+A
+~
+~
+send_to_char( #to_char, ch );
+
+act_notchar( #to_room, ch );
+
+~
+E
+to_room~
+$n nearly loses $s balance as a loose board gives way.
+
+~
+E
+to_char~
+You almost lose your balance as a board squeaks beneath you.
+
+~
+!
+2 80 0
+-1
+S
+
+#0
+

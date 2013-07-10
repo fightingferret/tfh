@@ -1,0 +1,3110 @@
+#AREA
+Ryoushi village~
+Nnilb Azerin~
+~
+
+15 0
+4
+#ROOMS
+
+#78500
+A Path Through the Cairns~
+This trail disappears into the mountains to the south, but continues
+
+north along its winding way down the northern reaches of the Cairn
+
+Mountain foothills.  The path follows the course of the snowmelt, ridged
+
+on both sides by eroded rock wall.  An eerie stillness envelops the area,
+
+shattered by gusts of chill howling winds.
+
+~
+[Nnilb] set all indoor/underground/lit flags
+
+[Nnilb] checked all room sizes
+
+[Eliza] reviewed
+
+[Eliza] possibly connect to 33007 here or 33054
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78501 10 10 9
+E
+mountains 1 south trail 1 n foothills~
+Southward the rough-cut trail follows a steep incline only to disappear
+
+around the intrusion of a cluster of massive boulders.  To the north and
+
+downward it carves a serpentine path through the lower reaches of the
+
+looming mountains.
+
+~
+E
+path snowmelt rock wall~
+Cut through the rising walls of a mountain pass, the path underfoot
+
+boasts alternating patches of loose chat and refrozen snow, creating an
+
+uncertain footing at best.  This high, just below the snowline, there are
+
+few trees to break the monotony of the cold, granite stone.
+
+~
+A
+~
+~
+send_to_room( "A frigid arctic wind whistles through the pass.", room );
+
+loop( all_in_room ) {
+
+  i = random( 4, 10 );
+
+  dam_message( ch, i, "the frigid wind" );
+
+  inflict( ch, ch, i, "freezing to death" );
+
+  }
+
+~
+!
+2 100 0
+A
+~
+~
+i = find_stat( ch, dex );
+
+j = find_skill( ch, climb );
+
+if( i < random( 5, 10 ) ) {
+
+  if( j < random( 1, 3 ) ) {
+
+    act_tochar( "You slip and fall down the path.", ch );
+
+    act_notchar( "$n slips and falls down the path.", ch );
+
+    j = random( 4, 8 );
+
+    transfer( ch, find_room( 78502 ) );
+
+    act_notchar( "$n comes falling down the path.", ch );
+
+    inflict( ch, ch, j, "falling down the mountain" );
+
+    dam_message( ch, j, "the tumbling fall" );
+
+    }
+
+  else
+
+    continue;
+
+  }
+
+else
+
+  continue;
+
+~
+!
+3 0 21
+-1
+S
+
+#78501
+A Narrow Path Through the Cairns~
+Flanked by the eroded stone of the Cairn Foothills, this narrow path
+
+carves its way down to a basin to the north.  A forest of pine stretches
+
+across the northern horizon, nestling up against the unhospitable rock of
+
+the Cairns.  From this vantage, a river can be seen flowing through the
+
+forest from the southwest to the northeast, tracing the edge of a small
+
+fishing village near the southern boundary of the rising trees.
+
+~
+[Eliza] reviewed
+
+[Nnilb] checked
+
+~
+301465600 5 9 0
+D0
+~
+~
+0 -1 78502 10 10 9
+D2
+~
+~
+0 -1 78500 10 10 9
+E
+river forest~
+The river appears to change shade as it enters the village, from the
+
+crystal blue of the pure mountain springs of its source to a dull,
+
+lifeless gray.  The trees lining the lifeless river have begun to die,
+
+twisting and hollow.
+
+~
+E
+small fishing village~
+The village appears to have been mostly constructed from the surrounding
+
+pine, died black, but not much else can be discerned from this distance. 
+
+There certainly does not appear to be much activity there, however.
+
+~
+-1
+S
+
+#78502
+Before a Forest of Pine~
+A narrow trail leads up the eroded rock face of the Cairns to the south,
+
+and disappears into a forest of pine to the north.  The chill winds of
+
+the northern Cairns thrash the limbs of the rising trees, and the sound
+
+of it makes an eerie howling noise, as constant as the ground underfoot.
+
+~
+[Eliza] reviewed
+
+[Nnilb] checked
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78503 10 10 9
+D2
+~
+~
+0 -1 78501 10 10 9
+E
+tress limbs forest pine~
+The pines crowd close together, their twisted branches sparsely covered
+
+with brown-tipped needles.  Yet despite their sad state, their sheer
+
+numbers offer protection from the frigid wind.
+
+~
+-1
+S
+
+#78503
+Faint Trail Through a Forest of Pine~
+Tall pine trees lie to either side of this faint trail through the forest. 
+
+The path continues to the east, treading along a fine bed of pine needles
+
+as it winds its way through the forest.  Chill winds howl overhead,
+
+whipping the tops of the trees.  To the south, the track begins to rise,
+
+heading back into the northern foothills of the Cairns.
+
+~
+[Eliza] reviewed.
+
+[Nnilb] checked
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78504 10 10 9
+D2
+~
+~
+0 -1 78502 10 10 9
+E
+bed needles pine~
+Beneath the trees, the ground is blanketed by an age old accumulation of
+
+fallen pine needles and rotted acorns, and other less defineable detritus.
+
+~
+E
+trail path~
+The path, little more than a game trail that winds through the trees, is
+
+a shallow depression in the soft and fertile soil of the forest.  Tall
+
+pines crowd so close to the edge that often a root breaks the path's
+
+surface and trips the unwary.
+
+~
+A
+search~
+bed pine needles~
+act_tochar( "You search the bed of pine needles.", ch );
+
+act_notchar( "$n searches the bed of pine needles.", ch );
+
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  i = random( 1, 8 );
+
+  if( i < 4 )
+
+    act_tochar( "You find a coin buried by the fallen needles.", ch );
+
+  else
+
+    act_tochar( "You don't find anything.", ch );
+
+  if( i == 1 )
+
+    obj = oload( 2 );
+
+  if( i == 2 )
+
+    obj = oload( 12 );
+
+  if( i == 3 )
+
+    obj = oload( 14 );
+
+  if( i < 4 )
+
+    obj_to_char( obj, ch );
+
+  }
+
+else
+
+  act_tochar( "You don't find anything.", ch );
+
+~
+!
+0 0 0
+-1
+S
+
+#78504
+Faint Trail Through a Forest of Pine~
+The trail bends to the west and north, weaving its way around a dense
+
+cluster of trees to the east.  The ever-present, howling wind seems a bit
+
+calmer here, as the ground dips slightly and the trees have grown taller
+
+a bit further from the stony ground of the mountains.
+
+~
+[Eliza] reviewed
+
+[Nnilb] checked
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78505 10 10 9
+D3
+~
+~
+0 -1 78503 10 10 9
+E
+cluster trees east~
+A particulary dense stand of trees lies to the east, the tall, straight
+
+trunks stretching skyward as if in supplication to the heavens above. 
+
+Entertwining limbs, gnarled and twisted, form a tight network of branches
+
+so thick only dappled light can penetrate to the forest floor.  Nettles
+
+and branches fill the spaces between the trees, blocking progress in that
+
+direction.
+
+~
+-1
+S
+
+#78505
+Faint Trail Through a Forest of Pine~
+Along a bed of fallen pine needles, this faint trail leads north and
+
+south through a mountain forest of pine and more pine.  A large boulder
+
+has rolled down from the mountains and lies on the west side of the trail. 
+
+It could be a nice spot for a rest from hiking.
+
+~
+[Nnilb] boulder
+
+[Eliza] rdesc: Along the forest floor, the faint trail leads north and
+
+south through a heavily wooded area of soaring pines.  The path is
+
+narrow, hard-packed, and runs through an eon's accumulation of fallen
+
+needles, twigs and acorns.  A large, gray granite boulder has toppled
+
+from the mountain and firmly implanted itself along the westward side of
+
+the path.  Despite the still chill bite to the air, it could be a nice
+
+spot to rest from the long hike.
+
+[Eliza] reviewed
+
+[Cyndra] I like detailed pictures too. Keep painting :P
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78506 10 10 9
+D2
+~
+~
+0 -1 78504 10 10 9
+E
+large boulder~
+The massive, gray granite rock must have found its way here a very long
+
+time ago, as the towering pines have grown around it as though guarding
+
+it, and a thick layer of moss covers all but its northward-facing side. 
+
+~
+A
+~
+north~
+continue;
+
+~
+E
+to_char~
+You skirt the massive boulder, continuing on to the north.
+
+~
+E
+to_room~
+$n skirts the massive boulder, continuing onward to the north.
+
+~
+!
+3 0 1
+-1
+S
+
+#78506
+Faint Trail Along a River Bank.~
+This faint trail leads in from the pine forest to the south, heading
+
+north, but a rushing river forces the trail to bend to the east to follow
+
+its path.  Across the river you can see not much aside from more pine
+
+trees, although to the northwest, a crumbling stone wall peeks out
+
+through the parted branches of a large pine.  However, it is such a
+
+distance off, not much detail can be seen from here.
+
+~
+[Eliza] rdesc: The trail is even less clearly defined here, where it
+
+leads from the pine forest northward to the low-rising banks of a rushing
+
+mountain river and turns east.  Across the crystal waters on the distant
+
+bank, not much can be aside from a continuation of the rising trees and a
+
+hint of a crumbling stone wall peeking through the lower branches of a
+
+towering pine.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78507 10 10 9
+D2
+~
+~
+0 -1 78505 10 10 9
+E
+crumbling stone wall~
+The wall is made of gray stone, and an apparent lack of upkeep has left
+
+it to crumble.  Some parts of it still remain stable, but in other places
+
+the wall has completely collapsed.
+
+~
+E
+banks river trail~
+The trail turns eastward, meandering along the soft, damp dirt of the
+
+bank of a quick-moving mountain river, its crystalline waters the product
+
+of snowmelt deep in the far reaches of the Cairn Mountains.
+
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#78507
+Before a Old Pine Bridge~
+The trail continues east and west, following the rushing river to the
+
+north, and a small pine bridge crosses the river, leading to another path
+
+beyond.  To the east, there seems to be a clearing of some kind, as the
+
+trees appear to thin out in that direction.  To the west, the trail
+
+begins to enter the deeper forest.
+
+~
+[Eliza] could add random for either the sound of the rushing water or being splashed by some particularly swift water where it hits and tumbles over some impediment.. like a rock or fallen pine.
+
+[Eliza] rdesc: The trail runs east and west, following the rushing river
+
+the lies at the foot of the shallow embankment, where a weather-worn pine
+
+bridge stretches from bank to bank across the waters to another path
+
+beyond.  Eastward the trees thin, opening out into a small clearing, and
+
+westward it disappears back into the shadows of the mighty pines.
+
+[Eliza] reviewed.
+
+[Eliza] add leaving code..hmm.. You move gingerly onto the bridge, unsure of its steadiness.
+
+[Eliza] or something
+
+[Azerin] brief forest extra added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78508 10 10 9
+D1
+~
+~
+0 -1 78545 10 10 9
+D3
+~
+~
+0 -1 78506 10 10 9
+E
+bridge~
+Spanning the rushing waters, three pine logs lay side by side.  Stripped
+
+of their bark, the wood is gray with age and weather.  Half-buried in the
+
+soft soil of the banks, the logs seem to offer fairly secure footing for
+
+the crossing.
+
+~
+E
+forest~
+The thick pine forest stretches across the icy landscape, dark trees
+
+offering some shelter from the cold, howling wind.
+
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#78508
+A Pine Log Bridge~
+Three pines have been cut down, stripped, and laid side by side across
+
+the burbling river, creating a fairly sturdy bridge.  The bridge has not
+
+seen much use, and the lack of handrails suggest that it was never
+
+finished.  The span seems fairly secure and balancing not to difficult,
+
+as a fall into the icy waters of the river below could prove deadly.  A
+
+faint and narrow trail runs both to the north and south of the crossing.
+
+~
+[Eliza] *chuckle* This room cries out for a dex check and a tumble into the river.. not sure how they would get out though unless they crawled up the bank.
+
+[Eliza] did some rdesc tweaking.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78509 10 10 9
+D2
+~
+~
+0 -1 78507 10 10 9
+E
+waters river icy~
+Below the bridge the icy waters tumble onward, slowing somewhat as the
+
+distance between the banks begins to slowly widen.  Splashes and sprays
+
+from the turbulent river wet the underside of pine logs and halfway up
+
+their curving sides.
+
+~
+-1
+S
+
+#78509
+Faint Trail Through a Forest of Pine~
+This short trail connects two bridges over the winding river to the
+
+southeast.  The bridge to the south is lightly constructed and does not
+
+look as though it has seen heavy use, while the bridge to the east is of
+
+slightly sturdier construction.  To the northwest, a forest of pine
+
+stretches out away from the river.
+
+~
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78510 10 10 9
+D2
+~
+~
+0 -1 78508 10 10 9
+E
+trail~
+This short section of trail connecting the two bridges is heavily rutted,
+
+though none of the ruts appear fresh, and no new footprints or wagon
+
+tracks disturb the layer of loose dust that overlays the hard-packed
+
+surface.
+
+~
+E
+forest pine~
+To the northwest lies a forest of tall pines. Grimly foreboding, the
+
+looming woods seem dark and menacing from this distance.
+
+~
+-1
+S
+
+#78510
+A Sturdy Pine Log Bridge~
+This solid bridge spans the river easily, five solid trunks of pine
+
+creating a lane wide enough to drive a wagon across.  Sturdy guard rails
+
+lie to either side, helping to guide you across.  The sound of the
+
+rushing river echoes off the bottom of the bridge and careens off the
+
+trees of the forest, nearly as loud as a waterfall.
+
+~
+[Nnilb] nomob
+
+[Azerin] river and forest extras added
+
+[Eliza] reviewed
+
+~
+301465608 12 9 0
+D1
+~
+~
+0 -1 78511 10 10 9
+D3
+~
+~
+0 -1 78509 10 10 9
+E
+river~
+With a crash and a roar the swift-moving mountain river surges between
+
+its banks.  Its icy waters pound against the logs of the bridge, a low
+
+rumbling through the woodwork.  The area is covered in a damp, cold mist
+
+that the tumbling waters throw up in great chilling waves.
+
+~
+E
+forest~
+The tall, dark pines of the forest crowd together, forming a wall of
+
+green.  The trees cast great shadows that stretch out across the rocky
+
+landscape, adding to the chilling menace of this place.
+
+~
+-1
+S
+
+#78511
+Intersection On a Faint Trail~
+This path's main route seems to be north and east, as the fork to the
+
+west seems very lightly traveled.  The trail seems to end not far to the
+
+east, in a pile of collapsed rubble, but closer examination must be taken
+
+to determine more.  To the north and west, sturdy pine bridges cross the
+
+bending river.
+
+~
+[Azerin] river extra added
+
+[Azerin] bridges extra added
+
+[Azerin] rubble extra added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78514 10 10 9
+D1
+~
+~
+0 -1 78512 10 10 9
+D3
+~
+~
+0 -1 78510 10 10 9
+E
+river~
+The fast-flowing river tumbles and splashes down from its mountain source. 
+
+As it nears the lake it widens and slows a bit, following the winding
+
+course.  At the bridges, water meets wood in a thunderous crash, throwing
+
+waves of cold foam into the air.
+
+~
+E
+bridge bridges~
+Both the bridges are made form the local pine.  Although they look like
+
+they are in fairly good repair, it is hard to tell much about their
+
+condition without closer inspection.
+
+~
+E
+rubble~
+The rubble seems to be made from some collapsed building, although what
+
+you cannot tell from here.  Unlike the gray stones of the surrounding
+
+area, these are white in color.
+
+~
+-1
+S
+
+#78512
+Faint Trail - South of a River~
+This east-west trail follows close along the twists and turns of a
+
+rushing river, that lies to the north.  A ways to the east, a mound of
+
+rubble can be discerned, perhaps once a building, but clearer details are
+
+hidden by its distance. To the west, the rutted trail nears a river,
+
+disappearing out of site around a bend.
+
+~
+[Azerin] rubble extra added
+
+[Eliza] extra added.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78513 10 10 9
+D3
+~
+~
+0 -1 78511 10 10 9
+E
+rubble~
+Its hard to tell what the rubble was from here, but whatever it was, its
+
+destruction was complete.  Jumbled piles of rock and wood lie scattered
+
+about, vying for space with the encroaching forest.
+
+~
+E
+river 1 north~
+A silver, ribbon of water snakes across the landscape, twisting and turning like an intricate lover's knot. Here, where the banks lie close together, the river surges onward, tumbling over rocks and sand bars as it rushes along its way.
+
+~
+2335 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#78513
+Before The Crumbling Remains of a Mill~
+It is clear that the crumbling rubble to the east was once a mill.  The
+
+old water wheel still wobbles crazily as the river rushes along its
+
+tongs, trying to turn it.  The wall nearest you is still standing, albeit
+
+barely, as the deteriorating stone leans inward into what must have been
+
+the center of the structure.  The destruction is complete, and was not
+
+the work of mere passage of time, as it seems great detail was taken to
+
+dismantle the mill and smash the giant millstones so that it could not be
+
+operated.
+
+~
+[Azerin] rubble/stone extra added
+
+[Eliza] The destruction is complete, the product of a deliberate attempt
+
+to dismantle the walls and smash the giant millstones past the point of
+
+repair, rather than the passage of time.
+
+[Eliza] add search rubble action.. random pop of lowish level reagents.. pebbles, shards, webs in combinations of some or none.
+
+[Nnilb] added action
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D3
+~
+~
+0 -1 78512 10 10 9
+E
+stone rubble~
+In contrast to the gray stone that is predominately found in the Cairn
+
+Mountains, the large stone blocks that make up the crumbling walls are
+
+pale white and very rough in texture.  Seemingly dragged here from an
+
+unknown quarry, the effort put into the creation and destruction of the
+
+mill, indicates its importance in the lives of its builders.
+
+~
+A
+search rummage~
+rubble pile~
+act_tochar( "You rummage through the pile of rubble.", ch );
+
+act_notchar( "$n rummages through the pile of rubble.", ch );
+
+if( rflag( reset0, room ) ) {
+
+  remove_rflag( reset0, room );
+
+  i = random( 1, 10 );
+
+  if( i == 1 )
+
+    obj = oload( 79 );
+
+  if( i == 2 )
+
+    obj = oload( 78 );
+
+  if( i == 3 )
+
+    obj = oload( 210 );
+
+  if( i == 4 )
+
+    obj = oload( 81 );
+
+  if( i > 4 )
+
+    act_tochar( "You find nothing of value.", ch );
+
+  else {
+
+    act_tochar( "You find $p.", ch, obj );
+
+    obj_to_char( obj, ch );
+
+    }
+
+  }
+
+else
+
+  act_tochar( "You find nothing of value.", ch );
+
+~
+!
+0 0 0
+324 17 1509949540 -2 0
+-1
+S
+
+#78514
+A Worn Bridge of Pine~
+This heavy bridge can easily support several tons of weight, and is wide
+
+enough to accomodate two large wagons.  It is built from massive pine
+
+logs, and the many-angled beams beneath the bridge were obviously
+
+designed to bear the weight of much more than man or horse.  Solid rails
+
+line the bridge, helping guide wagons across easily and safely.
+
+~
+[Azerin] perhaps the sound of the river could be heard bellow as crossing bridge?
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78515 10 10 9
+D2
+~
+~
+0 -1 78511 10 10 9
+E
+bridge~
+Spanning the river from bank to bank, the sturdy, wooden bridge provide
+
+access for traffic of any sort.  The massive, pine logs are secured with
+
+heavy, leather strapping and thickly braided rope, three times the size
+
+of an average rope.  Beneath the solid structure, smaller logs form
+
+braces that delve down deeply into the river's bottom, and smoothly
+
+sanded rails prevent accidental slippage from the bridge.
+
+~
+2335 9 1509949540 3 0
+-1
+S
+
+#78515
+Village Path - Near a Crumbling Wall~
+This wide path leads east along the river and into a small fishing
+
+village.  To the west, the large but crumbling stone wall of the village
+
+rises about eight feet off the ground.  A massive, dead oak tree lies to
+
+north, its few remaining limbs darkened with age and covered with moss. 
+
+To the south, a massively constructed pine bridge crosses the river.
+
+~
+[Azerin] extras added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78516 10 10 9
+D2
+~
+~
+0 -1 78514 10 10 5
+E
+wall~
+The tall, crumbling wall is in need of repairs.  Around its base fallen
+
+stones lie scattered, slowly being covered by moss and weeds.
+
+~
+E
+oak tree~
+Dominating the area to the north is an old oak tree.  The branches of the
+
+once mighty oak are bare of leaf and life.  From the highest branches
+
+small objects hang, caught up in the trees many branches.
+
+~
+E
+river~
+To the south the sparkling, silver river rushes and tumbles along on its
+
+journey from the high mountains towards the vast lake.  As it surges
+
+under the series bridges, clouds of chilling mist form, and cover the
+
+landscape in glistering dew.
+
+~
+-1
+S
+
+#78516
+Village Path - Along the River~
+The wide, village trail follows the river east and west, and a smaller
+
+but still, well-worn path leads to the north toward a scattering of
+
+houses.  To the east, the path approaches a mound of rubble, and
+
+southward across the river can be seen what appear to be the ruined
+
+remains of the village mill.
+
+~
+[Azerin] extras added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78518 10 10 9
+D1
+~
+~
+0 -1 78517 10 10 9
+D3
+~
+~
+0 -1 78515 10 10 5
+E
+mill~
+The once impressive structure has been reduced to scattered rubble.  Its
+
+white stones lie broken, almost like bleached bones on an ancient
+
+battlefield.
+
+~
+E
+rubble~
+It is hard to discern the nature of the rubble from here.  but it lies an
+
+a fair-sized mound.  It vies for space with the encroaching forest,
+
+clearly losing the battle.
+
+~
+E
+house houses~
+Most of the houses in the village have been built from the local pine. 
+
+There high roofs are steeply sloped to aid in snow and water runoff.  The
+
+gables of the majority of the houses are carved panels of local and
+
+mythical animals that the villagers deemed to bring good luck.  The homes
+
+show signs of damage, broken panels, missing tiles and the occasional
+
+scorch mark, although what caused the damage is unclear from here.  Chill
+
+mountain winds blow, scattering leaves, banging shutters and lifting
+
+tiles.
+
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#78517
+Before a Ruined Gate~
+The main gate of the village, inset into the stone wall to the east, has
+
+been destroyed.  The broken fragments have been discarded and piled into
+
+a heap of rubble, along with slabs fallen from the wall itself.  The wide
+
+path leads west away from this scene of destruction, where once it might
+
+have continued east through the gate and along the river.
+
+~
+[Azerin] rubble extra added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D3
+~
+~
+0 -1 78516 10 10 9
+E
+rubble~
+The rubble of the gray stone wall, lies in small piles.  Thick weeds and
+
+the occasional bamboo shoot grow around them.  Moss and lichen flourish
+
+here, exploiting the damp space the fallen stones provide.
+
+~
+2337 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#78518
+Near a Dead Oak~
+This well-worn path leads north and south between a massive, dying oak to
+
+the west and a small house to the east.  The path becomes muddy as it
+
+approaches a four-way intersection to the north, while to the south the
+
+path nears a rushing river.  The skeletal branches of the dead tree
+
+overhang the path, casting twisting shadows over its rutted surface.
+
+~
+[Azerin] extras added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78520 10 10 9
+D1
+~
+~
+0 -1 78519 10 10 5
+D2
+~
+~
+0 -1 78516 10 10 9
+E
+river~
+To the south the sparkling, silver river rushes and tumbles along on its
+
+journey from the heights of the might Cairn Mountains.
+
+~
+E
+house~
+The small house crumbles slowly into ruin.  Even from here, the numerous,
+
+small gaps that riddle the roof can be clearly seen, and rain, wind and
+
+neglect add further to the damage.  The remaining fragments of shutters
+
+undulate back and forth slowly alongside what is left of the house's
+
+windows.
+
+~
+E
+oak tree~
+The massive, old gnarled, oak tree stretches overhead.  The branches fan
+
+out over the path, casting twisted shadows.  The tree is dead, most of it
+
+is covered in lichen and mosses, its leafless branches swaying in the air. 
+
+Attached to the trees highest branches are small, wooden air chimes,
+
+singing in the cold air from the icy mountains.
+
+~
+-1
+S
+
+#78519
+One Room House~
+The floor is made of pine planks, sanded smooth.  The roof slants up
+
+gradually to its apex, above two rafters.  The windows have been broken
+
+out.  The fireplace is empty, but its stone chimney is coated with soot. 
+
+In the center of the floor is a dark, red stain, perhaps blood.  Near the
+
+back of the one-room house is an open trapdoor.
+
+~
+[Azerin] extras added
+
+[Eliza] add leaving code for climb down
+
+[Eliza] reviewed
+
+~
+301465604 12 6 0
+D3
+~
+~
+0 -1 78518 10 10 5
+D5
+~
+~
+1024 -1 78537 10 10 5
+E
+floor pine planks apex rafters~
+In typical fashion for houses of the village, the floors, walls and roof
+
+have been cut from the local pines.  At the apex of the rafters detailed
+
+pictures of animals have been carved into the wood, mostly of the natural
+
+plant and wildlife native to the nearby lake and mountains.  In striking
+
+contrast to the pale pine, a dark, red stain spreads out across the floor. 
+
+Apparently someone spent some time finger-painting in it, drawing
+
+macabre, stick figures being dismembered...perhaps an eye witness account.
+
+~
+E
+fireplace soot chimney~
+Thick, black soot covers the fireplace's immediate surroundings, the
+
+house's occupants having utilized the fire for both heat and food. 
+
+Oddly, there seems to be a few, gnawed bones left half-buried in the
+
+ashes.  The bones appear to be part of the skeletal remains of a human or
+
+humanoid-like creature.
+
+~
+E
+trapdoor~
+Made from the pale wood of the local pines, the trapdoor has been forced
+
+open, ripping apart a small section of the floor.  The door's violent
+
+removal has left a wide, open gap leading downward 
+
+~
+-1
+S
+
+#78520
+Village Path - Before a Ruined Hall~
+A smaller path branches west toward the wall surrounding the village,
+
+while the main path leads east and south.  Directly to the north a
+
+dilapidated hall rises, although not sturdily.  The doorframe is cracked
+
+and broken and apparently some of its major support beams have fallen, as
+
+the entire structure lists slightly to the east.
+
+~
+[Nnilb] nomob
+
+[Azerin] hall extra added
+
+[Eliza] acode adat
+
+[Eliza] reviewed
+
+~
+301465608 12 9 0
+D0
+~
+~
+0 -1 78521 10 10 5
+D1
+~
+~
+0 -1 78522 10 10 9
+D2
+~
+~
+0 -1 78518 10 10 5
+D3
+~
+~
+0 -1 78523 10 10 9
+E
+hall~
+Like the houses around it, the once grand hall has been partially
+
+destroyed, by battle first, now by rain and the ever-present icy winds
+
+that howl off the Cairn Mountains.  The area seems seeped in sorrow and
+
+loss.
+
+~
+A
+~
+~
+send_to_room( #creak, room );
+
+~
+E
+creak~
+@cThe building creaks and groans as its ruined structure settles closer
+
+to its final decay.@n 
+
+~
+!
+2 150 0
+-1
+S
+
+#78521
+Meeting hall~
+Many people died here.  Splotches of red stains cover the stone floor,
+
+and are scattered randomly across the walls and even the beams of this
+
+meeting hall.  An arched doorway leads north into the back of the hall,
+
+perhaps a kitchen.  A broken, empty doorframe leads south out of the
+
+structure.
+
+~
+[Nnilb] rextras?
+
+[Eliza] rdesc:This is a scene of carnage.  The near-black stains of dried,
+
+blood spatters cover everything, from the wide, pine ceiling beams to the
+
+solid floor where they have puddled at the base of the walls.  Hacked pieces
+
+of dessicated flesh adhere to any available surface, but particularly
+
+close to the ruined door frame leading back to the south.  To the north a
+
+blood-soaked archway offers entrance to the rest of the once-proud
+
+structure.
+
+[Eliza] extras added
+
+[Eliza] reviewed
+
+[Azerin] red stain extra added
+
+~
+301465604 12 6 0
+D0
+~
+~
+0 -1 78538 10 10 5
+D2
+~
+~
+0 -1 78520 10 10 5
+E
+floor ceiling walls~
+Blood stains cover everything in the hall, from walls to ceiling to
+
+floors.  Mass devastation was visited on the structure, the floor is
+
+hacked, wide ceiling beams were broken and suppost pillars along the
+
+walls cracked.  The struture lists heavily to the east, in danger of
+
+collapsing.
+
+~
+E
+door frame archway~
+The entrances to and from the hall, both the archway leading to the
+
+kitchen and the one lying south leading outside, carry the most dense
+
+concentration of blood splatters, as though these locations were the most
+
+fiercely disputed.  Hacked pieces of dessicated flesh cling to the walls
+
+and floor near these places some even finding themselves stuck to the
+
+rafters or ceiling.
+
+~
+E
+red stain splotches~
+Spreading out across the floor are many pools of now dry blood.  The
+
+darkness of the blood matches the dark feel this place has, half heard
+
+whispers, the clink of metal echo around the room.  The atmosphere feels
+
+colder that the icy mountain winds dark thoughts and deeds that have been
+
+stained more than the floor.
+
+~
+2337 9 1509949540 3 0
+-1
+S
+
+#78522
+Village Path - Smithy~
+The dark brown earth of the village path is stained darker still with
+
+red...crimson red...the color of blood.  The stain only darkens as the
+
+path continues northward toward the center of the village.  A small
+
+structure lies to the east, a sign once hanging over its door now hanging
+
+loosely by one lashing.
+
+~
+[Nnilb] sign
+
+[Nnilb] rextras?
+
+[Azerin] how bout a random wind to bang the sign
+
+[Azerin] house extra added
+
+[Eliza] sign extra added
+
+[Eliza] random added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78527 10 10 9
+D1
+~
+~
+0 -1 78526 10 10 5
+D3
+~
+~
+0 -1 78520 10 10 9
+E
+house~
+Unlike most of the houses of the village, this one is made from the dull,
+
+gray stones of the Cairn Mountains.  Why the owners build in stone
+
+instead of the plentiful pine is unclear, but certainly the house is
+
+weathering more slowly than its wooden counterparts.  A sign dangles
+
+loosely by one lashing above a wooden door.
+
+~
+E
+sign~
+A weathered, wooden plank, faded by time and soot-blackened.  hangs above
+
+the stone structure's door.  Once secured by thick, leather strips, one
+
+of the lashes has torn free and the sign dangles loosely.  Barely
+
+discernible, the word @RSmithy@n tops a carving of a hammer and anvil,
+
+centered on the sign.
+
+~
+A
+~
+~
+send_to_room( #bang, room );
+
+~
+E
+bang~
+@cA gust of wind whistles through the village and the sign thuds dully
+
+against the solid stone of the building.@n 
+
+~
+!
+2 150 0
+-1
+S
+
+#78523
+Village Path - Along the Wall~
+The path leads northward along the crumbling stone of the wall
+
+surrounding village, and away from the large oak tree to the south.  To
+
+the east, a larger path intersects this one.  A bird has built a nest in
+
+a fist-sized niche, where a flat-sided rock has broken away.
+
+~
+[Azerin] wall extra added
+
+[Azerin] oak extra copied
+
+[Azerin] nest extra added
+
+[Azerin] nest going to have anything in it?
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78524 10 10 9
+D1
+~
+~
+0 -1 78520 10 10 9
+E
+wall~
+The wall, built from the local gray stone, is crumbling in spots, the
+
+fallen rocks lying scattered at its base, slowly being overgrown with
+
+moss and weeds.  That it stills stands at all bears testimony to the
+
+skill of its original creators.
+
+~
+E
+oak tree~
+Rising to the south, the skeleton of an old, dead oak looms darkly over
+
+its surroundings.  Wide, spreading branches fan out over a path, casting
+
+twisted shadows over the rutted surface.  Lichen and moss cling to
+
+flaking bark and the brittle limbs creak, swaying in any gust of wind. 
+
+Attached to its uppermost branches, wooden windchimes dangle, tied there
+
+when the tree was young.
+
+~
+E
+nest~
+The small nest, woven skillfully together from pine needles and yellow
+
+straw, is tucked safely into a shallow niche out of harm's way.  Lined
+
+with torn-off bits of moss and scavenged feathers, it protects any
+
+precious eggs from the harsh climate.
+
+~
+2337 9 1509949540 3 0
+-1
+S
+
+#78524
+Village path - along the wall~
+The crumbling stone wall to the west has been nearly brought down by the
+
+creeping moss which is overgrowing it.  Branches of a large pine have
+
+broken the top few feet of the wall and sent it toppling into a heap.  To
+
+the north, the path comes to a well in the corner of the village, while
+
+to the south, the path approaches a large oak tree.
+
+~
+[Azerin] perhaps a small chance of there beening a mushroom or two growing here?
+
+[Azerin] extras added
+
+[Eliza] Nice extras Az. Like the idea of the mushrooms too.. perfect location.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78525 10 10 9
+D2
+~
+~
+0 -1 78523 10 10 9
+E
+pine branches heap~
+The thick pile of pine branches and needles slowly decay against the
+
+crumbling wall.  The heavy scent of pine mixes with the smell of decay,
+
+almost choking in its strength.
+
+~
+E
+moss~
+In the shelter of the crumbling wall thick green moss flourishes.  Fed
+
+from the rotting, pine debris and protected against the harsh, cold
+
+winds, the moss blankets the area in a carpet of green.  The entire area
+
+smells musty and damp.
+
+~
+E
+wall~
+The crumbling wall slowly gives up the fight against the onslaught of the
+
+pine forest and the enveloping moss.  The gray stones are cracked and
+
+split, many now resting at the base of the once-tall wall.  Small birds
+
+and the occasional lizard have moved into any small opening, profiting
+
+from the wall's demise.
+
+~
+E
+path~
+The path, like most of the area around it, has become increasingly
+
+overgrown.  Thick weeds and the occasional small pine sapling have broken
+
+through its hard, dirt surface.
+
+~
+E
+oak tree~
+Dominating the area to the south is an old oak tree.  The branches of the
+
+once mighty oak are bare of leaf and life.  From the highest branches
+
+small objects hang, perhaps they have been caught up in the trees many
+
+branches.
+
+~
+-1
+S
+
+#78525
+Village path - at the well~
+In this northwest corner of the village, the forest has nearly reclaimed
+
+the crumbling stone wall as its own, as large pine trees threaten to
+
+topple it over.  There is a small round well, surrounded by a ring of
+
+knee-high stone, near where the walls intersect.
+
+~
+[Nnilb] well interaction?
+
+[Azerin] extras added
+
+[Eliza] Well interaction good idea..  wonder if it should be pure water
+
+or tainted though.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D2
+~
+~
+0 -1 78524 10 10 9
+E
+pine~
+The tall pines bends away from the strong, prevailing winds.  Although
+
+the growing space is limited, the trees make more room with the
+
+destruction of the nearby wall.  Everywhere there are signs that nature
+
+is reclaiming the land as its own.  As the wind blows, small clouds of
+
+yellow pollen scatter across the area, slowly spreading out over the
+
+village before they are lost to view.
+
+~
+E
+forest~
+The thick pine forest spreads out before you.  The fierce battle for
+
+space has lead the forest to start to reclaim the village land back into
+
+its green fold.
+
+~
+2335 9 1509949540 3 0
+-1
+S
+
+#78526
+Village Smithy~
+A massive anvil lies in the center of the room, but it as well as its
+
+bellows have been destroyed.  The anvil appears to have been melted, as
+
+its surface is bubbled and cracked, and a dark red stain covers half of
+
+its iron surface.  A trapdoor in the southeast corner of the room has
+
+been torn aside, revealing a wooden ladder leading down to a small room. 
+
+The only exit is through the doorway to the west.
+
+~
+[Azerin] a small pop of iron scraps or filings might be cool
+
+[Nnilb] true, added
+
+[Azerin] is the trapdoor going to be an object?
+
+[Eliza] believe the trapdoor is is torn off its hinges..
+
+[Tyrone] reset should probably be a search acode, perhaps % possibility of
+
+iron filings and flint 
+
+[Eliza] extras added
+
+[Eliza] reviewed
+
+~
+301465604 12 6 0
+D3
+~
+~
+0 -1 78522 10 10 5
+D5
+~
+~
+1024 -1 78540 10 10 5
+E
+trapdoor 1 down ladder~
+The solid trapdoor has been ripped from its hinges and tossed aside by an
+
+act of force, its iron hinges bent and even broken.  Exposed is a sturdy,
+
+wooden ladder, leading down into the gaping darkness below.
+
+~
+E
+anvil bellows surface red stain~
+Once a traditional cast-iron anvil, the surface of this blacksmith's tool
+
+has bubbled as though from a tremendous heat and cooling, had cracked and
+
+split asunder.  The nearby bellows has been jerked from its lashings and
+
+hacked and trampled into a shattered mess.  What remains of the anvil's
+
+surface bears a stain...the dark, crimson stain of dried blood.
+
+~
+872 17 1509949475 -2 0
+-1
+S
+
+#78527
+Village Path - Red Ground~
+A fierce battle was fought here, and the ground is stained dark red with
+
+old, dried blood.  Broken bamboo spears are planted, butt-first in the
+
+ground, their shattered shafts stained green with ichor.  A narrow path
+
+leads south and north, and a wider one, littered with more spears, leads
+
+east between two houses.
+
+~
+[Azerin] houses extra added
+
+[Azerin] other extras added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78528 10 10 9
+D1
+~
+~
+0 -1 78530 10 10 9
+D2
+~
+~
+0 -1 78522 10 10 9
+E
+houses~
+The building to the north appears to be an old barn of sorts, while the
+
+southern house's most striking feature is that it is built mostly of
+
+stone.  Both buildings appear to have some damage done to them, although
+
+the barn is in far worse shape . 
+
+~
+E
+spears bamboo~
+Thrusting out of the ground like the jagged teeth of some great submerged
+
+fiend, the stout spears have been coated with blood and gore.  Tattered
+
+cloths from once fine clothes flap in the chilling wind.
+
+~
+2338 9 1509949540 3 0
+2338 9 1509949540 3 0
+2338 9 1509949540 3 0
+2338 9 1509949540 3 0
+2338 9 1509949540 3 0
+-1
+S
+
+#78528
+Village Path - Bend~
+The path bends south and east here, near the crumbling stone wall of the
+
+village to the north, and the wall of a building to the west.  To the
+
+east, the path enters a barn or what might be a stable, while to the
+
+south the path's earthy ground becomes dark red at an intersection.
+
+~
+[Azerin] wall extra added
+
+[Azerin] brief barn extra added
+
+[Eliza] rextra 1: Nice desc, Az. Well done.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78529 10 10 8
+D2
+~
+~
+0 -1 78527 10 10 9
+E
+wall~
+This once stout stone wall surrounds most of the village.  Time has not
+
+been kind to it however, and in many places, including this one, the wall
+
+has started to crumble.  Thick creepers and blanketing moss surge over
+
+the gray stones, burying them in a sea of green.  At the base of the wall
+
+small piles of broken stones lie, slowly crumbling in the cold, damp
+
+climate of the Cairn Mountains.
+
+~
+E
+barn~
+The small barn is in a poor state.  Even from here you can see several
+
+holes in its tiled roof, allowing wind and rain into its interior.
+
+~
+-1
+S
+
+#78529
+Deserted Stable~
+This is a site of horror.  Broken skeletons of horses litter the ground,
+
+some with decomposing reins still around their necks.  Several of the
+
+fleshless carcasses are only half there, the remaining parts missing.  In
+
+any case, no regard was taken for plunder, only destruction.  Overhead,
+
+half of the loft has been torn down, but that which remains can be
+
+accessed by a rickety ladder in the southeast corner.
+
+~
+[Azerin] extas added
+
+[Eliza] add leaving up code for climbing ladder
+
+[Eliza] reviewed
+
+~
+301465604 12 8 0
+D3
+~
+~
+0 -1 78528 10 10 5
+D4
+~
+~
+1024 -1 78541 10 10 5
+E
+ladder~
+The wooden ladder has been braced against the barn roof, allowing access
+
+to the loft.  On each rung are the dark stains of small bloody handprints. 
+
+The supports and steps of the ladder are deteriorating, the footing
+
+unstable.
+
+~
+E
+skeleton horse bones~
+Reeking of death the foul remains of the horses show the depravity of the
+
+invaders clearly.  Not happy with looting they have embarked on mindless
+
+slaughter in a frenzied attack on anything that lived here.  The tortured
+
+bodies of the horses have been hacked and chopped apart, several larger
+
+remains scattered cross the stained floor.  A few of the bones even have
+
+been gnawed on.
+
+~
+-1
+S
+
+#78530
+Village Path - Between Two Buildings~
+The ground is stained crimson with blood, and ichor-coated bamboo spears,
+
+some intact and other broken off at different points along the shaft, jut
+
+erratically from the ground like some macabre garden.  A barn lies to the
+
+north, while a small house rises to the south.  To the east and west,
+
+this path comes to intersections.
+
+~
+[Azerin] house extra added
+
+[Azerin] barn extra added
+
+[Eliza] reviewed
+
+[Azerin] bamboo extra added
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78531 10 10 9
+D3
+~
+~
+0 -1 78527 10 10 9
+E
+house 1 south~
+Unlike most of the houses of the village, this one is made from the dull,
+
+gray stones of the Cairn Mountains.  Why the owners built in stone
+
+instead of the plentiful pine is unclear.  Small windows allow a view of
+
+the impressive mountain range to the south.  Although this house shows
+
+signs of damage, it is slower to fall into ruin than its wooden
+
+counterparts.
+
+~
+E
+barn 1 north~
+The small barn is in a poor state.  Even from here, the several holes in
+
+its tiled roof can be see, allowing wind and rain into its interior. 
+
+Every so often birds fly in through the gaps and after a brief delay fly
+
+out again, beaks filled with yellow straw.
+
+~
+E
+spears bamboo~
+The stout bamboo spears thrust outwards in all manner of angle, forming a
+
+bloody wall of death.  Some have had their tips shattered, this seems to
+
+have added to the carnage they have caused, with many sharp spines of
+
+bamboo line scattered around.
+
+~
+-1
+S
+
+#78531
+Intersection On a Village Path~
+The path branches here, to the north and west.  The branch to the west is
+
+littered with broken bamboo spears and is stained red with blood.  To the
+
+north, the path nears the door of an ornately crafted home, the near
+
+wall of which lies to the east.  To the south, a faint path approaches a
+
+house which is both simple and larger than most of the others in the
+
+village.  A large rock in the center of the intersection is stained dark
+
+red, with a line of green good nearly completing a gruesome circle
+
+around it.
+
+~
+[Nnilb] no.mob
+
+[Nnilb] weaponmaster's stand
+
+[Azerin] house extra added
+
+[Eliza] last line of rdesc - green good?
+
+[Eliza] Little confused, rbug notes weaponmaster's stand but there is no
+
+mention of it in rdesc.  Does it go here or will it be an additional room?
+
+[Eliza] more extras added
+
+[Eliza] reviewed
+
+~
+301465608 12 9 0
+D0
+~
+~
+0 -1 78533 10 10 9
+D2
+~
+~
+0 -1 78532 10 10 5
+D3
+~
+~
+0 -1 78530 10 10 5
+E
+simple house~
+The simple house to the south has been built out of the local pine,
+
+however the panels have been stained with lacquer, giving them a rich
+
+luster.  At the entrance four, white wood panels have been carved with
+
+scenes of a mountain lake, each displaying the lake during a different
+
+season.  The gables and struts of the house have also been etched with
+
+pictures of cranes in flight.  A solid, wooden door stands ajar, offering
+
+welcome.
+
+~
+E
+ornate home~
+Rising to the north and slightly east, a fine, ornate home is surrounded
+
+by a solid rock wall.  From this distance the house seems in good repair,
+
+unlike many of the others present in the village.
+
+~
+E
+wall 1 east~
+Nearby to the east a rock wall surrounds an ornate home, bordering the
+
+unkempt yard.  Most of the wall is intact except for a breach in the
+
+back, just visible at this distance.
+
+~
+E
+spears broken 1 w~
+Along the westward-running arm of the village path the ground is littered
+
+with bamboo spears, both intact and broken.  The shafts of the spears
+
+have been shattered with force, and all of the points are blood-stained.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+You take the few short steps along the path, entering the simple house to
+
+the south.
+
+~
+E
+to_room~
+$n takes the few short steps along the path, entering the simple house to
+
+the south.
+
+~
+!
+3 0 4
+2343 137 1509949540 3 0
+-1
+S
+
+#78532
+Simple Home~
+This simple, quite home has been ravaged for treasure, the floorboards
+
+torn up and the fireplace destroyed, taken apart stone by stone in an
+
+attempt to unlock its secrets.  Cold, grey ashes from an old fire adhere
+
+to pools of dark, dried blood that adorn every possible surface in the
+
+room.  A shattered doorway leads east into a small courtyard of sorts or
+
+you can leave the house through the door to the north.
+
+~
+[Eliza] reviewed
+
+[Azerin] extra added
+
+~
+301465604 12 6 0
+D0
+~
+~
+0 -1 78531 10 10 5
+D1
+~
+~
+0 -1 78536 10 10 5
+E
+stone floor boards~
+Savage fury has laid waste to the humble home.  Ripped from their
+
+foundations, broken pine boards lie scattered about, large chunks of wood
+
+have been chopped from them, the signs that an axe or other stout bladed
+
+tool was used in the making of this carnage is obvious.  Even the stones
+
+of the hearth have come under this savage attack, cracked and split they
+
+have been hurtled into blooded pools.
+
+~
+E
+blood pools~
+Swirls and patterns have been drawn into the now dried bloody pools.  As
+
+if amused by their handy work the invaders have sat and played in the
+
+spilling bloody of the villagers.
+
+~
+E
+courtyard~
+From here it looks as if the courtyard has come under the same frenzied
+
+attack as the house itself.  Stumps of trees and shatter stones lie about
+
+a ruined fountain.
+
+~
+E
+fireplace~
+At one time a family would have gathered around the humble fireplace, to
+
+share tales of the day, and eat and sleep.  Now the shattered remains of
+
+the hearth sever as a grim reminder that joy and happiness have been
+
+crushed here, replaced with blood and sorrow.
+
+~
+-1
+S
+
+#78533
+Village Path Near an Ornate Home~
+An ornately-built house rises to the east, nearly a work of art in its
+
+graceful architecture.  The lower half of its wall is stone, which is
+
+crafted seamlessly into a pine wall that meets a low-sloping rooftop. 
+
+The wall is painted white, but the paint has begun to chip significantly. 
+
+The roof is dark, black pine.  The windows have perfect pine shutters,
+
+painted to match the dark wood of the shingles.  The door is solid and
+
+painted red.  To the south, the path reaches an intersection, marked by a
+
+blood-stained stone.
+
+~
+[Nnilb] rextras?
+
+[Eliza] extra added
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+large red door~
+e east large red door~
+131 -1 78534 10 10 5
+D2
+~
+~
+0 -1 78531 10 10 9
+E
+wall house door 1 east roof pine~
+Although from afar the house seems in good repair, up close the signs of
+
+age and deterioration can be clearly seen.  Black paint is peeling and
+
+chipped, a few of the shingles are missing, and the front door is faded
+
+and cracked.  Floor beds, once lovingly cared for, hold only a scattering
+
+of limp, half-dead flowers and the path is over-grown with weeds and
+
+grass.  Flanked by a dangling shutter, one nearby window boasts a
+
+shattered pane of glass.
+
+~
+-1
+S
+
+#78534
+Fine Manor~
+A fine rug warms the chill, stone floor of this house, and a vast, cold
+
+fireplace is inset into the north wall.  Atop the mantle are a few
+
+picture frames, all empty.  A wide doorway leads westward out of the
+
+house, while an archway in the south wall of the room provides access to
+
+another, larger chamber.  To the east, a half-opened door leads to a
+
+small set of stairs and a grassy, over-grown courtyard.
+
+~
+[Azerin] extras added
+
+[Eliza] reviewed.
+
+~
+301465604 12 6 0
+D1
+~
+~
+0 -1 78535 10 10 5
+D2
+~
+~
+0 -1 78542 10 10 5
+D3
+large red door~
+w west large red door~
+131 -1 78533 10 10 5
+E
+frames fireplace mantle~
+The rug has been finely woven, the craftsmanship of the piece impressive. 
+
+A scene of a lake at dawn has been skillfully stitched using dark blues
+
+and greens with red and yellow cords.  A flight of cranes, silhouetted in
+
+black, takes off from the still waters.  The edges of the rug are
+
+starting to fray, small runs and tears encroaching upon the very borders
+
+of the picture itself.
+
+~
+E
+frames fireplace~
+The fireplace is a stone affair, planted firmly in the center of the
+
+northern wall.  Cold as death and musty smelling, the ashes within it
+
+have been there a long time.  A hand-carved pine mantle boasts a half
+
+dozen picture frames, some upright and some over-turned, but all of them
+
+empty.
+
+~
+-1
+S
+
+#78535
+Private Yard~
+Nestled between the crumbling stone wall of the village to the north and
+
+the remains of the wall to the east, this small yard is bordered to the
+
+south and west by a magnificent home.  A large section of the wall to the
+
+east has collapsed in a neat pile, very strange and unnatural looking, as
+
+if someone carefully took it apart stone by stone.  A few steps lead up
+
+and into the house to the west.
+
+~
+[Eliza] extras added.
+
+[Eliza] leaving code added.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D1
+~
+~
+0 -1 78544 10 10 5
+D3
+~
+~
+0 -1 78534 10 10 5
+E
+home house~
+The structure that cradles the small, overgrown yard was built of stone,
+
+with hand-carved pine used in the cross-timbering that adorns the upper
+
+floor.  Although still intact, small signs of deterioration tell a tale
+
+of abandonment or other, more sinister events...a broken pane in a
+
+eastward-lying window, a door not quite closed where leaves and debris
+
+drifting in from outside have littered the floor, the unkempt yard of
+
+dead or dying flowers and grass.
+
+~
+E
+steps~
+From a distance the handful of steps leading up from an overgrown garden
+
+path to the backdoor of this fine manor appear in good repair.  Closer
+
+examination reveals, however, that they are weathered and worn, gray with
+
+age and half-eaten through in spots from dry-rot.  Great care should be
+
+taken in their ascent or descent.
+
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+Picking a careful path eastward, you pass through the breach in the
+
+crumbling wall.
+
+~
+E
+to_room~
+Picking a careful path eastward, $n passes through the breachin the
+
+crumbling wall.
+
+~
+!
+3 0 2
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+Edging a few rotted boards, you climb up the steps and enter the
+
+half-opened door.
+
+~
+E
+to_room~
+Edging a few rotted boards, $n climbs up the steps and enters the
+
+half-opened door.
+
+~
+!
+3 0 8
+-1
+S
+
+#78536
+Ruined Shrine~
+The stumps of a circle of trees are nearly all that remains of a once
+
+sacred shrine.  In the center of the circle was once a small fountain,
+
+but the statue has been broken in two, and the water of the pool have
+
+turned black.  A large house lies to the west, a shattered doorway
+
+leading inside.  The walls of the village border the yard to the east and
+
+south, while the south wall of an ornate house lies to the north.
+
+~
+[Nnilb] no.mob
+
+[Nnilb] rextras?
+
+[Azerin] the master could carry the Ancestral Blade of his house, a ancient katana that took into
+
+[Azerin] consideration the wielders wisdom when used.
+
+[Azerin] as a very low pop item :)
+
+[Nnilb] would like to save items that cool for higher level areas
+
+[Nnilb] but very cool idea, maybe we can implement on our next area :
+
+[Azerin] *grin* good idea :)
+
+[Eliza] extras added
+
+[Eliza] reviewed
+
+~
+301465608 12 9 0
+D3
+~
+~
+0 -1 78532 10 10 5
+E
+fountain statues water~
+Octagonal in shape, the basin of the stone fountain holds little more than
+
+an inch or two of dark, brackish water, and the sides and bottom of the
+
+bowl are covered with a heavy growth of black algae.  The statue from
+
+which the fountain's water once flowed is broken in twain, the pieces
+
+lying side by side on the dusty ground.
+
+~
+E
+trees circles stumps shrine~
+Vast in girth, only the stumps remain to form the circle of what must
+
+once have been a small and sacred shrine.  Centered within the ring, the
+
+shattered stone of an altar litter the ground, side by side with the
+
+pieces of a statue, broken in twain.
+
+~
+2340 137 1509949540 3 0
+-1
+S
+
+#78537
+Small House - Cellar~
+Damp, stone steps lead up from the cellar, toward a very clawed-up
+
+trapdoor.  The walls are hard-packed dirt, wet in spots where water has
+
+seeped in from above.  Underfoot, the earthen ground bowls a bit in the,
+
+and a dark, pool of rank, grey water has collected there.  The air is
+
+very cold and dank here.
+
+~
+[Nnilb] nomob
+
+[Azerin] extras added
+
+[Eliza] add climb up leaving code here.
+
+[Eliza] add search in pool?
+
+[Eliza] reviewed
+
+~
+301596684 12 6 0
+D4
+~
+~
+1024 -1 78519 10 10 5
+E
+trapdoor~
+Made from the pale wood of the local pines, the trapdoor has been forced
+
+open, ripping apart a small section of the floor.  Deep grooves, perhaps
+
+from a beast's claw, have been torn into the underside of the trapdoor.
+
+~
+E
+floor pool grey~
+Hacked from the earth, the small cellar would be ideal to keep foodstuffs
+
+cool.  A small pool of water has collected in the center of the floor. 
+
+The roof overhead has been water-stained, wind-blown rain obviously has
+
+found its way into the interior of the house and drained through the
+
+floor.
+
+~
+E
+stone steps~
+The rough stone steps have been made by lugging the local rock into the
+
+cellar, then packing mud and straw around them to form the crudest form
+
+of mortar.
+
+~
+2339 137 1509949540 3 0
+-1
+S
+
+#78538
+Meeting Hall - Kitchen~
+Empty shelves and cupboards are broken and some have fallen down to the
+
+pine plank floor.  A dark crimson stain has collected in front of the
+
+oven, and other red splotches mottle the walls.  An arched doorway leads
+
+south into the meeting hall, and the broken remains of a trapdoor lie in
+
+the northeast corner, near a small stairway leading down.
+
+~
+[Eliza] extras added
+
+~
+301465604 12 6 0
+D2
+~
+~
+0 -1 78521 10 10 5
+D5
+~
+~
+1024 -1 78539 10 10 5
+E
+trapdoor remains corner stairway 1 down~
+The broken remains of a trapdoor have been tossed casually aside, torn
+
+from its hinges with some force.  Nearby, an opening in the floor reveals
+
+a pit with a narrow and steep staircase, leading down into the darkness.
+
+~
+E
+shelves cupboard~
+The shelves, those still intact, are empty, their contents swept aside
+
+without thought or care.  Scattered about the floor, broken bits of jars
+
+and pots lie in ruined piles splattered with the dark, crimson stain of
+
+old, dried blood.
+
+~
+-1
+S
+
+#78539
+Meeting Hall - Cellar~
+The shards of broken storage jars and pots have been scattered across the
+
+floor, and everything of value has been taken.  The entire pantry has
+
+been looted.  A small pile of flour lies on the floor beside a rotting
+
+burlap sack.  A small stairway leads up to the kitchen.
+
+~
+[Nnilb] nomob
+
+[Eliza] add search for glass shard?
+
+[Eliza] Broken shards, remnants of shattered storage jars and pots, lie
+
+scattered across the floor, and everthing of value has been scavenged
+
+from the cellar.  The pantry has been looted, and only a white pile of
+
+flour lies in one corner beside a rotting burlap sack.  A narrow stairway
+
+leads upward to the kitchen.
+
+[Eliza] extras added
+
+[Eliza] add leaving code climb stairs
+
+[Eliza] reviewed
+
+~
+301596684 12 6 0
+D4
+~
+~
+1024 -1 78538 10 10 5
+E
+1 up stairway~
+The rise of the narrow staircase is steep, the surface of the individual
+
+steps worn smooth from use.  It leads to an open hole overhead cut into
+
+the ceiling of the cellar.
+
+~
+2339 137 1509949540 3 0
+-1
+S
+
+#78540
+Small Cellar~
+This dirt-walled cellar was once a spartan bedroom, but the bed has long
+
+since been smashed into splinters.  The only remnants of the other sparse
+
+furnishngs are intermingled with a pile of broken spears in a shadowy
+
+corner of the room.  A light wooden ladder leads up and out of the room.
+
+~
+[Nnilb] pile, search
+
+[Nnilb] blacksmith
+
+[Nnilb] nomob
+
+[Eliza] add blacksmith apron to blacksmith loads? vnumb 3296
+
+[Eliza] add cli up leaving code
+
+[Eliza] was something going to pop in search pile or just fake?
+
+[Eliza] extras added
+
+[Eliza] reviewed
+
+~
+301596684 12 6 0
+D4
+~
+~
+1024 -1 78526 10 10 5
+E
+ladder~
+A short wooden ladder, fairly sturdy in construction still, leads up and
+
+out of the spartan room.
+
+~
+E
+pile furnishings remants corner~
+Tucked into a shadowy corner, a sizeable pile of debris has accumulated. 
+
+Broken spears, fair-sized pieces of wood and mere splinters form the
+
+majority of the mess, but who knows what underlying treasures the
+
+secretive heap holds?
+
+~
+2341 137 1509949540 3 0
+-1
+S
+
+#78541
+Hay Loft~
+The edge of this pine loft is charred, suggesting that someone attempted
+
+to burn it down.  Perhaps the incredibly leaky rook allowed rain to put
+
+out the fire.  A small skeleton is huddled in the corner, tucked into a
+
+fetal position in a pile of musty and damp hay.  A rickety ladder leads
+
+down to the stable.
+
+~
+[Azerin] extras added
+
+[Eliza] add leaving code for climbing down the ladder.
+
+[Eliza] add search for skel or hay or both, one can be fake, if you do both..
+
+[Eliza] could add a child's toy if this is a child's skeleton, which
+
+small size seems to indicate.  There is a toy soldier, vnumb 2882, that
+
+Florian created and resets nowhere that you might like to use..  very
+
+cute item..  really low pop on that too.
+
+[Eliza] reviewed
+
+~
+301465612 12 5 0
+D5
+~
+~
+1024 -1 78529 10 10 5
+E
+ladder~
+The wooden ladder has been braced against the barn roof, allowing access
+
+to the ground.  On each rung are the dark stains of small bloody
+
+handprints.  The supports and the steps of the ladder are loose, the
+
+footing uncertain.
+
+~
+E
+skeleton~
+Curled in a fetal position the skeletal remains seem undamaged.  The
+
+charring around the area might suggest that fumes or heat might have
+
+overcome the unfortunate villager.  Its small size suggests this poor
+
+soul might have been a child..
+
+~
+E
+pine charred loft~
+Twisted planks and gaping holes allow the chilling wind access to the
+
+ruined loft.  Clouds of ash occasionally billow up from the charred wood. 
+
+With so much damage done, it is a wonder that the loft can still support
+
+any weight at all.
+
+~
+2335 137 1509949540 3 0
+-1
+S
+
+#78542
+Fine Manor - Scattered Furniture~
+The furniture in this room was not destroyed, but merely shoved randomly
+
+aside, as if simple rage and not hatred were behind the act.  A graceful
+
+archway leads leads north to the manor's entrance, and a small, wooden
+
+door opens to the east into a smaller chamber beyond.
+
+~
+[Nnilb] nomob
+
+[Nnilb] rextras?
+
+~
+301465612 12 6 0
+D0
+~
+~
+0 -1 78534 10 10 5
+D1
+small door~
+e east small door~
+131 -1 78543 10 10 5
+2342 137 1509949540 3 0
+-1
+S
+
+#78543
+Fine Manor - Washroom~
+This small washroom is eerily cold, and low moans and the sounds of
+
+gnashing teeth grate across your eardrums.  A skeleton lies in a relaxed
+
+position in the washbasin, which is coated with a dark, red stain.  A
+
+broken mirror lies in a thousand fragments on the floor, and a
+
+particularly large shard is in the clenched hands of the skeleton, the
+
+point of which lies deep in the skeleton's ribcage.  A small door leads
+
+west and out of this haunted place.
+
+~
+[Nnilb] rextras?
+
+[Eliza] extras added.
+
+[Eliza] reviewed
+
+~
+301465604 12 5 0
+D3
+small door~
+small door w west~
+131 -1 78542 10 10 5
+E
+mirror fragment~
+A broken mirror, shattered beyond repair, hangs on the wall.  The ruined
+
+fragments litter the floor and the resting skeleton, many of them covered
+
+with near-black spatters of long-dried blood.  One particularly large
+
+glass shard is buried deep in the ribcage of the intact bones, held in
+
+place by a skeletal hand.
+
+~
+E
+skeleton washbasin stain~
+Sprawled in the washbasin, its legs and one arm dangling loosely, the
+
+skeleton is a gruesome sight.  It clutches at a large, crimson-stained
+
+shard of glass buried deep between two ribs, apparently the killing blow. 
+
+Blood covers everything...the washbasin, the walls, the carcass itself
+
+where runnels have dripped a pendant arm to puddle on the floor.
+
+~
+A
+get take~
+fragment mirror~
+if( rflag( reset0, room ) ) {
+
+  act_tochar( "You take the fragment from the skeleton's chest.", ch );
+
+  act_notchar( "$n takes the fragment from the skeleton's chest.", ch );
+
+  obj_to_char( oload( 2903 ), ch );
+
+  remove_rflag( reset0, room );
+
+  }
+
+else
+
+  act_tochar( "Someone has already taken the fragment.", ch );
+
+~
+!
+0 0 0
+-1
+S
+
+#78544
+Beyond the Crumbled Wall~
+The forest surrounds you.  A crumbled wall to the west has collapsed,
+
+leading into a small courtyard.
+
+~
+[Nnilb] this is how the raiders got in.
+
+[Nnilb] rextras?
+
+[Azerin] forest extra added
+
+[Azerin] wall extra added
+
+[Eliza] Please rewrite this rdesc. It really tells nothing about what we're supposed to see or feel here.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D3
+~
+~
+0 -1 78535 10 10 5
+E
+forest~
+Towering overhead are the mighty white pines that make up the majority
+
+of the forest.  The trees' thick bark protects them from the icy wind and
+
+bitter winters that occur this high in the mountains.  Around the tall
+
+trees, lesser shrubs and saplings jostle for light and nutrients, many
+
+requiring the death of one of the giant trees before they may grow beyond
+
+a few feet high.
+
+~
+E
+wall~
+The crumbling wall has seen better days, many of its stones have split
+
+and fallen, they gather now in small piles around its base.  A large area
+
+of it has collapsed inward, which now provides access between the dark forest
+
+and a small courtyard.  Moss and small saplings have begun to take hold
+
+of the stone work, some sections of wall completely disappearing in a
+
+wave of green growth.
+
+~
+-1
+S
+
+#78545
+Faint Trail Near a Mountain Lake~
+The rushing river to the north branches, with one arm heading northeast
+
+toward a small village, and the other curving to the south and east,
+
+spilling into a vast mountain lake.  The trail continues west along the
+
+river, and stops here at a dock lying southward over the edge of the lake.
+
+~
+[Azerin] Extras added
+
+[Eliza] reviewed
+
+[Azerin] a flock of crains that fly over head or something might make the lake
+
+[Azerin] seem more alive, or perhaps a jumping fish ?
+
+~
+301465600 12 9 0
+D2
+~
+~
+0 -1 78546 10 10 9
+D3
+~
+~
+0 -1 78507 10 10 9
+E
+lake~
+The deep blue water of the lake reflects the ice-covered Cairn Mountains
+
+like a giant mirror.  The mountain wind howls across it in chilling
+
+blasts, stirring up the surface and sending small waves lapping at the
+
+shoreline.
+
+~
+E
+dock~
+Thick pine trees have been lashed together with coarse rope to form a
+
+solid dock.  The supporting struts have been driven deep into the lake
+
+bottom, allowing access to the deeper icy waters.
+
+~
+E
+village~
+Through the hazy distance, cozy stone houses can just be seen clustered
+
+together at the northern end of the lake.  Surrounding the village, you
+
+can just make out a low stone wall.
+
+~
+-1
+S
+
+#78546
+Dock on a lake~
+The water of the lake is clear, cold, and calm, a perfect mirror, and it
+
+creates quite the scenic view.  The stony crags of the Cairns to the
+
+south are reflected in perfect symmetry in the water of the lake, like
+
+something out of an elvish artist's canvas.  A trail leads north away
+
+from the dock.
+
+~
+[Nnilb] need nice fishing action
+
+[Nnilb] creak under weight action
+
+[Nnilb] take bucket and pole out of room desc. and place objects.
+
+[Nnilb] wait - fishing pole anachronistic?
+
+[Nnilb] nets, not fishing pole, removed.
+
+[Azerin] extras added
+
+[Eliza] Fishing pole isn't anachronistic
+
+[Eliza] Add the actions in your notes. I like them.
+
+[Eliza] place the objects too.
+
+[Eliza] reviewed
+
+~
+301465600 12 9 0
+D0
+~
+~
+0 -1 78545 10 10 9
+E
+dock~
+The dock underfoot has been made from several thick pine trees, with many
+
+coarse ropes lashing the structure together.  The wood shows signs of
+
+needing repairs, small bits of rotting wood and flaking bark tumble into
+
+the clear waters below.  The dock slowly sways with the lapping waters of
+
+the lake.
+
+~
+E
+lake~
+Stretching before you is a vast mountain lake.  When calm, the lake
+
+surface reflects the beauty and ruggedness of the Cairn Mountains
+
+however, the chilling wind does its best to bring an icy realty to the
+
+scenic view.
+
+~
+2336 137 1509949540 3 0
+1872 17 1509949540 -2 0
+-1
+S
+
+#0
+
